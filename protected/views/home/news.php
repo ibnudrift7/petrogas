@@ -24,7 +24,7 @@
         </div>
         <div class="col-md-20 text-right">
           <div class="blocc_back">
-            <a href="#" class="btn btn-link">BACK</a>
+            <a href="#" onclick="window.history.back();" class="btn btn-link">BACK</a>
           </div>
         </div>
       </div>
