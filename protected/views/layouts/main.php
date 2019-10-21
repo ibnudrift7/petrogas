@@ -66,7 +66,7 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
-<body>
+<body id="bodys">
 <?php 
 /*
 <div id="fb-root"></div>
@@ -96,7 +96,7 @@
     </div> -->
     <script type="text/javascript">
         $(window).load(function(){
-        $('.t-backtop').hide();
+        // $('.t-backtop').hide();
         });
         $(function(){
             $('.t-backtop').click(function () {

@@ -512,3 +512,21 @@ section.outers_inside{
 		}
 	}
 }
+
+section.header .header-bottom .navbar-expand-lg ul.navbar-nav li.nav-item{
+	a{
+	position: relative;
+	}
+}
+section.header .header-bottom .navbar-expand-lg ul.navbar-nav li.nav-item:hover a:after,
+section.header .header-bottom .navbar-expand-lg ul.navbar-nav li.nav-item.active a:after{
+	// display: inline-block;
+	position: absolute;
+	top: -21px;
+	left: 0px;
+	display: fit-content;
+	content: "";
+	width: 100%;
+	height: 1px;
+	background-color: #fff;
+}

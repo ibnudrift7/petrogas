@@ -81,7 +81,7 @@
 			</div>
 		</div>
 		<div class="more-news">
-			<a href="#"> <span><img src="<?php echo $this->assetBaseurl; ?>right-thin.png" alt=""></span>MORE NEWS</a>
+			<a href="<?php echo CHtml::normalizeUrl(array('/home/news')); ?>"> <span><img src="<?php echo $this->assetBaseurl; ?>right-thin.png" alt=""></span>MORE NEWS</a>
 		</div>
 	</div>
 </section>
