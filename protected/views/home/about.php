@@ -35,9 +35,10 @@
 			<div class="content-text t-about text-center">
 				<div class="py-4"></div>
 				<div class="mw1091 mx-auto">
-				<h2><strong>We will open a new horizon of Korean finance.</strong><br>Going beyond the No. 1 financial group in Korea, we will take the lead in global financial markets.</h2>
+				<h2><strong>Opening new horizon of Indonesian Oil & Gas Industry.</strong><br>
+				We are the no. 1 contributor in Indonesia, we will take the lead in nation’s oil and gas supplies.</h2>
 				<p>Petrogas Jatim Utama Cendana is conducting business in the fields of exploration, evaluation, preparation, feasibility studies, exploitation, production, development, mining, processing, storage and transportation of oil and gas for upstream oil and gas activities in the Cepu Block.</p>
-				<p>Woori Financial Group outstanding employees are providing the best possible financial services based on domestic sales networks, global networks outnumbering other financial groups, broad customer base including individual, business, and institutional clients, and differentiated digital competitiveness. By expanding our business portfolio, Woori Financial Group will offer a variety of financial services for customers’ needs and create comfortable financial environments applying new and digital technologies to finance. We will take the leap to become the global financial group leading both the Korean and global financial markets</p>
+				<p>Petrogas Jatim Utama Cendana outstanding human resources on field and outside the field are providing the best possible exploration to distribution services based on domestic and global demand outnumbering other government oil and gas company in East Java. By continously expanding our operation field, Petrogas Jatim Utama Cendana will offer a variety of products for corporate needs and create comfortable chain supply environments applying digital transparancy to finance. We will take the leap to become the national group leading both the Indonesian and East Java distribution.</p>
 				</div>
 				<div class="py-4"></div>
 				<div class="in_banner row">
@@ -48,8 +49,8 @@
 						<div class="py-2"></div>
 						<div class="pl-2">
 						<h2><b>History And Value Behind Petrogas Jatim Utama Cendana</b></h2>
-						<p>PT Petrogas Jatim Utama Cendana adalah sebuah perusahaan berstatus BUMD, yang merupakan anak perusahaan dari Petrogas Jatim Utama. Asal usul didirikannya PT Petrogas Jatim Utama Cendana tidak lain adalah guna meningkatkan pendapatan negara Indonesia di sektor Migas untuk keperluan jangka pendek.</p>
-						<p>Asal usul didirikannya PT Petrogas Jatim Utama Cendana tidak lain adalah guna meningkatkan pendapatan negara Indonesia di sektor Migas untuk keperluan jangka pendek.</p>
+						<p>PT Petrogas Jatim Utama Cendana is a BUMD (govern under a province), which was a subsidiary company from Petrogas Jatim Utama. The reason of the establishment of PT Petrogas Jatim Utama Cendana is none other than to increase Indonesia's state revenue in the oil and gas sector for short-term purposes.</p>
+						<p>Currently holding the biggest possession of oil and gas exploration in East Java, PT Petrogas Jatim Utama Cendana is one of the main pilar of the oil distribution system in Indonesia.</p>
 						</div>
 					</div>
 				</div>
