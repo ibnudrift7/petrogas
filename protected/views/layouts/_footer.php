@@ -35,8 +35,11 @@
 				</div>
 			</div>
 			<div class="col-md-30">
-				<div class="isikanan">
+				<div class="isikanan d-none d-sm-block">
 					<p>Responsive Website Design and Development by <a target="_blank" title="Website Design Surabaya" href="https://www.markdesign.net/">Mark Design Indonesia</a>.</p>
+				</div>
+				<div class="isikanan d-block d-sm-none">
+					<p>Responsive Website Design and Development by <a target="_blank" title="Website Design Surabaya" href="https://www.markdesign.net/"><br>Mark Design Indonesia</a>.</p>
 				</div>
 			</div>
 		</div>

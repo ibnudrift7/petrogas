@@ -13,7 +13,7 @@
   <div class="prelatife container">
     <div class="outers_breadcrumbgrey">
       <div class="row">
-        <div class="col-md-40">
+        <div class="col-md-40 col-40">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">HOME</a></li>
@@ -22,7 +22,7 @@
           </nav>
           <div class="clear"></div>
         </div>
-        <div class="col-md-20 text-right">
+        <div class="col-md-20 col-20 text-right">
           <div class="blocc_back">
             <a href="#" class="btn btn-link">BACK</a>
           </div>
@@ -33,7 +33,7 @@
 
     <div class="insides">
       <div class="content-text t-about text-center">
-        <div class="py-4"></div>
+        <div class="py-4 d-none d-sm-block"></div>
         <div class="mw1091 mx-auto">
           <h2><strong>Join Petrogas Jatim Utama Cendana Successfull Team.</strong>
             <br>We are always looking for candidates who have the potential to strengthen our group.</h2>
@@ -54,8 +54,8 @@
 
       <div class="clear"></div>
     </div>
-    <div class="py-2"></div>
-    <div class="py-4"></div>
+    <div class="py-2 d-none d-sm-block"></div>
+    <div class="py-4 d-none d-sm-block"></div>
   </div>
 
 </section>

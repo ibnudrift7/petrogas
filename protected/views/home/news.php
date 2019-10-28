@@ -13,7 +13,7 @@
   <div class="prelatife container">
     <div class="outers_breadcrumbgrey">
       <div class="row">
-        <div class="col-md-40">
+        <div class="col-md-40 col-40">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">HOME</a></li>
@@ -22,7 +22,7 @@
           </nav>
           <div class="clear"></div>
         </div>
-        <div class="col-md-20 text-right">
+        <div class="col-md-20 text-right col-20">
           <div class="blocc_back">
             <a href="#" onclick="window.history.back();" class="btn btn-link">BACK</a>
           </div>
@@ -33,7 +33,7 @@
 
     <div class="insides outers_blogc_news">
       <div class="content-text t-about">
-        <div class="py-4"></div>
+        <div class="py-4 d-none d-sm-block"></div>
         <div class="tops_news_fltr">
           <div class="row">
             <div class="col-md-35">
@@ -63,9 +63,11 @@
           <div class="lines-grey"></div>
           <div class="clear"></div>
         </div>
-        <div class="py-4 my-3"></div>
+        <div class="py-4 my-3 d-none d-sm-block"></div>
+		  <div class="py-2 my-2 d-block d-sm-none"></div>
 
-        <div class="box-list-newsdata">
+
+		  <div class="box-list-newsdata">
           <div class="row no-gutters">
             <?php for ($i=1; $i < 4; $i++) { ?>
 

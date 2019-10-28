@@ -59,24 +59,24 @@
 	<div class="prelative container2">
 		<div class="row no-gutters">
 			<div class="col-md-20">
-				<a href="<?php echo CHtml::normalizeUrl(array('/home/news')); ?>"><img src="<?php echo $this->assetBaseurl; ?>Layer-10.jpg" alt=""></a>
+				<img src="<?php echo $this->assetBaseurl; ?>Layer-10.jpg" alt="">
 				<div class="box-content">
-					<a href="<?php echo CHtml::normalizeUrl(array('/home/news')); ?>"><h4>Perkembangan status eksplorasi Kedung Keris bulan September 2019</h4></a>
-					<a class="views" href="<?php echo CHtml::normalizeUrl(array('/home/news')); ?>">view article</a>
+					<h4>Perkembangan status eksplorasi Kedung Keris bulan September 2019</h4>
+					<a href="#">view article</a>
 				</div>
 			</div>
 			<div class="col-md-20">
-				<a href="<?php echo CHtml::normalizeUrl(array('/home/news')); ?>"><img src="<?php echo $this->assetBaseurl; ?>Layer-11.jpg" alt=""></a>
+				<img src="<?php echo $this->assetBaseurl; ?>Layer-11.jpg" alt="">
 				<div class="box-content">
-					<a href="<?php echo CHtml::normalizeUrl(array('/home/news')); ?>"><h4>Indonesia: Kekuatan sumbangsih migas utama negara ada pada PJUC</h4></a>
-					<a class="views" href="<?php echo CHtml::normalizeUrl(array('/home/news')); ?>">view article</a>
+					<h4>Indonesia: Kekuatan sumbangsih migas utama negara ada pada PJUC</h4>
+					<a href="#">view article</a>
 				</div>
 			</div>
 			<div class="col-md-20">
-				<a href="<?php echo CHtml::normalizeUrl(array('/home/news')); ?>"><img src="<?php echo $this->assetBaseurl; ?>Layer-12.jpg" alt=""></a>
+				<img src="<?php echo $this->assetBaseurl; ?>Layer-12.jpg" alt="">
 				<div class="box-content">
-					<a href="<?php echo CHtml::normalizeUrl(array('/home/news')); ?>"><h4>Update perkembangan pembangunan plant pengolahan Banyu Urip, Cepu</h4></a>
-					<a class="views" href="<?php echo CHtml::normalizeUrl(array('/home/news')); ?>">view article</a>
+					<h4>Update perkembangan pembangunan plant pengolahan Banyu Urip, Cepu</h4>
+					<a href="#">view article</a>
 				</div>
 			</div>
 		</div>
