@@ -145,9 +145,11 @@ section.header{
 
 .carousel-caption.caption-slider-home{
   position: absolute;
+  
   right: 15%;
-  bottom: 25%;
+  bottom: 15%;
   left: 13%;
+
   z-index: 10;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -385,10 +387,44 @@ section.footer2{
 
 @import 'subpage.less';
 
-@media screen and (max-width:1280px){
+@media screen and (min-width:1700px){
+
   .carousel-caption.caption-slider-home .bxsl_tx_fcs h4{
-    font-size: 28px;
+    font-size: 42px;
   }
+
+}
+
+@media screen and (max-width:1670px){
+
+  .carousel-caption.caption-slider-home .bxsl_tx_fcs h4{
+    font-size: 31px;
+  }
+
+}
+
+
+@media screen and (max-width:1370px){
+
+  .carousel-caption.caption-slider-home .bxsl_tx_fcs h4{
+    font-size: 30px;
+  }
+  .carousel-caption.caption-slider-home .bxsl_tx_fcs h3,
+  .carousel-caption.caption-slider-home .bxsl_tx_fcs h5{
+    font-size: 15px;
+  }
+  
+}
+@media screen and (max-width:1290px){
+  
+  .carousel-caption.caption-slider-home{
+    bottom: 20%;
+  }
+
+}
+
+@media only screen and (max-width:767px){
+
 }
 
 @media only screen and (max-width:450px){

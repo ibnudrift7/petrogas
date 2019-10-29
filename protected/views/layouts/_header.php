@@ -19,7 +19,7 @@
       </div>
       <div class="col-md-36">
         <div class="image-tengah">
-          <img src="<?php echo $this->assetBaseurl; ?>Petrogas-copy.png" alt="">
+          <a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>"><img src="<?php echo $this->assetBaseurl; ?>Petrogas-copy.png" alt=""></a>
         </div>
       </div>
       <div class="col-md-12">
