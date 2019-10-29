@@ -161,14 +161,13 @@
 		    </div>
 		    <div class="widgetcontent">
 				<?php echo $form->fileFieldRow($model,'image',array(
-				'hint'=>'<b>Note:</b> Image size is 1920 x 978px. Larger image will be automatically cropped.', 'style'=>"width: 100%")); ?>
+				'hint'=>'<b>Note:</b> Image size is 1920 x 980px. Larger image will be automatically cropped.', 'style'=>"width: 100%")); ?>
 				<?php if ($model->scenario == 'update'): ?>
 				<img style="width: 100%;" src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(1160,645, '/images/slide/'.$model->image , array('method' => 'adaptiveResize', 'quality' => '90')) ?>"/>
 				<?php endif; ?>
 		    </div>
 		</div>
 		
-		<?php /*
 		<div class="divider15"></div>
 		<div class="widgetbox block-rightcontent">                        
 		    <div class="headtitle">
@@ -182,7 +181,6 @@
 				<?php endif; ?>
 		    </div>
 		</div>
-		*/ ?>
 
 	</div>
 </div>

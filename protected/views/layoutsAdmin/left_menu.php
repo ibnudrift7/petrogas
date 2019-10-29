@@ -41,21 +41,13 @@
         <li class="dropdown"><a href="#"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'About Us') ?></a>
             <ul>
                 <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/about')); ?>">Static About</a></li>
-                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/teamList/index')); ?>">List Team</a></li>
             </ul>
         </li>
 
-        <li class="dropdown"><a href="#"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'What We Do') ?></a>
+        <li class="dropdown"><a href="#"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'Our Business') ?></a>
             <ul>
-                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/service/index')); ?>">List What We Do</a></li>
-            </ul>
-        </li>
-
-        <li class="dropdown"><a href="#"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'Investor Relations') ?></a>
-            <ul>
-                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/pdf/index', 'category'=>1)); ?>">Annual Financial Reports</a></li>
-                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/blog/index', 'category'=> 'financial')); ?>">Financial Highlights</a></li>
-                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/pdf/index', 'category'=>3)); ?>">Factsheets</a></li>
+                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/business')); ?>">Static Business</a></li>
+                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/')); ?>">List Business</a></li>
             </ul>
         </li>
 
@@ -65,6 +57,14 @@
                 <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/blog/create')); ?>">Create News</a></li>
             </ul>
         </li>
+
+        <!-- <li class="dropdown"><a href="#"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'Investor Relations') ?></a>
+            <ul>
+                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/pdf/index', 'category'=>1)); ?>">Annual Financial Reports</a></li>
+                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/blog/index', 'category'=> 'financial')); ?>">Financial Highlights</a></li>
+                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/pdf/index', 'category'=>3)); ?>">Factsheets</a></li>
+            </ul>
+        </li> -->
 
         <!-- <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/merchant')); ?>"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'Merchant Partner') ?></a></li> -->
 

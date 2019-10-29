@@ -32,7 +32,7 @@
             <div class="carousel-button-native">
                 <div class="">
                     <ol class="carousel-indicators">
-                            <li data-target="#myCarousel_home" data-slide-to="" class="active"></li>
+                        <li data-target="#myCarousel_home" data-slide-to="0" class="active"></li>
                     </ol>
                 </div>
             </div>

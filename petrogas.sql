@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 21 Okt 2019 pada 14.04
+-- Waktu pembuatan: 29 Okt 2019 pada 12.03
 -- Versi server: 10.1.37-MariaDB
 -- Versi PHP: 7.1.24
 
@@ -817,155 +817,8 @@ CREATE TABLE `log` (
 --
 
 INSERT INTO `log` (`id`, `username`, `activity`, `time`) VALUES
-(1, 'info@markdesign.net', 'Slide Controller Create 1', '2019-05-24 09:55:33'),
-(2, 'info@markdesign.net', 'ServiceController Create 1', '2019-05-27 10:17:46'),
-(3, 'info@markdesign.net', 'ServiceController Update 1', '2019-05-27 10:28:36'),
-(4, 'info@markdesign.net', 'ServiceController Update 1', '2019-05-27 10:29:51'),
-(5, 'info@markdesign.net', 'TeamListController Create 1', '2019-05-29 09:59:29'),
-(6, 'info@markdesign.net', 'PrdCategoryController Create 1', '2019-05-31 03:44:24'),
-(7, 'info@markdesign.net', 'PrdCategoryController Create 2', '2019-05-31 03:44:40'),
-(8, 'info@markdesign.net', 'PrdCategoryController Create 3', '2019-05-31 03:45:08'),
-(9, 'info@markdesign.net', 'PrdCategoryController Create 4', '2019-05-31 03:47:14'),
-(10, 'info@markdesign.net', 'Login: info@markdesign.net', '2019-06-11 02:33:18'),
-(11, 'info@markdesign.net', 'Login: info@markdesign.net', '2019-06-12 04:00:14'),
-(12, 'info@markdesign.net', 'Login: info@markdesign.net', '2019-06-12 06:33:36'),
-(13, 'info@markdesign.net', 'Login: info@markdesign.net', '2019-06-12 06:36:17'),
-(14, 'info@markdesign.net', 'SlideController Update 1', '2019-06-12 06:38:11'),
-(15, 'info@markdesign.net', 'Setting Update', '2019-06-12 07:03:42'),
-(16, 'info@markdesign.net', 'Setting Update', '2019-06-12 07:03:54'),
-(17, 'info@markdesign.net', 'Setting Update', '2019-06-12 07:03:58'),
-(18, 'info@markdesign.net', 'Login: info@markdesign.net', '2019-06-12 07:47:50'),
-(19, 'info@markdesign.net', 'PdfController Create 1', '2019-06-12 07:52:29'),
-(20, 'info@markdesign.net', 'Login: info@markdesign.net', '2019-06-12 07:53:53'),
-(21, 'info@markdesign.net', 'Slide Controller Create 2', '2019-06-12 07:55:17'),
-(22, 'info@markdesign.net', 'PdfController Create 2', '2019-06-12 07:55:26'),
-(23, 'info@markdesign.net', 'Slide Controller Create 3', '2019-06-12 07:57:22'),
-(24, 'info@markdesign.net', 'Slide Controller Create 4', '2019-06-12 07:57:39'),
-(25, 'info@markdesign.net', 'Slide Controller Create 5', '2019-06-12 07:57:54'),
-(26, 'info@markdesign.net', 'Setting Update', '2019-06-12 07:58:00'),
-(27, 'info@markdesign.net', 'Setting Update', '2019-06-12 07:58:03'),
-(28, 'info@markdesign.net', 'Setting Update', '2019-06-12 07:58:16'),
-(29, 'info@markdesign.net', 'PdfController Create 3', '2019-06-12 07:58:59'),
-(30, 'info@markdesign.net', 'PdfController Create 4', '2019-06-12 08:01:25'),
-(31, 'info@markdesign.net', 'Setting Update', '2019-06-12 08:04:32'),
-(32, 'info@markdesign.net', 'PdfController Create 5', '2019-06-12 08:04:47'),
-(33, 'info@markdesign.net', 'Setting Update', '2019-06-12 08:08:04'),
-(34, 'info@markdesign.net', 'Setting Update', '2019-06-12 08:11:25'),
-(35, 'info@markdesign.net', 'Setting Update', '2019-06-12 08:12:58'),
-(36, 'info@markdesign.net', 'PdfController Create 6', '2019-06-12 08:26:47'),
-(37, 'info@markdesign.net', 'PdfController Create 7', '2019-06-12 08:27:54'),
-(38, 'info@markdesign.net', 'PdfController Create 8', '2019-06-12 08:30:22'),
-(39, 'info@markdesign.net', 'Blog Controller Create 1', '2019-06-12 08:33:02'),
-(40, 'info@markdesign.net', 'BlogController Update 1', '2019-06-12 08:33:31'),
-(41, 'info@markdesign.net', 'BlogController Update 1', '2019-06-12 08:33:54'),
-(42, 'info@markdesign.net', 'PdfController Create 9', '2019-06-12 08:34:28'),
-(43, 'info@markdesign.net', 'PdfController Create 10', '2019-06-12 08:36:12'),
-(44, 'info@markdesign.net', 'Blog Controller Create 2', '2019-06-12 08:36:52'),
-(45, 'info@markdesign.net', 'PdfController Create 11', '2019-06-12 08:37:02'),
-(46, 'info@markdesign.net', 'Blog Controller Create 3', '2019-06-12 08:38:24'),
-(47, 'info@markdesign.net', 'PdfController Create 12', '2019-06-12 08:39:27'),
-(48, 'info@markdesign.net', 'Blog Controller Create 4', '2019-06-12 08:40:07'),
-(49, 'info@markdesign.net', 'PdfController Create 13', '2019-06-12 08:40:30'),
-(50, 'info@markdesign.net', 'Blog Controller Create 5', '2019-06-12 08:41:35'),
-(51, 'info@markdesign.net', 'PdfController Create 14', '2019-06-12 08:42:44'),
-(52, 'info@markdesign.net', 'Blog Controller Create 6', '2019-06-12 08:44:18'),
-(53, 'info@markdesign.net', 'PdfController Create 15', '2019-06-12 08:45:18'),
-(54, 'info@markdesign.net', 'Blog Controller Create 7', '2019-06-12 08:45:55'),
-(55, 'info@markdesign.net', 'PdfController Create 16', '2019-06-12 08:47:18'),
-(56, 'info@markdesign.net', 'Blog Controller Create 8', '2019-06-12 08:47:41'),
-(57, 'info@markdesign.net', 'PdfController Create 17', '2019-06-12 08:49:06'),
-(58, 'info@markdesign.net', 'PdfController Create 18', '2019-06-12 08:51:22'),
-(59, 'info@markdesign.net', 'Blog Controller Create 9', '2019-06-12 08:51:41'),
-(60, 'info@markdesign.net', 'CareerListController Create 1', '2019-06-12 08:53:49'),
-(61, 'info@markdesign.net', 'PdfController Create 19', '2019-06-12 08:54:08'),
-(62, 'info@markdesign.net', 'CareerListController Create 2', '2019-06-12 08:54:56'),
-(63, 'info@markdesign.net', 'PdfController Create 20', '2019-06-12 08:57:36'),
-(64, 'info@markdesign.net', 'PdfController Update 9', '2019-06-12 08:59:41'),
-(65, 'info@markdesign.net', 'PdfController Update 9', '2019-06-12 09:00:35'),
-(66, 'info@markdesign.net', 'Setting Update', '2019-06-12 09:04:32'),
-(67, 'info@markdesign.net', 'Setting Update', '2019-06-12 09:04:35'),
-(68, 'info@markdesign.net', 'Setting Update', '2019-06-12 09:08:56'),
-(69, 'info@markdesign.net', 'Setting Update', '2019-06-12 09:10:00'),
-(70, 'info@markdesign.net', 'PdfController Create 21', '2019-06-12 09:12:05'),
-(71, 'info@markdesign.net', 'Setting Update', '2019-06-12 09:14:15'),
-(72, 'info@markdesign.net', 'PdfController Create 22', '2019-06-12 09:14:17'),
-(73, 'info@markdesign.net', 'PdfController Create 23', '2019-06-12 09:17:12'),
-(74, 'info@markdesign.net', 'PdfController Create 24', '2019-06-12 09:18:22'),
-(75, 'info@markdesign.net', 'Address Controller Create 1', '2019-06-12 09:20:30'),
-(76, 'info@markdesign.net', 'PdfController Create 25', '2019-06-12 09:21:09'),
-(77, 'info@markdesign.net', 'Address Controller Update 1', '2019-06-12 09:21:21'),
-(78, 'info@markdesign.net', 'Address Controller Create 2', '2019-06-12 09:22:36'),
-(79, 'info@markdesign.net', 'PdfController Create 26', '2019-06-12 09:23:19'),
-(80, 'info@markdesign.net', 'Address Controller Create 3', '2019-06-12 09:24:28'),
-(81, 'info@markdesign.net', 'Address Controller Create 4', '2019-06-12 09:25:02'),
-(82, 'info@markdesign.net', 'PdfController Create 27', '2019-06-12 09:25:22'),
-(83, 'info@markdesign.net', 'Address Controller Create 5', '2019-06-12 09:25:47'),
-(84, 'info@markdesign.net', 'Address Controller Create 6', '2019-06-12 09:26:29'),
-(85, 'info@markdesign.net', 'Address Controller Create 7', '2019-06-12 09:27:01'),
-(86, 'info@markdesign.net', 'PdfController Create 28', '2019-06-12 09:27:30'),
-(87, 'info@markdesign.net', 'Address Controller Create 8', '2019-06-12 09:27:39'),
-(88, 'info@markdesign.net', 'Setting Update', '2019-06-12 09:29:08'),
-(89, 'info@markdesign.net', 'PdfController Create 29', '2019-06-12 09:29:31'),
-(90, 'info@markdesign.net', 'Setting Update', '2019-06-12 09:32:29'),
-(91, 'info@markdesign.net', 'Setting Update', '2019-06-12 09:35:28'),
-(92, 'info@markdesign.net', 'PdfController Create 30', '2019-06-12 09:35:55'),
-(93, 'info@markdesign.net', 'Setting Update', '2019-06-12 09:36:31'),
-(94, 'info@markdesign.net', 'PdfController Create 31', '2019-06-12 09:38:12'),
-(95, 'info@markdesign.net', 'PdfController Create 32', '2019-06-12 09:40:51'),
-(96, 'info@markdesign.net', 'Setting Update', '2019-06-12 09:42:50'),
-(97, 'info@markdesign.net', 'TeamListController Create 2', '2019-06-12 09:43:54'),
-(98, 'info@markdesign.net', 'TeamListController Create 3', '2019-06-12 09:46:27'),
-(99, 'info@markdesign.net', 'TeamListController Create 4', '2019-06-12 09:46:50'),
-(100, 'info@markdesign.net', 'TeamListController Create 5', '2019-06-12 09:47:13'),
-(101, 'info@markdesign.net', 'PdfController Create 33', '2019-06-12 09:48:00'),
-(102, 'info@markdesign.net', 'ServiceController Update 1', '2019-06-12 09:49:11'),
-(103, 'info@markdesign.net', 'PdfController Create 34', '2019-06-12 09:49:53'),
-(104, 'info@markdesign.net', 'PdfController Create 35', '2019-06-12 09:53:46'),
-(105, 'info@markdesign.net', 'ServiceController Create 2', '2019-06-12 09:55:17'),
-(106, 'info@markdesign.net', 'PdfController Update 33', '2019-06-12 10:01:01'),
-(107, 'info@markdesign.net', 'ServiceController Create 3', '2019-06-12 10:01:35'),
-(108, 'info@markdesign.net', 'ServiceController Create 4', '2019-06-12 10:04:43'),
-(109, 'info@markdesign.net', 'ServiceController Update 4', '2019-06-12 10:04:51'),
-(110, 'info@markdesign.net', 'ServiceController Create 5', '2019-06-12 10:06:39'),
-(111, 'info@markdesign.net', 'ServiceController Update 5', '2019-06-12 10:06:53'),
-(112, 'info@markdesign.net', 'ServiceController Create 6', '2019-06-12 10:11:28'),
-(113, 'info@markdesign.net', 'ServiceController Update 6', '2019-06-12 10:11:42'),
-(114, 'info@markdesign.net', 'Blog Controller Create 10', '2019-06-12 10:13:54'),
-(115, 'info@markdesign.net', 'PdfController Create 36', '2019-06-12 10:14:30'),
-(116, 'info@markdesign.net', 'PdfController Update 33', '2019-06-12 10:15:26'),
-(117, 'info@markdesign.net', 'PdfController Update 33', '2019-06-12 10:16:07'),
-(118, 'info@markdesign.net', 'Blog Controller Create 11', '2019-06-12 10:16:11'),
-(119, 'info@markdesign.net', 'Blog Controller Create 12', '2019-06-12 10:17:36'),
-(120, 'info@markdesign.net', 'PdfController Update 34', '2019-06-12 10:18:20'),
-(121, 'info@markdesign.net', 'Blog Controller Create 13', '2019-06-12 10:18:50'),
-(122, 'info@markdesign.net', 'PdfController Update 35', '2019-06-12 10:19:20'),
-(123, 'info@markdesign.net', 'PdfController Update 5', '2019-06-12 10:19:49'),
-(124, 'info@markdesign.net', 'PdfController Create 37', '2019-06-12 10:21:51'),
-(125, 'info@markdesign.net', 'PdfController Update 31', '2019-06-12 10:23:30'),
-(126, 'info@markdesign.net', 'PdfController Update 32', '2019-06-12 10:24:22'),
-(127, 'info@markdesign.net', 'PdfController Update 29', '2019-06-12 10:24:55'),
-(128, 'info@markdesign.net', 'PdfController Update 28', '2019-06-12 10:26:07'),
-(129, 'info@markdesign.net', 'PdfController Update 27', '2019-06-12 10:26:21'),
-(130, 'info@markdesign.net', 'PdfController Update 26', '2019-06-12 10:26:34'),
-(131, 'info@markdesign.net', 'PdfController Update 25', '2019-06-12 10:26:41'),
-(132, 'info@markdesign.net', 'PdfController Update 24', '2019-06-12 10:26:49'),
-(133, 'info@markdesign.net', 'PdfController Update 23', '2019-06-12 10:26:56'),
-(134, 'info@markdesign.net', 'PdfController Update 22', '2019-06-12 10:27:02'),
-(135, 'info@markdesign.net', 'PdfController Update 21', '2019-06-12 10:27:29'),
-(136, 'info@markdesign.net', 'Blog Controller Create 14', '2019-06-12 10:37:36'),
-(137, 'info@markdesign.net', 'BlogController Update 10', '2019-06-12 10:39:29'),
-(138, 'info@markdesign.net', 'Blog Controller Create 15', '2019-06-12 10:49:02'),
-(139, 'info@markdesign.net', 'Blog Controller Create 16', '2019-06-12 10:50:59'),
-(140, 'info@markdesign.net', 'Setting Update', '2019-06-12 11:13:49'),
-(141, 'info@markdesign.net', 'CareerListController Update 1', '2019-06-12 11:36:12'),
-(142, 'info@markdesign.net', 'Setting Update', '2019-06-12 11:42:16'),
-(143, 'info@markdesign.net', 'Login: info@markdesign.net', '0000-00-00 00:00:00'),
-(144, 'info@markdesign.net', 'CareerListController Update 1', '0000-00-00 00:00:00'),
-(145, 'info@markdesign.net', 'CareerListController Update 2', '0000-00-00 00:00:00'),
-(146, 'info@markdesign.net', 'CareerListController Update 1', '0000-00-00 00:00:00'),
-(147, 'info@markdesign.net', 'Login: info@markdesign.net', '2019-10-21 11:49:07'),
-(148, 'info@markdesign.net', 'Setting Update', '2019-10-21 11:49:33'),
-(149, 'info@markdesign.net', 'Setting Update', '2019-10-21 11:49:40');
+(1, 'info@markdesign.net', 'Login: info@markdesign.net', '2019-10-29 04:27:33'),
+(2, 'info@markdesign.net', 'Login: info@markdesign.net', '2019-10-29 08:13:43');
 
 -- --------------------------------------------------------
 
@@ -1685,17 +1538,6 @@ CREATE TABLE `sl_slide` (
   `image2` varchar(225) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
---
--- Dumping data untuk tabel `sl_slide`
---
-
-INSERT INTO `sl_slide` (`id`, `topik_id`, `image`, `active`, `date_input`, `date_update`, `insert_by`, `last_update_by`, `writer`, `sort`, `image2`) VALUES
-(1, 0, '1bc5c-fcs-corpus-02.jpg', 1, '0000-00-00 00:00:00', '2019-06-12 13:38:11', 'info@markdesign.net', 'info@markdesign.net', '', 1, '7c84a-fcs-corpus-01_mob.jpg'),
-(2, 0, '22a8f-fcs-corpus-03.jpg', 1, '2019-06-12 14:55:17', '2019-06-12 14:55:17', 'info@markdesign.net', 'info@markdesign.net', '', 2, NULL),
-(3, 0, '56ab9-fcs-corpus-04.jpg', 1, '2019-06-12 14:57:22', '2019-06-12 14:57:22', 'info@markdesign.net', 'info@markdesign.net', '', 3, NULL),
-(4, 0, '930ac-fcs-corpus-05.jpg', 1, '2019-06-12 14:57:39', '2019-06-12 14:57:39', 'info@markdesign.net', 'info@markdesign.net', '', 4, NULL),
-(5, 0, '6dc88-fcs-corpus-06.jpg', 1, '2019-06-12 14:57:54', '2019-06-12 14:57:54', 'info@markdesign.net', 'info@markdesign.net', '', 5, NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -1712,22 +1554,6 @@ CREATE TABLE `sl_slide_description` (
   `url_teks` varchar(200) NOT NULL,
   `url` varchar(200) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `sl_slide_description`
---
-
-INSERT INTO `sl_slide_description` (`id`, `slide_id`, `language_id`, `title`, `subtitle`, `content`, `url_teks`, `url`) VALUES
-(4, 1, 3, 'fcs 1', '', '', '', ''),
-(3, 1, 2, 'fcs 1', '', '', '', ''),
-(5, 2, 2, 'fcs 2', '', '', '', ''),
-(6, 2, 3, 'fcs 2', '', '', '', ''),
-(7, 3, 2, 'fcs 3', '', '', '', ''),
-(8, 3, 3, 'fcs 3', '', '', '', ''),
-(9, 4, 2, 'fcs 4', '', '', '', ''),
-(10, 4, 3, 'fcs 4', '', '', '', ''),
-(11, 5, 2, 'fcs 5', '', '', '', ''),
-(12, 5, 3, 'fcs 5', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -2094,7 +1920,8 @@ INSERT INTO `tt_text` (`id`, `category`, `message`) VALUES
 (85, 'front', 'Industry Application'),
 (86, 'front', 'AVAILABLE POSITIONS'),
 (87, 'front', 'There are no opening positions at the moment.'),
-(88, 'front', 'Newsroom');
+(88, 'front', 'Newsroom'),
+(89, 'admin', 'Our Business');
 
 -- --------------------------------------------------------
 
@@ -2688,7 +2515,7 @@ ALTER TABLE `list_career`
 -- AUTO_INCREMENT untuk tabel `log`
 --
 ALTER TABLE `log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=150;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `me_member`
@@ -2862,7 +2689,7 @@ ALTER TABLE `sertifikasi`
 -- AUTO_INCREMENT untuk tabel `setting`
 --
 ALTER TABLE `setting`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT untuk tabel `setting_description`
@@ -2880,13 +2707,13 @@ ALTER TABLE `shp_shipping_price`
 -- AUTO_INCREMENT untuk tabel `sl_slide`
 --
 ALTER TABLE `sl_slide`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `sl_slide_description`
 --
 ALTER TABLE `sl_slide_description`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_group`
@@ -2946,7 +2773,7 @@ ALTER TABLE `trips`
 -- AUTO_INCREMENT untuk tabel `tt_text`
 --
 ALTER TABLE `tt_text`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
