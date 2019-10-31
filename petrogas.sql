@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 29 Okt 2019 pada 12.03
+-- Waktu pembuatan: 31 Okt 2019 pada 12.36
 -- Versi server: 10.1.37-MariaDB
 -- Versi PHP: 7.1.24
 
@@ -55,20 +55,6 @@ CREATE TABLE `address` (
   `lat` text,
   `lng` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `address`
---
-
-INSERT INTO `address` (`id`, `category_id`, `nama`, `address_1`, `address_2`, `telp`, `fax`, `image`, `kota`, `prov`, `email`, `sort`, `lat`, `lng`) VALUES
-(1, 0, 'Graha Corpus Surabaya', 'Headquarter', 'Jl. Embong Kenongo No.7-9  Surabaya 60271 - East Java ', 'Phone. (031) 99015353', '', 'cc705-con1 (1).jpg', 'Surabaya', '', '', NULL, '', ''),
-(2, 0, 'Corpus Kapital Manajemen', 'Branch Office', 'Sahid Sudirman Center Lantai 49 Unit B Jl. Jendral Sudirman No. 86  Jakarta Pusat, 10220', '', '', '56e83-con2.jpg', 'Jakarta Pusat', '', '', NULL, '', ''),
-(3, 0, 'Corpus Bali ', 'Branch Office', 'Jl. Raya Padang Luwih No. 8 (Kav. 2)  Kerobokan Kaja - Kuta Utara,  Denpasar, 80361', '', '', 'ded81-con3.jpg', 'Bali ', '', '', NULL, '', ''),
-(4, 0, 'Corpus Malang ', 'Branch Office', 'Jl. Buring No. 1 (Kav. 6)  Oro-Oro Dowo, Klojen  Kota Malang, 65119', '', '', '14fed-con4.jpg', 'Malang', '', '', NULL, '', ''),
-(5, 0, 'Corpus Jakarta ', 'Branch Office', 'Equity Tower 15H  Jl. Jendral Sudirman 52-53 Jakarta Pusat, 12190', '', '', 'd7e9f-con5.jpg', 'Jakarta Pusat', '', '', NULL, '', ''),
-(6, 0, 'Corpus Medan ', 'Branch Office', 'Komplek Ruko Royal Residence  Jl. Palang Merah No. 15-16  20151', '', '', 'd3cb2-con6.jpg', 'Medan ', '', '', NULL, '', ''),
-(7, 0, 'Corpus Bandung ', 'Branch Office', 'Wisma Monex 9C  Jl. Asia Afrika No. 133 40112', '', '', '41398-con7.jpg', 'Bandung', '', '', NULL, '', ''),
-(8, 0, 'Corpus Semarang ', 'Branch Office', 'Jl. Seroja Dalam A2  Karang Kidul, 50241', '', '', '6dd90-con8.jpg', 'Semarang ', '', '', NULL, '', '');
 
 -- --------------------------------------------------------
 
@@ -744,7 +730,7 @@ CREATE TABLE `language` (
 
 INSERT INTO `language` (`id`, `name`, `code`, `sort`, `status`) VALUES
 (2, 'English', 'en', 1, '1'),
-(3, 'Indonesia', 'id', 2, '1');
+(3, 'Indonesia', 'id', 2, '0');
 
 -- --------------------------------------------------------
 
@@ -818,7 +804,42 @@ CREATE TABLE `log` (
 
 INSERT INTO `log` (`id`, `username`, `activity`, `time`) VALUES
 (1, 'info@markdesign.net', 'Login: info@markdesign.net', '2019-10-29 04:27:33'),
-(2, 'info@markdesign.net', 'Login: info@markdesign.net', '2019-10-29 08:13:43');
+(2, 'info@markdesign.net', 'Login: info@markdesign.net', '2019-10-29 08:13:43'),
+(3, 'info@markdesign.net', 'Slide Controller Create 1', '2019-10-30 03:33:38'),
+(4, 'info@markdesign.net', 'Login: info@markdesign.net', '2019-10-31 08:23:10'),
+(5, 'info@markdesign.net', 'StatistikListController Create 1', '2019-10-31 08:27:16'),
+(6, 'info@markdesign.net', 'Setting Update', '2019-10-31 08:30:56'),
+(7, 'info@markdesign.net', 'StatistikListController Create 2', '2019-10-31 08:34:52'),
+(8, 'info@markdesign.net', 'StatistikListController Create 3', '2019-10-31 08:35:41'),
+(9, 'info@markdesign.net', 'StatistikListController Create 4', '2019-10-31 08:36:26'),
+(10, 'info@markdesign.net', 'StatistikListController Create 5', '2019-10-31 08:37:02'),
+(11, 'info@markdesign.net', 'StatistikListController Create 6', '2019-10-31 08:37:37'),
+(12, 'info@markdesign.net', 'StatistikListController Create 7', '2019-10-31 08:38:17'),
+(13, 'info@markdesign.net', 'StatistikListController Create 8', '2019-10-31 08:38:50'),
+(14, 'info@markdesign.net', 'StatistikListController Create 9', '2019-10-31 08:39:26'),
+(15, 'info@markdesign.net', 'StatistikListController Create 10', '2019-10-31 08:40:09'),
+(16, 'info@markdesign.net', 'Setting Update', '2019-10-31 08:53:41'),
+(17, 'info@markdesign.net', 'Setting Update', '2019-10-31 09:03:54'),
+(18, 'info@markdesign.net', 'Setting Update', '2019-10-31 09:14:15'),
+(19, 'info@markdesign.net', 'Setting Update', '2019-10-31 09:14:35'),
+(20, 'info@markdesign.net', 'Setting Update', '2019-10-31 09:14:58'),
+(21, 'info@markdesign.net', 'Setting Update', '2019-10-31 09:15:07'),
+(22, 'info@markdesign.net', 'Setting Update', '2019-10-31 09:16:14'),
+(23, 'info@markdesign.net', 'Setting Update', '2019-10-31 09:18:01'),
+(24, 'info@markdesign.net', 'Setting Update', '2019-10-31 09:23:38'),
+(25, 'info@markdesign.net', 'Setting Update', '2019-10-31 09:24:18'),
+(26, 'info@markdesign.net', 'Login: info@markdesign.net', '2019-10-31 09:25:05'),
+(27, 'info@markdesign.net', 'Setting Update', '2019-10-31 09:25:25'),
+(28, 'info@markdesign.net', 'Setting Update', '2019-10-31 09:40:26'),
+(29, 'info@markdesign.net', 'Login: info@markdesign.net', '2019-10-31 09:52:39'),
+(30, 'info@markdesign.net', 'Setting Update', '2019-10-31 10:14:29'),
+(31, 'info@markdesign.net', 'Setting Update', '2019-10-31 10:33:57'),
+(32, 'info@markdesign.net', 'Setting Update', '2019-10-31 10:35:00'),
+(33, 'info@markdesign.net', 'Setting Update', '2019-10-31 10:36:56'),
+(34, 'info@markdesign.net', 'BlockbuildingController Create 1', '2019-10-31 10:40:32'),
+(35, 'info@markdesign.net', 'BlockbuildingController Create 2', '2019-10-31 10:41:19'),
+(36, 'info@markdesign.net', 'BlockbuildingController Update 1', '2019-10-31 10:47:19'),
+(37, 'info@markdesign.net', 'BlockbuildingController Update 2', '2019-10-31 10:47:35');
 
 -- --------------------------------------------------------
 
@@ -1467,7 +1488,7 @@ CREATE TABLE `setting` (
 --
 
 INSERT INTO `setting` (`id`, `name`, `label`, `value`, `type`, `hide`, `group`, `dual_language`, `sort`) VALUES
-(1, 'default_meta_title', 'Title', '', 'text', 0, 'default_meta', 'y', 1),
+(1, 'default_meta_title', 'Title', 'cece2c89b0ill-career.jpg', 'text', 0, 'default_meta', 'y', 1),
 (2, 'default_meta_keywords', 'Keywords', '', 'textarea', 0, 'default_meta', 'y', 2),
 (3, 'default_meta_description', 'Description', '', 'textarea', 0, 'default_meta', 'y', 3),
 (4, 'google_tools_webmaster', 'Google Webmaster Code', '', 'textarea', 0, 'google_tools', 'n', 4),
@@ -1478,7 +1499,61 @@ INSERT INTO `setting` (`id`, `name`, `label`, `value`, `type`, `hide`, `group`, 
 (9, 'invoice_increment', 'Invoice Increment', '5', 'text', 0, 'invoice', 'n', 0),
 (10, 'invoice_auto_cancel_after', 'Invoice Auto Cancel After', '72', 'text', 0, 'invoice', 'n', 0),
 (11, 'lang_deff', 'Language Default', 'en', 'text', 0, 'data', 'n', 0),
-(12, 'email', 'Email Form', 'info@pjuc.co.id', 'text', 0, 'data', 'n', 1);
+(12, 'email', 'Email Form', 'info@pjuc.co.id', 'text', 0, 'data', 'n', 1),
+(22, 'home_sectionf_text', 'Fcs Content', '', 'text', 0, 'data', 'y', 0),
+(23, 'home1_title', 'Title', '', 'text', 0, 'data', 'y', 0),
+(24, 'home1_subtitle', 'Sub Title', '', 'text', 0, 'data', 'y', 0),
+(25, 'home2_banner_pictures', 'Image', '5c60803dfcLayer-14.jpg', 'image', 0, 'data', 'n', 0),
+(26, 'home2_banner_content', 'Content', '', 'text', 0, 'data', 'y', 0),
+(27, 'home2_banner_link', 'Banners Link', '#', 'text', 0, 'data', 'n', 0),
+(28, 'about_hero_image', 'Image', 'faef75d32fills-about.jpg', 'image', 0, 'data', 'n', 0),
+(29, 'about_hero_title', 'Title', '', 'text', 0, 'data', 'y', 0),
+(30, 'about1_content', 'Content', '', 'text', 0, 'data', 'y', 0),
+(31, 'about2_pictures', 'Image', '70abf18a80about-value.jpg', 'image', 0, 'data', 'n', 0),
+(32, 'about_history_content', 'History Content', '', 'text', 0, 'data', 'y', 0),
+(33, 'about_milestones_picture_1', 'Image', '194368009bmilestones1.jpg', 'image', 0, 'data', 'n', 0),
+(34, 'about_milestones_title_1', 'Title', '', 'text', 0, 'data', 'y', 0),
+(35, 'about_milestones_info_1', 'Content', '', 'text', 0, 'data', 'y', 0),
+(36, 'about_milestones_picture_2', 'Image', '9afb55af74milestones2.jpg', 'image', 0, 'data', 'n', 0),
+(37, 'about_milestones_title_2', 'Title', '', 'text', 0, 'data', 'y', 0),
+(38, 'about_milestones_info_2', 'Content', '', 'text', 0, 'data', 'y', 0),
+(39, 'about_milestones_picture_3', 'Image', '2694587c72milestones3.jpg', 'image', 0, 'data', 'n', 0),
+(40, 'about_milestones_title_3', 'Title', '', 'text', 0, 'data', 'y', 0),
+(41, 'about_milestones_info_3', 'Content', '', 'text', 0, 'data', 'y', 0),
+(42, 'about_milestones_picture_4', 'Image', '067d22ba4emilestones4.jpg', 'image', 0, 'data', 'n', 0),
+(43, 'about_milestones_title_4', 'Title', '', 'text', 0, 'data', 'y', 0),
+(44, 'about_milestones_info_4', 'Content', '', 'text', 0, 'data', 'y', 0),
+(45, 'about_visi', 'Section Visi', '', 'text', 0, 'data', 'y', 0),
+(46, 'about_misi', 'Section Misi', '', 'text', 0, 'data', 'y', 0),
+(47, 'about_pujv_banner', 'Pujv Image', '02fe11c797block_bottoms_missl.png', 'image', 0, 'data', 'n', 0),
+(48, 'business_hero_image', 'Image', '77dc20d2d3ill-bisnis.jpg', 'image', 0, 'data', 'n', 0),
+(49, 'business_hero_title', 'Title', '', 'text', 0, 'data', 'y', 0),
+(50, 'business1_content', 'Content', '', 'text', 0, 'data', 'y', 0),
+(51, 'business2_holder_content', 'Holder Top Content', '', 'text', 0, 'data', 'y', 0),
+(52, 'business3_holder_btm_content', 'Holder Bottom Content', '', 'text', 0, 'data', 'y', 0),
+(53, 'career_hero_image', 'Image', '5fb88c5a9bill-career.jpg', 'image', 0, 'data', 'n', 0),
+(54, 'career_hero_title', 'Title', '', 'text', 0, 'data', 'y', 0),
+(55, 'career1_content', 'Content', '', 'text', 0, 'data', 'y', 0),
+(56, 'career_email', 'Career Email', 'career@petrogas.pwj.co.id', 'text', 0, 'data', 'n', 0),
+(57, 'contact_hero_image', 'Image', '74193bb7ddill-contact.jpg', 'image', 0, 'data', 'n', 0),
+(58, 'contact_hero_title', 'Title', '', 'text', 0, 'data', 'y', 0),
+(59, 'contact_top_title', 'Title Content', '', 'text', 0, 'data', 'y', 0),
+(60, 'contact_content', 'Content', '', 'text', 0, 'data', 'y', 0),
+(61, 'contact_bottom_content', 'Bottom Content', '', 'text', 0, 'data', 'y', 0),
+(62, 'contact_wa', 'Whatsapp', '081 6480 7016', 'text', 0, 'data', 'n', 0),
+(63, 'contact_phone', 'Phone', '+62 21 590 7777', 'text', 0, 'data', 'n', 0),
+(64, 'contact_email', 'Email Website', 'info@pjuc.co.id', 'text', 0, 'data', 'n', 0),
+(65, 'url_facebook', 'URL Facebook', '', 'text', 0, 'data', 'n', 0),
+(66, 'url_instagram', 'URL Instagram', '', 'text', 0, 'data', 'n', 0),
+(67, 'url_linkedin', 'URL LinkedIn', '', 'text', 0, 'data', 'n', 0),
+(68, 'url_youtube', 'URL Youtube', '', 'text', 0, 'data', 'n', 0),
+(69, 'business_sec2_title_1', 'Titles', '', 'text', 0, 'data', 'y', 0),
+(70, 'business_sec2_info_1', 'Contents', '', 'text', 0, 'data', 'y', 0),
+(71, 'business_sec2_title_2', 'Titles', '', 'text', 0, 'data', 'y', 0),
+(72, 'business_sec2_info_2', 'Contents', '', 'text', 0, 'data', 'y', 0),
+(73, 'business_sec2_title_3', 'Titles', '', 'text', 0, 'data', 'y', 0),
+(74, 'business_sec2_info_3', 'Contents', '', 'text', 0, 'data', 'y', 0),
+(75, 'business3_bottom_banner', 'Pujv Image', '989d89e2e5stc_holder.jpg', 'image', 0, 'data', 'n', 0);
 
 -- --------------------------------------------------------
 
@@ -1503,7 +1578,43 @@ INSERT INTO `setting_description` (`id`, `setting_id`, `language_id`, `value`) V
 (3, 3, 2, 'Petrogas - Jatim Utama Cendana'),
 (4, 3, 3, 'Petrogas - Jatim Utama Cendana'),
 (5, 2, 2, 'Petrogas - Jatim Utama Cendana'),
-(6, 2, 3, 'Petrogas - Jatim Utama Cendana');
+(6, 2, 3, 'Petrogas - Jatim Utama Cendana'),
+(7, 22, 2, '<h5>WHAT WE DO</h5><h4>Operating Oil and Gas Exploration in Cepu Block, For the contribution of oil and gas consumption in Indonesia</h4>'),
+(8, 22, 3, ''),
+(9, 23, 2, 'Our Business'),
+(10, 23, 3, ''),
+(11, 24, 2, '<p>Petrogas Jatim Utama Cendana is conducting business in the fields of exploration, evaluation, preparation, feasibility studies, exploitation, production, development, mining, processing, storage and transportation of oil and gas for upstream oil and gas activities in the Cepu Block.</p>'),
+(12, 24, 3, ''),
+(13, 26, 2, '<h4>History And Value Behind Petrogas Jatim Utama Cendana</h4><p>PT Petrogas Jatim Utama Cendana adalah sebuah perusahaan berstatus BUMD, yang merupakan anak perusahaan dari Petrogas Jatim Utama. Asal usul didirikannya PT Petrogas Jatim Utama Cendana tidak lain adalah guna meningkatkan pendapatan negara Indonesia di sektor Migas untuk keperluan jangka pendek.</p>'),
+(14, 26, 3, ''),
+(15, 29, 2, 'About Us'),
+(16, 30, 2, '<h2><b>Opening new horizon of Indonesian Oil & Gas Industry.</b><br>We are the no. 1 contributor in Indonesia, we will take the lead in nation’s oil and gas supplies.</h2>\r\n<p>Petrogas Jatim Utama Cendana is conducting business in the fields of exploration, evaluation, preparation, feasibility studies, exploitation, production, development, mining, processing, storage and transportation of oil and gas for upstream oil and gas activities in the Cepu Block.\r\n</p>\r\n<p>Petrogas Jatim Utama Cendana outstanding human resources on field and outside the field are providing the best possible exploration to distribution services based on domestic and global demand outnumbering other government oil and gas company in East Java. By continously expanding our operation field, Petrogas Jatim Utama Cendana will offer a variety of products for corporate needs and create comfortable chain supply environments applying digital transparancy to finance. We will take the leap to become the national group leading both the Indonesian and East Java distribution.\r\n</p>'),
+(17, 32, 2, '<h2><strong>History And Value Behind Petrogas Jatim Utama Cendana</strong></h2><p>PT Petrogas Jatim Utama Cendana is a BUMD (govern under a province), which was a subsidiary company from Petrogas Jatim Utama. The reason of the establishment of PT Petrogas Jatim Utama Cendana is none other than to increase Indonesia\'s state revenue in the oil and gas sector for short-term purposes.\r\n</p><p>Currently holding the biggest possession of oil and gas exploration in East Java, PT Petrogas Jatim Utama Cendana is one of the main pilar of the oil distribution system in Indonesia.\r\n</p>'),
+(18, 34, 2, '1997'),
+(19, 35, 2, '<p>The Birth of PT Petrogas</p>'),
+(20, 37, 2, '2000'),
+(21, 38, 2, '<p>The Birth of PT Petrogas Jatim Utama Cendana at East Java</p>'),
+(22, 40, 2, '2008-2012'),
+(23, 41, 2, '<p>Development and operations of Cepu Block oil refinery at East Java</p>'),
+(24, 43, 2, '2013-2016'),
+(25, 44, 2, '<p>Banyu Urip new development of oil exploration</p>'),
+(26, 45, 2, '<p>We strive to fulfil our responsibilities as a regional level exploration and distribution company to match even the nation level of oil and gas company, help our nation grow, and contribute to create a modern culture where the country, people, and contractors are connected in a never ending supply system.\r\n</p>'),
+(27, 46, 2, '<p>Developing ourselves as a regional oil and gas company that are able to compete nationally with professional corporations, supported by experts who are competent in their fields.</p><section></section>'),
+(28, 54, 2, 'Career'),
+(29, 55, 2, '<h2>Join Petrogas Jatim Utama Cendana Successfull Team.<br>We are always looking for candidates who have the potential to strengthen our group.</h2><p>Petrogas Jatim Utama Cendana has big future plans and involves endless development both in infrastructure and human resource development. If you have the interest and enthusiasm to join our company, please send your resume to the email address below.\r\n</p>'),
+(30, 58, 2, 'Contact Us'),
+(31, 59, 2, 'PT. Petrogas Jatim Utama Cendana'),
+(32, 60, 2, '<p><strong>Surabaya Head Office:</strong><br>Intiland Building, 7th Floor, Suite 3B<br>Jl. Panglima Sudirman No.101-103, Surabaya<br>Phone: (+62-31) 547-8319, Fax:(+62-31) 547.8353<br>Email: info@petrogas.pwj.co.id\r\n</p>'),
+(33, 61, 2, '<p><strong>Jakarta Office:</strong><br>The Bellezza Office Tower, 11th Floor, Office 01<br>Jl. Let. Jend. Soepeno No. 34, Permata Hijau, Jakarta 12210<br>Phone: (+62-21) 3002-7197, Fax: (+62-21) 2567-5578<br>Email: info@petrogas.pwj.co.id\r\n</p>'),
+(34, 49, 2, 'Our Business'),
+(35, 50, 2, '<h2>We explore to mine oil and gas in Indonesia Participating interest of 2,2423% at Cepu Block.<br>With a country to serve, we operate with passion to our nation.</h2><p>To achieve these aims and objectives, Petrogas Jatim Utama Cendana is conducting business in the fields of exploration, evaluation, preparation, feasibility studies, exploitation, production, development, mining, processing, storage and transportation of oil and gas for upstream oil and gas activities in the Cepu Block.</p><p>All of Petrogas Jatim Utama Cendana’s activities are in accordance with applicable laws and regulations and conducting oil and gas mining business, both for own business or undertaken on the basis of cooperation with third parties, for upstream oil and gas activities in the working area of the Cepu Block. Petrogas Jatim Utama Cendana have the rights to market the production outcome in both domestically and abroad.</p>'),
+(36, 69, 2, 'PT. PJU'),
+(37, 70, 2, '<h4>50.6% Shares (253 sheets)</h4><p>Paid up capital of Rp 253,000,000,-</p>'),
+(38, 71, 2, 'PT. REC'),
+(39, 72, 2, '<h4>49% Shares (245 sheets)</h4><p>Paid up capital of Rp 245,000,000,-</p>'),
+(40, 73, 2, 'Kop DIPERTAM'),
+(41, 74, 2, '<h4>0.4% Shares (2 sheets)</h4><p>Paid up capital of Rp 2,000,000,-</p>'),
+(42, 52, 2, '<h4><b>Share Holder and Organisation Structure</b></h4>\r\n<p>Shareholding composition of PT. Petrogas Jatim Utama Cendana according to the business registration No. 44 at 25 Januari 2019, as a result of change of name from DSME ENR Cepu/DEC (before was SUM) to Raharja Energi Cepu (REC) as follows.\r\n</p>');
 
 -- --------------------------------------------------------
 
@@ -1538,6 +1649,13 @@ CREATE TABLE `sl_slide` (
   `image2` varchar(225) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `sl_slide`
+--
+
+INSERT INTO `sl_slide` (`id`, `topik_id`, `image`, `active`, `date_input`, `date_update`, `insert_by`, `last_update_by`, `writer`, `sort`, `image2`) VALUES
+(1, 0, 'fa8cd-Layer-71.jpg', 1, '2019-10-30 10:33:38', '2019-10-30 10:33:38', 'info@markdesign.net', 'info@markdesign.net', '', 1, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -1554,6 +1672,39 @@ CREATE TABLE `sl_slide_description` (
   `url_teks` varchar(200) NOT NULL,
   `url` varchar(200) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `sl_slide_description`
+--
+
+INSERT INTO `sl_slide_description` (`id`, `slide_id`, `language_id`, `title`, `subtitle`, `content`, `url_teks`, `url`) VALUES
+(1, 1, 2, 'fcs 1', '', '', '', ''),
+(2, 1, 3, 'fcs 1', '', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_blockbuilding`
+--
+
+CREATE TABLE `tb_blockbuilding` (
+  `id` bigint(20) NOT NULL,
+  `nama` varchar(225) NOT NULL,
+  `lokasi_blok` varchar(225) DEFAULT NULL,
+  `image` varchar(225) DEFAULT NULL,
+  `facts_info` text,
+  `facilities_info` text,
+  `sorts` int(5) DEFAULT NULL,
+  `active` int(2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `tb_blockbuilding`
+--
+
+INSERT INTO `tb_blockbuilding` (`id`, `nama`, `lokasi_blok`, `image`, `facts_info`, `facilities_info`, `sorts`, `active`) VALUES
+(1, 'Banyu Urip Plant', 'CEPU BLOCK', 'a3d58-hhhh_03.jpg', '<p>Ditemukan tahun 2001<br>POD di setujui BP Migas 4 Juli 2006<br>3 Well Pad :<br>- Well Pad A (9 Sumur Produksi, 4 Sumur Water Injeksi, 1 Sumur Gas Injeksi)<br>- Well Pad B (11 Sumur Produksi, 5 Sumur Water Injeksi)<br>- Well Pad C (10 Sumur Produksi, 4 Sumur Water Injeksi,1 Sumur Gas Injeksi)<br>Kumulatif Produksi Minyak 31 Agustus 2009 – 31 Maret 2019 = 303,83 MMBO<br>Cadangan Minyak = 823 MMBO, sisa cadangan per 31 Maret 2019 = 519,17 MMBO<br>Rata-rata Produksi Minyak Januari 2019 – Maret 2019 = 220,71 BOPD</p>', '<p>Sour oil and gas processing (45% CO2 and 16% H2S)</p><p>- Produced gas used as fueld or re-injected<br>- Produced water re-injected with raw water (365 KBD water injection)<br>- 4 x 31.500 bbls crude storage tank<br>- 5 GTG with 12.7 MW capacity and 1 GTG (12.7 MW back up)</p><p>Onshore Pipeline<br>- 20” Diameter<br>- 72 km total length<br>- 900 psig (6205 kPA) @78 deg C Maximum Allowable Operating Pressure<br>- 1350 psig (9307 kPA) design pressure</p>', 1, 1),
+(2, 'Kedung Keris Field', 'CEPU BLOCK', '2f5c4-hhh_04.jpg', '<p>Ditemukan tahun 2001<br>POD di setujui BP Migas 4 Juli 2006<br>3 Well Pad :<br>- Well Pad A (9 Sumur Produksi, 4 Sumur Water Injeksi, 1 Sumur Gas Injeksi)<br>- Well Pad B (11 Sumur Produksi, 5 Sumur Water Injeksi)<br>- Well Pad C (10 Sumur Produksi, 4 Sumur Water Injeksi,1 Sumur Gas Injeksi)<br>Kumulatif Produksi Minyak 31 Agustus 2009 – 31 Maret 2019 = 303,83 MMBO<br>Cadangan Minyak = 823 MMBO, sisa cadangan per 31 Maret 2019 = 519,17 MMBO<br>Rata-rata Produksi Minyak Januari 2019 – Maret 2019 = 220,71 BOPD</p>', '<p>Sour oil and gas processing (45% CO2 and 16% H2S)</p><p>- Produced gas used as fueld or re-injected<br>- Produced water re-injected with raw water (365 KBD water injection)<br>- 4 x 31.500 bbls crude storage tank<br>- 5 GTG with 12.7 MW capacity and 1 GTG (12.7 MW back up)</p><p>Onshore Pipeline<br>- 20” Diameter<br>- 72 km total length<br>- 900 psig (6205 kPA) @78 deg C Maximum Allowable Operating Pressure<br>- 1350 psig (9307 kPA) design pressure</p>', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -1666,6 +1817,40 @@ INSERT INTO `tb_services_description` (`id`, `services_id`, `language_id`, `titl
 (17, 5, 2, 'Financial Restructuring Advisory', '<p><br></p><p>Corpus helps the client to reorganize business assets and liabilities where an organization’s overall structure and it’s processes are revamped. The service includes debt restructuring and equity restructuring.</p>', '<ol><li>Client comes with project</li><li>Due diligence</li><li>Market survey and research</li><li>Business analysis</li><li>Financial Projection</li><li>Derive business Plan</li><li>Present the result to the client</li><li>Final stage by helping the clien to restructure their financial position</li></ol>', '<p>Corpus offers full range of financial services for both public and private organisations, with the benefit of ensuring the legal compliance of all our advisory and recommendations. The combination of our expertise in the financial and legal field allow us to support our clients and their businesses in a secure, integrated and resilient manner.</p><p><a href=\"http://richmore.co/corpus/en/home/contactus\">Contact </a>Corpus Capital Group Now, we’re here for all your needs of financial services.</p>'),
 (22, 6, 3, 'Akuisisi Merger', '<p>Corpus membantu memberikan informasi dan saran yang relevan mengenai kebutuhan klien terkait dengan akuisisi merger, seperti membeli, menjual, membagi, dan menggabungkan berbagai perusahaan dan entitas serupa yang dapat membantu perusahaan tumbuh pesat di sektor atau lokasi asal, atau bidang baru atau lokasi baru, tanpa membuat anak perusahaan, entitas anak lain atau menggunakan usaha patungan.</p>', '<ol><li>Klien datang dengan dana untuk mengakuisisi perusahaan yang berpotensi bergabung, atau klien datang dengan proyek dalam mencari perusahaan potensial untuk bergabung</li><li>Uji kelayakan</li><li>Survei dan penelitian pasar</li><li>Analisa bisnis</li><li>Proyeksi finansial</li><li>Rencana Bisnis yang diturunkan</li><li>Sajikan hasilnya kepada klien</li><li>Mencari mitra merger potensial yang cocok dengan persyaratan klien.</li><li>Bantu klien dengan kebutuhan dalam proses merger.</li></ol>', '<p>Corpus menawarkan berbagai layanan keuangan untuk organisasi publik dan swasta, dengan manfaat memastikan kepatuhan hukum semua saran dan saran kami. Kombinasi keahlian kami di bidang keuangan dan hukum memungkinkan kami untuk mendukung klien kami dan bisnis mereka dengan cara yang aman, terintegrasi dan tangguh.</p><p>Hubungi Corpus Capital Group Sekarang, kami di sini untuk semua kebutuhan Anda akan layanan keuangan.</p>'),
 (21, 6, 2, 'Merger Acquisition', '<p><br></p><p>Corpus helps provide relevant information and advices regarding the client’s needs related to merger acquisition, such as buying, selling, dividing and combining of different companies and similar entities that can help an enterprise grow rapidly in it’s sector or location of origin, or a new field or new location, without creating a subsidiary, other child entity or using a joint venture.</p>', '<ol><li>Client comes with fund to acquire potential merging company, or client comes with project in searching potential company to merge with</li><li>Due diligence</li><li>Market survey and research</li><li>Business analysis</li><li>Financial Projection</li><li>Derived Business Plan</li><li>Present the result to the client</li><li>Searching for potential merging partner which match the client requirements.</li><li>Help the client with necessities in the merger process.</li></ol>', '<p>Corpus offers full range of financial services for both public and private organisations, with the benefit of ensuring the legal compliance of all our advisory and recommendations. The combination of our expertise in the financial and legal field allow us to support our clients and their businesses in a secure, integrated and resilient manner.</p><p><a href=\"http://richmore.co/corpus/en/home/contactus\">Contact </a>Corpus Capital Group Now, we’re here for all your needs of financial services.</p>');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_statistik_list`
+--
+
+CREATE TABLE `tb_statistik_list` (
+  `id` int(10) NOT NULL,
+  `tgl_statistik` varchar(225) NOT NULL,
+  `bopd` varchar(225) DEFAULT NULL,
+  `mscfd` varchar(225) DEFAULT NULL,
+  `bwpd` varchar(225) DEFAULT NULL,
+  `image` varchar(225) DEFAULT NULL,
+  `date_input` date DEFAULT NULL,
+  `status` int(5) DEFAULT NULL,
+  `sorts` int(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `tb_statistik_list`
+--
+
+INSERT INTO `tb_statistik_list` (`id`, `tgl_statistik`, `bopd`, `mscfd`, `bwpd`, `image`, `date_input`, `status`, `sorts`) VALUES
+(1, '2019-11-01', '5048', '2757', '1358', 'ea0ac-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', NULL, 1, NULL),
+(2, '2019-10-31', '5058', '2578', '1259', '8b76c-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', NULL, 1, NULL),
+(3, '2019-11-02', '5049', '2565', '1349', '06930-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', NULL, 1, NULL),
+(4, '2019-11-01', '5054', '2389', '1472', '9991b-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', NULL, 1, NULL),
+(5, '2019-10-31', '5023', '2197', '1268', 'c0dd6-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', NULL, 1, NULL),
+(6, '2019-11-02', '4392', '1932', '1543', '1c3e9-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', NULL, 1, NULL),
+(7, '2019-11-03', '4321', '3215', '2536', '221ab-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', NULL, 1, NULL),
+(8, '2019-11-03', '2531', '5362', '4621', 'cc9e3-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', NULL, 1, NULL),
+(9, '2019-11-01', '2612', '5238', '5272', '543a2-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', NULL, 1, NULL),
+(10, '2019-11-03', '5246', '2384', '5238', '65a8a-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', NULL, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -1921,115 +2106,17 @@ INSERT INTO `tt_text` (`id`, `category`, `message`) VALUES
 (86, 'front', 'AVAILABLE POSITIONS'),
 (87, 'front', 'There are no opening positions at the moment.'),
 (88, 'front', 'Newsroom'),
-(89, 'admin', 'Our Business');
+(89, 'admin', 'Our Business'),
+(90, 'admin', 'Block Building'),
+(91, 'admin', 'Statistic Data');
 
 -- --------------------------------------------------------
-
---
--- Stand-in struktur untuk tampilan `view_blog`
--- (Lihat di bawah untuk tampilan aktual)
---
-CREATE TABLE `view_blog` (
-`id` int(11)
-,`topik_id` int(11)
-,`image` varchar(255)
-,`active` int(11)
-,`date_input` datetime
-,`date_update` datetime
-,`insert_by` varchar(255)
-,`last_update_by` varchar(255)
-,`writer` int(25)
-,`id2` int(11)
-,`blog_id` int(11)
-,`language_id` int(11)
-,`title` varchar(255)
-,`content` text
-,`quote` text
-);
-
--- --------------------------------------------------------
-
---
--- Stand-in struktur untuk tampilan `view_category`
--- (Lihat di bawah untuk tampilan aktual)
---
-CREATE TABLE `view_category` (
-`id` int(11)
-,`parent_id` int(11)
-,`sort` int(11)
-,`image` varchar(200)
-,`type` varchar(100)
-,`data` text
-,`id2` int(11)
-,`category_id` int(11)
-,`language_id` int(11)
-,`name` varchar(100)
-,`data2` text
-);
-
--- --------------------------------------------------------
-
---
--- Stand-in struktur untuk tampilan `view_gallery`
--- (Lihat di bawah untuk tampilan aktual)
---
-CREATE TABLE `view_gallery` (
-`id` int(11)
-,`topik_id` int(11)
-,`image` varchar(255)
-,`image2` varchar(200)
-,`active` int(11)
-,`date_input` datetime
-,`date_update` datetime
-,`insert_by` varchar(255)
-,`last_update_by` varchar(255)
-,`writer` varchar(200)
-,`city` varchar(100)
-,`harga` int(11)
-,`color` varchar(100)
-,`orientation` int(11)
-,`id2` int(11)
-,`gallery_id` int(11)
-,`language_id` int(11)
-,`title` varchar(255)
-,`sub_title` text
-,`sub_title_2` text
-,`content` text
-);
-
--- --------------------------------------------------------
-
---
--- Stand-in struktur untuk tampilan `view_slide`
--- (Lihat di bawah untuk tampilan aktual)
---
-CREATE TABLE `view_slide` (
-`id` int(11)
-,`topik_id` int(11)
-,`image` varchar(255)
-,`active` int(11)
-,`date_input` datetime
-,`date_update` datetime
-,`insert_by` varchar(255)
-,`last_update_by` varchar(255)
-,`writer` varchar(200)
-,`id2` int(11)
-,`slide_id` int(11)
-,`language_id` int(11)
-,`title` varchar(255)
-,`content` text
-,`url` varchar(200)
-,`sort` int(11)
-);
-
--- --------------------------------------------------------
-
 --
 -- Struktur untuk view `view_blog`
 --
 DROP TABLE IF EXISTS `view_blog`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_blog`  AS  select `pg_blog`.`id` AS `id`,`pg_blog`.`topik_id` AS `topik_id`,`pg_blog`.`image` AS `image`,`pg_blog`.`active` AS `active`,`pg_blog`.`date_input` AS `date_input`,`pg_blog`.`date_update` AS `date_update`,`pg_blog`.`insert_by` AS `insert_by`,`pg_blog`.`last_update_by` AS `last_update_by`,`pg_blog`.`writer` AS `writer`,`pg_blog_description`.`id` AS `id2`,`pg_blog_description`.`blog_id` AS `blog_id`,`pg_blog_description`.`language_id` AS `language_id`,`pg_blog_description`.`title` AS `title`,`pg_blog_description`.`content` AS `content`,`pg_blog_description`.`quote` AS `quote` from (`pg_blog` join `pg_blog_description` on((`pg_blog`.`id` = `pg_blog_description`.`blog_id`))) ;
+CREATE VIEW `view_blog`  AS  select `pg_blog`.`id` AS `id`,`pg_blog`.`topik_id` AS `topik_id`,`pg_blog`.`image` AS `image`,`pg_blog`.`active` AS `active`,`pg_blog`.`date_input` AS `date_input`,`pg_blog`.`date_update` AS `date_update`,`pg_blog`.`insert_by` AS `insert_by`,`pg_blog`.`last_update_by` AS `last_update_by`,`pg_blog`.`writer` AS `writer`,`pg_blog_description`.`id` AS `id2`,`pg_blog_description`.`blog_id` AS `blog_id`,`pg_blog_description`.`language_id` AS `language_id`,`pg_blog_description`.`title` AS `title`,`pg_blog_description`.`content` AS `content`,`pg_blog_description`.`quote` AS `quote` from (`pg_blog` join `pg_blog_description` on((`pg_blog`.`id` = `pg_blog_description`.`blog_id`))) ;
 
 -- --------------------------------------------------------
 
@@ -2038,7 +2125,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `view_category`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_category`  AS  select `prd_category`.`id` AS `id`,`prd_category`.`parent_id` AS `parent_id`,`prd_category`.`sort` AS `sort`,`prd_category`.`image` AS `image`,`prd_category`.`type` AS `type`,`prd_category`.`data` AS `data`,`prd_category_description`.`id` AS `id2`,`prd_category_description`.`category_id` AS `category_id`,`prd_category_description`.`language_id` AS `language_id`,`prd_category_description`.`name` AS `name`,`prd_category_description`.`data` AS `data2` from (`prd_category` join `prd_category_description` on((`prd_category`.`id` = `prd_category_description`.`category_id`))) ;
+CREATE VIEW `view_category`  AS  select `prd_category`.`id` AS `id`,`prd_category`.`parent_id` AS `parent_id`,`prd_category`.`sort` AS `sort`,`prd_category`.`image` AS `image`,`prd_category`.`type` AS `type`,`prd_category`.`data` AS `data`,`prd_category_description`.`id` AS `id2`,`prd_category_description`.`category_id` AS `category_id`,`prd_category_description`.`language_id` AS `language_id`,`prd_category_description`.`name` AS `name`,`prd_category_description`.`data` AS `data2` from (`prd_category` join `prd_category_description` on((`prd_category`.`id` = `prd_category_description`.`category_id`))) ;
 
 -- --------------------------------------------------------
 
@@ -2047,7 +2134,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `view_gallery`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_gallery`  AS  select `gal_gallery`.`id` AS `id`,`gal_gallery`.`topik_id` AS `topik_id`,`gal_gallery`.`image` AS `image`,`gal_gallery`.`image2` AS `image2`,`gal_gallery`.`active` AS `active`,`gal_gallery`.`date_input` AS `date_input`,`gal_gallery`.`date_update` AS `date_update`,`gal_gallery`.`insert_by` AS `insert_by`,`gal_gallery`.`last_update_by` AS `last_update_by`,`gal_gallery`.`writer` AS `writer`,`gal_gallery`.`city` AS `city`,`gal_gallery`.`harga` AS `harga`,`gal_gallery`.`color` AS `color`,`gal_gallery`.`orientation` AS `orientation`,`gal_gallery_description`.`id` AS `id2`,`gal_gallery_description`.`gallery_id` AS `gallery_id`,`gal_gallery_description`.`language_id` AS `language_id`,`gal_gallery_description`.`title` AS `title`,`gal_gallery_description`.`sub_title` AS `sub_title`,`gal_gallery_description`.`sub_title_2` AS `sub_title_2`,`gal_gallery_description`.`content` AS `content` from (`gal_gallery` join `gal_gallery_description` on((`gal_gallery`.`id` = `gal_gallery_description`.`gallery_id`))) ;
+CREATE VIEW `view_gallery`  AS  select `gal_gallery`.`id` AS `id`,`gal_gallery`.`topik_id` AS `topik_id`,`gal_gallery`.`image` AS `image`,`gal_gallery`.`image2` AS `image2`,`gal_gallery`.`active` AS `active`,`gal_gallery`.`date_input` AS `date_input`,`gal_gallery`.`date_update` AS `date_update`,`gal_gallery`.`insert_by` AS `insert_by`,`gal_gallery`.`last_update_by` AS `last_update_by`,`gal_gallery`.`writer` AS `writer`,`gal_gallery`.`city` AS `city`,`gal_gallery`.`harga` AS `harga`,`gal_gallery`.`color` AS `color`,`gal_gallery`.`orientation` AS `orientation`,`gal_gallery_description`.`id` AS `id2`,`gal_gallery_description`.`gallery_id` AS `gallery_id`,`gal_gallery_description`.`language_id` AS `language_id`,`gal_gallery_description`.`title` AS `title`,`gal_gallery_description`.`sub_title` AS `sub_title`,`gal_gallery_description`.`sub_title_2` AS `sub_title_2`,`gal_gallery_description`.`content` AS `content` from (`gal_gallery` join `gal_gallery_description` on((`gal_gallery`.`id` = `gal_gallery_description`.`gallery_id`))) ;
 
 -- --------------------------------------------------------
 
@@ -2056,7 +2143,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `view_slide`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `view_slide`  AS  select `sl_slide`.`id` AS `id`,`sl_slide`.`topik_id` AS `topik_id`,`sl_slide`.`image` AS `image`,`sl_slide`.`active` AS `active`,`sl_slide`.`date_input` AS `date_input`,`sl_slide`.`date_update` AS `date_update`,`sl_slide`.`insert_by` AS `insert_by`,`sl_slide`.`last_update_by` AS `last_update_by`,`sl_slide`.`writer` AS `writer`,`sl_slide_description`.`id` AS `id2`,`sl_slide_description`.`slide_id` AS `slide_id`,`sl_slide_description`.`language_id` AS `language_id`,`sl_slide_description`.`title` AS `title`,`sl_slide_description`.`content` AS `content`,`sl_slide_description`.`url` AS `url`,`sl_slide`.`sort` AS `sort` from (`sl_slide` join `sl_slide_description` on((`sl_slide_description`.`slide_id` = `sl_slide`.`id`))) ;
+CREATE VIEW `view_slide`  AS  select `sl_slide`.`id` AS `id`,`sl_slide`.`topik_id` AS `topik_id`,`sl_slide`.`image` AS `image`,`sl_slide`.`active` AS `active`,`sl_slide`.`date_input` AS `date_input`,`sl_slide`.`date_update` AS `date_update`,`sl_slide`.`insert_by` AS `insert_by`,`sl_slide`.`last_update_by` AS `last_update_by`,`sl_slide`.`writer` AS `writer`,`sl_slide_description`.`id` AS `id2`,`sl_slide_description`.`slide_id` AS `slide_id`,`sl_slide_description`.`language_id` AS `language_id`,`sl_slide_description`.`title` AS `title`,`sl_slide_description`.`content` AS `content`,`sl_slide_description`.`url` AS `url`,`sl_slide`.`sort` AS `sort` from (`sl_slide` join `sl_slide_description` on((`sl_slide_description`.`slide_id` = `sl_slide`.`id`))) ;
 
 --
 -- Indexes for dumped tables
@@ -2365,6 +2452,12 @@ ALTER TABLE `sl_slide_description`
   ADD KEY `language_id` (`language_id`);
 
 --
+-- Indeks untuk tabel `tb_blockbuilding`
+--
+ALTER TABLE `tb_blockbuilding`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `tb_group`
 --
 ALTER TABLE `tb_group`
@@ -2388,6 +2481,12 @@ ALTER TABLE `tb_services`
 ALTER TABLE `tb_services_description`
   ADD PRIMARY KEY (`id`),
   ADD KEY `language_id` (`language_id`);
+
+--
+-- Indeks untuk tabel `tb_statistik_list`
+--
+ALTER TABLE `tb_statistik_list`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `tb_teams_list`
@@ -2443,7 +2542,7 @@ ALTER TABLE `about_image`
 -- AUTO_INCREMENT untuk tabel `address`
 --
 ALTER TABLE `address`
-  MODIFY `id` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(25) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `banner`
@@ -2515,7 +2614,7 @@ ALTER TABLE `list_career`
 -- AUTO_INCREMENT untuk tabel `log`
 --
 ALTER TABLE `log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT untuk tabel `me_member`
@@ -2689,13 +2788,13 @@ ALTER TABLE `sertifikasi`
 -- AUTO_INCREMENT untuk tabel `setting`
 --
 ALTER TABLE `setting`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
 
 --
 -- AUTO_INCREMENT untuk tabel `setting_description`
 --
 ALTER TABLE `setting_description`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT untuk tabel `shp_shipping_price`
@@ -2707,13 +2806,19 @@ ALTER TABLE `shp_shipping_price`
 -- AUTO_INCREMENT untuk tabel `sl_slide`
 --
 ALTER TABLE `sl_slide`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `sl_slide_description`
 --
 ALTER TABLE `sl_slide_description`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT untuk tabel `tb_blockbuilding`
+--
+ALTER TABLE `tb_blockbuilding`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_group`
@@ -2738,6 +2843,12 @@ ALTER TABLE `tb_services`
 --
 ALTER TABLE `tb_services_description`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT untuk tabel `tb_statistik_list`
+--
+ALTER TABLE `tb_statistik_list`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_teams_list`
@@ -2773,7 +2884,7 @@ ALTER TABLE `trips`
 -- AUTO_INCREMENT untuk tabel `tt_text`
 --
 ALTER TABLE `tt_text`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
