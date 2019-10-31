@@ -44,10 +44,16 @@
             </ul>
         </li>
 
+
         <li class="dropdown"><a href="#"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'Our Business') ?></a>
             <ul>
                 <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/business')); ?>">Static Business</a></li>
-                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/')); ?>">List Business</a></li>
+                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/blockbuilding')); ?>">List Block Building</a></li>
+            </ul>
+        </li>
+        <li class="dropdown"><a href="#"><span class="fa fa-flag"></span> <?php echo Tt::t('admin', 'Statistic Data') ?></a>
+            <ul>
+                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/statistikList')); ?>">Statistic</a></li>
             </ul>
         </li>
 
@@ -86,7 +92,7 @@
         <li class="dropdown"><a href="#"><span class="fa fa-phone"></span> <?php echo Tt::t('admin', 'Contact Us') ?></a>
             <ul>
                 <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/contact')); ?>">Static Contact</a></li>
-                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/address/index')); ?>">List Company Location</a></li>
+                <!-- <li><a href="<?php // echo CHtml::normalizeUrl(array('/admin/address/index')); ?>">List Company Location</a></li> -->
             </ul>
         </li>
 

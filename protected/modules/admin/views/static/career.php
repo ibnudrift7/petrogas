@@ -108,7 +108,7 @@ $this->pageHeader=array(
 		    </div>
 			<div class="widgetcontent">
 
-				<?php $type = 'career_content' ?>
+				<?php $type = 'career1_content' ?>
 				<?php Common::createSetting($type, 'Content', 'text', 'y') ?>
 				<?php foreach (Language::model()->getLanguage() as $key => $value): ?>
 					<div class="pj-multilang-wrap myLanguage control-group" style="display: <?php if ($value->code==$this->setting['lang_deff']): ?>block<?php else: ?>none<?php endif ?>;" data-id="<?php echo $value->id ?>">
@@ -119,6 +119,11 @@ $this->pageHeader=array(
 					    <span class="help-inline _em_" style="display: none;">Please correct the error</span>
 					</div>
 				<?php endforeach ?>
+
+				<?php $type = 'career_email' ?>
+				<?php Common::createSetting($type, 'Career Email', 'text', 'n') ?>
+				<label for="Setting_<?php echo $model[$type]['data']->name ?>" class="control-label required"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
+				<?php echo CHtml::textField('Setting['.$model[$type]['data']->name.']', $model[$type]['data']->value, array('class'=>'span12')) ?>
 
 				<div class="divider10"></div>
 				<?php $this->widget('bootstrap.widgets.TbButton', array(

@@ -1,13 +1,11 @@
-home_cover_fcs_subtitle
-home_cover_fcs_title
+home_sectionf_text
 
 home1_title
 home1_subtitle
 
-home1_banner_pictures
-home1_banner_title
-home1_banner_info
-home1_banner_link
+home2_banner_pictures
+home2_banner_content
+home2_banner_link
 
 ---------------
 
@@ -22,8 +20,8 @@ facilities_info
 ---------------
 ABOUT US
 
-about_cover_picture
-about_cover_title
+about_hero_image
+about_hero_title
 
 about1_content
 about_history_picture
@@ -33,16 +31,16 @@ about_milestones_picture1
 about_milestones_title1
 about_milestones_info1 * 4
 
-about_vision_content
-about_mision_content
+about_visi
+about_misi
 
 about_pujv_banner
 
 ---------------
 OUR BUSINESS
 
-business_cover_picture
-business_cover_title
+business_hero_image
+business_hero_title
 
 business1_content
 business2_holder_content
@@ -58,8 +56,8 @@ info_desc
 ---------------
 CAREER
 
-career_cover_picture
-career_cover_title
+career_hero_image
+career_hero_title
 
 career1_content
 career_email
@@ -67,9 +65,13 @@ career_email
 ---------------
 CONTACT US
 
+contact_hero_image
+contact_hero_title
+
 contact_name_pt
 contact_address_head
 contact_address_office
 
 contact_wa
 contact_phone
+career_email

@@ -139,7 +139,7 @@
         //datepicker
         jQuery('#datepicker').datepicker();
 
-        jQuery('#datepicker2').datepicker({
+        jQuery('#datepicker2, .datepicker2').datepicker({
             dateFormat: 'yy-mm-dd',
         });
         

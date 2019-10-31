@@ -37,7 +37,6 @@ $this->pageHeader=array(
 				        'alerts'=>array('success'),
 				    )); ?>
 				<?php endif; ?>
-
 				<?php Yii::import('ext.imperavi-redactor-widget.ImperaviRedactorWidget'); ?>
 				<?php $this->widget('ImperaviRedactorWidget', array(
 				    'selector' => '.redactor',
@@ -61,13 +60,13 @@ $this->pageHeader=array(
 					    <span class="pj-multilang-input"><img src="<?php echo Yii::app()->baseUrl.'/asset/backend/language/'.$value->code.'.png' ?>"></span>
 					    <span class="help-inline _em_" style="display: none;">Please correct the error</span>
 					</div>
-				<?php endforeach ?>
+				<?php endforeach; ?>
 
 				<div class="divider15"></div>
 				<div class="lines-grey" style="background-color: #ccc; height: 1px;"></div>
 				<div class="divider15"></div>
 
-				<?php $type = 'home_section1_title' ?>
+				<?php $type = 'home1_title' ?>
 				<?php Common::createSetting($type, 'Title', 'text', 'y') ?>
 				<?php foreach (Language::model()->getLanguage() as $key => $value): ?>
 					<div class="pj-multilang-wrap myLanguage control-group" style="display: <?php if ($value->code==$this->setting['lang_deff']): ?>block<?php else: ?>none<?php endif ?>;" data-id="<?php echo $value->id ?>">
@@ -79,7 +78,7 @@ $this->pageHeader=array(
 					</div>
 				<?php endforeach ?>
 
-				<?php $type = 'home_section1_subtitle' ?>
+				<?php $type = 'home1_subtitle' ?>
 				<?php Common::createSetting($type, 'Sub Title', 'text', 'y') ?>
 				<?php foreach (Language::model()->getLanguage() as $key => $value): ?>
 					<div class="pj-multilang-wrap myLanguage control-group" style="display: <?php if ($value->code==$this->setting['lang_deff']): ?>block<?php else: ?>none<?php endif ?>;" data-id="<?php echo $value->id ?>">
@@ -89,36 +88,7 @@ $this->pageHeader=array(
 					    <span class="pj-multilang-input"><img src="<?php echo Yii::app()->baseUrl.'/asset/backend/language/'.$value->code.'.png' ?>"></span>
 					    <span class="help-inline _em_" style="display: none;">Please correct the error</span>
 					</div>
-				<?php endforeach ?>
-
-				<?php $type = 'home_section1_link_schedule_text' ?>
-				<?php Common::createSetting($type, 'Schedule Text', 'text', 'y') ?>
-				<?php foreach (Language::model()->getLanguage() as $key => $value): ?>
-					<div class="pj-multilang-wrap myLanguage control-group" style="display: <?php if ($value->code==$this->setting['lang_deff']): ?>block<?php else: ?>none<?php endif ?>;" data-id="<?php echo $value->id ?>">
-						<label class="control-label required" for="Setting_<?php echo $type ?>_<?php echo $value->code ?>"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
-						<textarea id="Setting_<?php echo $type ?>_<?php echo $value->code ?>" name="Setting[<?php echo $type ?>][<?php echo $value->code ?>]" class="span11" rows="1"><?php echo $model[$type]['desc'][$value->code]->value ?></textarea>
-
-					    <span class="pj-multilang-input"><img src="<?php echo Yii::app()->baseUrl.'/asset/backend/language/'.$value->code.'.png' ?>"></span>
-					    <span class="help-inline _em_" style="display: none;">Please correct the error</span>
-					</div>
-				<?php endforeach ?>
-
-				<?php $type = 'home_section1_link_schedule' ?>
-				<?php Common::createSetting($type, 'Schedule Link', 'text', 'n') ?>
-				<label for="Setting_<?php echo $model[$type]['data']->name ?>" class="control-label required"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
-				<?php echo CHtml::textField('Setting['.$model[$type]['data']->name.']', $model[$type]['data']->value, array('class'=>'span12')) ?>			
-
-				<?php $type = 'home_section1_link_schedule_text_info' ?>
-				<?php Common::createSetting($type, 'Info Schedule Text', 'text', 'y') ?>
-				<?php foreach (Language::model()->getLanguage() as $key => $value): ?>
-					<div class="pj-multilang-wrap myLanguage control-group" style="display: <?php if ($value->code==$this->setting['lang_deff']): ?>block<?php else: ?>none<?php endif ?>;" data-id="<?php echo $value->id ?>">
-						<label class="control-label required" for="Setting_<?php echo $type ?>_<?php echo $value->code ?>"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
-						<textarea id="Setting_<?php echo $type ?>_<?php echo $value->code ?>" name="Setting[<?php echo $type ?>][<?php echo $value->code ?>]" class="span11" rows="1"><?php echo $model[$type]['desc'][$value->code]->value ?></textarea>
-
-					    <span class="pj-multilang-input"><img src="<?php echo Yii::app()->baseUrl.'/asset/backend/language/'.$value->code.'.png' ?>"></span>
-					    <span class="help-inline _em_" style="display: none;">Please correct the error</span>
-					</div>
-				<?php endforeach ?>					
+				<?php endforeach ?>				
 				
 				<div class="divider10"></div>
 				<?php $this->widget('bootstrap.widgets.TbButton', array(
@@ -133,45 +103,38 @@ $this->pageHeader=array(
 		
 		<div class="widgetbox">
 		    <div class="headtitle">
-				<h4 class="widgettitle">Section 1</h4>
+				<h4 class="widgettitle">Section 2</h4>
 		    </div>
 			<div class="widgetcontent">
+				
+				<?php $type = 'home2_banner_pictures' ?>
+				<?php Common::createSetting($type, 'Image', 'image', 'n') ?>
+				<label for="Setting_<?php echo $model[$type]['data']->name ?>" class="control-label required"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
+				<?php echo CHtml::fileField('Setting['.$model[$type]['data']->name.']', $model[$type]['data']->value, array('class'=>'span12')) ?>
+				<p class="help-block">NOTE: Picture  landscape with min size 1600 x 534 px, Larger image will be automatically cropped.</p>
+				<?php if ($model[$type]['data']->value): ?>
+					<div style="">
+						<img style="height: auto; max-width: 300px;" src="<?php echo Yii::app()->baseUrl; ?>/images/static/<?php echo $model[$type]['data']->value; ?>" alt="">
+					</div>
+					<div class="clearfix" style="height: 15px;"></div>
+					<div class="clearfix" style="height: 1px;"></div>
+				<?php endif; ?>
 
-				<?php $type = 'home_section2_smalltitle'; ?>
-				<?php Common::createSetting($type, 'Section2 Small Title', 'text', 'y') ?>
-				<?php foreach (Language::model()->getLanguage() as $key => $value): ?>
-				<div class="pj-multilang-wrap myLanguage control-group" style="display: <?php if ($value->code==$this->setting['lang_deff']): ?>block<?php else: ?>none<?php endif ?>;" data-id="<?php echo $value->id ?>">
-				<label class="control-label required" for="Setting_<?php echo $type ?>_<?php echo $value->code ?>"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
-				<input value="<?php echo $model[$type]['desc'][$value->code]->value ?>" type="text" id="Setting_<?php echo $type ?>_<?php echo $value->code ?>" name="Setting[<?php echo $type ?>][<?php echo $value->code ?>]" class="span10">
-
-				<span class="pj-multilang-input"><img src="<?php echo Yii::app()->baseUrl.'/asset/backend/language/'.$value->code.'.png' ?>"></span>
-				<span class="help-inline _em_" style="display: none;">Please correct the error</span>
-				</div>
-				<?php endforeach ?>
-
-				<?php $type = 'home_section2_title'; ?>
-				<?php Common::createSetting($type, 'Section2 Title', 'text', 'y') ?>
-				<?php foreach (Language::model()->getLanguage() as $key => $value): ?>
-				<div class="pj-multilang-wrap myLanguage control-group" style="display: <?php if ($value->code==$this->setting['lang_deff']): ?>block<?php else: ?>none<?php endif ?>;" data-id="<?php echo $value->id ?>">
-				<label class="control-label required" for="Setting_<?php echo $type ?>_<?php echo $value->code ?>"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
-				<input value="<?php echo $model[$type]['desc'][$value->code]->value ?>" type="text" id="Setting_<?php echo $type ?>_<?php echo $value->code ?>" name="Setting[<?php echo $type ?>][<?php echo $value->code ?>]" class="span10">
-
-				<span class="pj-multilang-input"><img src="<?php echo Yii::app()->baseUrl.'/asset/backend/language/'.$value->code.'.png' ?>"></span>
-				<span class="help-inline _em_" style="display: none;">Please correct the error</span>
-				</div>
-				<?php endforeach ?>
-
-				<?php $type = 'home_section2_subcontent'; ?>
-				<?php Common::createSetting($type, 'Section2 Content', 'text', 'y') ?>
+				<?php $type = 'home2_banner_content'; ?>
+				<?php Common::createSetting($type, 'Content', 'text', 'y') ?>
 				<?php foreach (Language::model()->getLanguage() as $key => $value): ?>
 				<div class="pj-multilang-wrap myLanguage control-group" style="display: <?php if ($value->code==$this->setting['lang_deff']): ?>block<?php else: ?>none<?php endif ?>;" data-id="<?php echo $value->id ?>">
 				<label class="control-label required" for="Setting_<?php echo $type ?>_<?php echo $value->code ?>"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
 				<textarea id="Setting_<?php echo $type ?>_<?php echo $value->code ?>" name="Setting[<?php echo $type ?>][<?php echo $value->code ?>]" class="span10 redactor" rows="2"><?php echo $model[$type]['desc'][$value->code]->value ?></textarea>
-
 				<span class="pj-multilang-input"><img src="<?php echo Yii::app()->baseUrl.'/asset/backend/language/'.$value->code.'.png' ?>"></span>
 				<span class="help-inline _em_" style="display: none;">Please correct the error</span>
 				</div>
 				<?php endforeach ?>
+
+				<?php $type = 'home2_banner_link' ?>
+				<?php Common::createSetting($type, 'Banners Link', 'text', 'n') ?>
+				<label for="Setting_<?php echo $model[$type]['data']->name ?>" class="control-label required"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
+				<?php echo CHtml::textField('Setting['.$model[$type]['data']->name.']', $model[$type]['data']->value, array('class'=>'span12')) ?>
 
 				<div class="divider10"></div>
 				<?php $this->widget('bootstrap.widgets.TbButton', array(
@@ -181,47 +144,7 @@ $this->pageHeader=array(
 				)); ?>
 
 			</div>
-		</div>
-
-		<div class="widgetbox">
-		    <div class="headtitle">
-				<h4 class="widgettitle">Section 2</h4>
-		    </div>
-			<div class="widgetcontent">
-				<?php $type = 'home_section2_smalltitle'; ?>
-				<?php Common::createSetting($type, 'Section1 Small Title', 'text', 'y') ?>
-				<?php foreach (Language::model()->getLanguage() as $key => $value): ?>
-				<div class="pj-multilang-wrap myLanguage control-group" style="display: <?php if ($value->code==$this->setting['lang_deff']): ?>block<?php else: ?>none<?php endif ?>;" data-id="<?php echo $value->id ?>">
-				<label class="control-label required" for="Setting_<?php echo $type ?>_<?php echo $value->code ?>"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
-				<input value="<?php echo $model[$type]['desc'][$value->code]->value ?>" type="text" id="Setting_<?php echo $type ?>_<?php echo $value->code ?>" name="Setting[<?php echo $type ?>][<?php echo $value->code ?>]" class="span10">
-
-				<span class="pj-multilang-input"><img src="<?php echo Yii::app()->baseUrl.'/asset/backend/language/'.$value->code.'.png' ?>"></span>
-				<span class="help-inline _em_" style="display: none;">Please correct the error</span>
-				</div>
-				<?php endforeach ?>
-
-				<?php $type = 'home_section2_title'; ?>
-				<?php Common::createSetting($type, 'Section1 Title', 'text', 'y') ?>
-				<?php foreach (Language::model()->getLanguage() as $key => $value): ?>
-				<div class="pj-multilang-wrap myLanguage control-group" style="display: <?php if ($value->code==$this->setting['lang_deff']): ?>block<?php else: ?>none<?php endif ?>;" data-id="<?php echo $value->id ?>">
-				<label class="control-label required" for="Setting_<?php echo $type ?>_<?php echo $value->code ?>"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
-				<input value="<?php echo $model[$type]['desc'][$value->code]->value ?>" type="text" id="Setting_<?php echo $type ?>_<?php echo $value->code ?>" name="Setting[<?php echo $type ?>][<?php echo $value->code ?>]" class="span10">
-
-				<span class="pj-multilang-input"><img src="<?php echo Yii::app()->baseUrl.'/asset/backend/language/'.$value->code.'.png' ?>"></span>
-				<span class="help-inline _em_" style="display: none;">Please correct the error</span>
-				</div>
-				<?php endforeach ?>
-
-				<div class="divider10"></div>
-				<?php $this->widget('bootstrap.widgets.TbButton', array(
-					'buttonType'=>'submit',
-					'type'=>'primary',
-					'label'=>'Save',
-				)); ?>
-
-			</div>
-		</div>
-		
+		</div>		
 
 		<div class="alert">
 		  <button type="button" class="close" data-dismiss="alert">×</button>

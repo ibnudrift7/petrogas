@@ -167,7 +167,8 @@
 				<?php endif; ?>
 		    </div>
 		</div>
-		
+		<?php
+		/*
 		<div class="divider15"></div>
 		<div class="widgetbox block-rightcontent">                        
 		    <div class="headtitle">
@@ -181,6 +182,7 @@
 				<?php endif; ?>
 		    </div>
 		</div>
+		*/ ?>
 
 	</div>
 </div>

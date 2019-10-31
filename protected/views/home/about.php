@@ -1,8 +1,8 @@
 <!-- illustration cover -->
-<section class="coverpages ill-about">
+<section class="coverpages ill-about" style="background-image: url('<?php echo Yii::app()->baseUrl.'/images/static/'. $this->setting['about_hero_image']; ?>');">
 	<!-- <div class="prelatife container"> -->
 		<div class="inners_npage_ill">
-			<h1>About Us</h1>
+			<h1><?php echo $this->setting['about_hero_title'] ?></h1>
 		</div>
 		<div class="clear"></div>
 	<!-- </div> -->
@@ -34,22 +34,23 @@
 			<div class="content-text t-about text-center">
 				<div class="py-4 d-none d-sm-block"></div>
 				<div class="mw1091 mx-auto">
-				<h2><strong>Opening new horizon of Indonesian Oil & Gas Industry.</strong><br>We are the no. 1 contributor in Indonesia, we will take the lead in nation’s oil and gas supplies.</h2>
+				<!-- <h2><strong>Opening new horizon of Indonesian Oil & Gas Industry.</strong><br>We are the no. 1 contributor in Indonesia, we will take the lead in nation’s oil and gas supplies.</h2>
 				<p>Petrogas Jatim Utama Cendana is conducting business in the fields of exploration, evaluation, preparation, feasibility studies, exploitation, production, development, mining, processing, storage and transportation of oil and gas for upstream oil and gas activities in the Cepu Block.</p>
-				<p>Petrogas Jatim Utama Cendana outstanding human resources on field and outside the field are providing the best possible exploration to distribution services based on domestic and global demand outnumbering other government oil and gas company in East Java. By continously expanding our operation field, Petrogas Jatim Utama Cendana will offer a variety of products for corporate needs and create comfortable chain supply environments applying digital transparancy to finance. We will take the leap to become the national group leading both the Indonesian and East Java distribution.</p>
+				<p>Petrogas Jatim Utama Cendana outstanding human resources on field and outside the field are providing the best possible exploration to distribution services based on domestic and global demand outnumbering other government oil and gas company in East Java. By continously expanding our operation field, Petrogas Jatim Utama Cendana will offer a variety of products for corporate needs and create comfortable chain supply environments applying digital transparancy to finance. We will take the leap to become the national group leading both the Indonesian and East Java distribution.</p> -->
+				<?php echo $this->setting['about1_content'] ?>
 				</div>
 				<div class="py-4"></div>
 				<div class="in_banner row">
 					<div class="col-md-30">
-						<div class="pict"><img src="<?php echo $this->assetBaseurl ?>about-value.jpg" alt="" class="img-fluid"></div>
+						<div class="pict"><img src="<?php echo Yii::app()->baseUrl.'/images/static/'. $this->setting['about2_pictures'] ?>" alt="" class="img-fluid"></div>
 					</div>
 					<div class="col-md-30 text-left">
-<!--						<div class="py-2"></div>-->
 						<div class="content-boxx">
 							<div class="pl-2">
-								<h2><b>History And Value Behind Petrogas Jatim Utama Cendana</b></h2>
+								<?php echo $this->setting['about_history_content'] ?>
+								<!-- <h2><b>History And Value Behind Petrogas Jatim Utama Cendana</b></h2>
 								<p>PT Petrogas Jatim Utama Cendana is a BUMD (govern under a province), which was a subsidiary company from Petrogas Jatim Utama. The reason of the establishment of PT Petrogas Jatim Utama Cendana is none other than to increase Indonesia's state revenue in the oil and gas sector for short-term purposes.</p>
-								<p>Currently holding the biggest possession of oil and gas exploration in East Java, PT Petrogas Jatim Utama Cendana is one of the main pilar of the oil distribution system in Indonesia.</p>
+								<p>Currently holding the biggest possession of oil and gas exploration in East Java, PT Petrogas Jatim Utama Cendana is one of the main pilar of the oil distribution system in Indonesia.</p> -->
 							</div>
 						</div>
 					</div>
@@ -68,24 +69,24 @@
 	<?php 
 		$data_milest = [
 						[
-							'pict'=>'milestones1.jpg',
-							'titles'=>'1997',
-							'subcontent'=>'The Birth of PT Petrogas',
+							'pict'=> $this->setting['about_milestones_picture_1'] ,
+							'titles'=> $this->setting['about_milestones_title_1'],
+							'subcontent'=> $this->setting['about_milestones_info_1'],
 						],
 						[
-							'pict'=>'milestones2.jpg',
-							'titles'=>'2000',
-							'subcontent'=>'The Birth of PT Petrogas Jatim Utama Cendana at East Java',
+							'pict'=> $this->setting['about_milestones_picture_2'] ,
+							'titles'=> $this->setting['about_milestones_title_2'],
+							'subcontent'=> $this->setting['about_milestones_info_2'],
 						],
 						[
-							'pict'=>'milestones3.jpg',
-							'titles'=>'2008-2012',
-							'subcontent'=>'Development and operations of Cepu Block oil refinery at East Java',
+							'pict'=> $this->setting['about_milestones_picture_3'] ,
+							'titles'=> $this->setting['about_milestones_title_3'],
+							'subcontent'=> $this->setting['about_milestones_info_3'],
 						],
 						[
-							'pict'=>'milestones4.jpg',
-							'titles'=>'2013-2016',
-							'subcontent'=>'Banyu Urip new development of oil exploration',
+							'pict'=> $this->setting['about_milestones_picture_4'] ,
+							'titles'=> $this->setting['about_milestones_title_4'],
+							'subcontent'=> $this->setting['about_milestones_info_4'],
 						],
 						
 					];
@@ -100,7 +101,7 @@
 					<?php foreach ($data_milest as $key => $value): ?>
 					<div class="col-md-15">
 						<div class="items">
-							<div class="pict"><img src="<?php echo $this->assetBaseurl ?><?php echo $value['pict'] ?>" alt="" class="img img-fluid"></div>
+							<div class="pict"><img src="<?php echo Yii::app()->baseUrl.'/images/static/' ?><?php echo $value['pict'] ?>" alt="" class="img img-fluid"></div>
 							<div class="info">
 								<h4 class="subtitles"><?php echo $value['titles'] ?></h4>
 								<div class="clear"></div>
@@ -131,7 +132,7 @@
 								<div class="lines-grey"></div>
 							</div>
 							<div class="d-inline-block align-top b-info">
-								<p>We strive to fulfil our responsibilities as a regional level exploration and distribution company to match even the nation level of oil and gas company, help our nation grow, and contribute to create a modern culture where the country, people, and contractors are connected in a never ending supply system.</p>
+								<?php echo $this->setting['about_visi'] ?>
 							</div>
 						</div>
 					</div>
@@ -144,7 +145,7 @@
 								<div class="lines-grey"></div>
 							</div>
 							<div class="d-inline-block align-top b-info">
-								<p>Developing ourselves as a regional oil and gas company that are able to compete nationally with professional corporations, supported by experts who are competent in their fields.</p>
+								<?php echo $this->setting['about_misi'] ?>
 							</div>
 						</div>
 					</div>
@@ -183,7 +184,7 @@
 					<div class="clear"></div>
 				</div> -->
 				<div class="dn_banners d-block mx-auto">
-					<img src="<?php echo $this->assetBaseurl ?>block_bottoms_missl.png" alt="" class="img img-fluid">
+					<img src="<?php echo Yii::app()->baseUrl.'/images/static/'. $this->setting['about_pujv_banner'] ?>" alt="" class="img img-fluid">
 				</div>
 				<div class="py-3 d-block d-sm-none"></div>
 				<div class="py-4 d-none d-sm-block"></div>

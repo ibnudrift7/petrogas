@@ -7,13 +7,13 @@
 			<div class="col-md-36">
 				<ul>
 					<li>
-						<p>Whatsapp <a href="">081 6480 7016</a></p>
+						<p>Whatsapp <a href="#"><?php echo $this->setting['contact_wa'] ?></a></p>
 					</li>
 					<li>
-						<p>Telephone <a href="">+62 21 590 7777</a></p>
+						<p>Telephone <a href="#"><?php echo $this->setting['contact_phone'] ?></a></p>
 					</li>
 					<li class="nooo">
-						<p>Email <a href="mailto:info@pjuc.co.id">info@pjuc.co.id</a></p>
+						<p>Email <a href="mailto:<?php echo $this->setting['contact_email'] ?>"><?php echo $this->setting['contact_email'] ?></a></p>
 					</li>
 				</ul>
 			</div>
