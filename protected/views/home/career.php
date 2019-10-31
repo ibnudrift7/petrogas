@@ -1,8 +1,8 @@
 <!-- illustration cover -->
-<section class="coverpages ill-career">
+<section class="coverpages ill-about" style="background-image: url('<?php echo Yii::app()->baseUrl.'/images/static/'. $this->setting['career_hero_image']; ?>');">
   <!-- <div class="prelatife container"> -->
     <div class="inners_npage_ill">
-      <h1>Career</h1>
+      <h1><?php echo $this->setting['career_hero_title'] ?></h1>
     </div>
     <div class="clear"></div>
   <!-- </div> -->
@@ -17,7 +17,7 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">HOME</a></li>
-              <li class="breadcrumb-item active" aria-current="page">CAREER</li>
+              <li class="breadcrumb-item active" aria-current="page"><?php echo $this->setting['career_hero_title'] ?></li>
             </ol>
           </nav>
           <div class="clear"></div>
@@ -35,16 +35,14 @@
       <div class="content-text t-about text-center">
         <div class="py-4 d-none d-sm-block"></div>
         <div class="mw1091 mx-auto">
-          <h2><strong>Join Petrogas Jatim Utama Cendana Successfull Team.</strong>
-            <br>We are always looking for candidates who have the potential to strengthen our group.</h2>
-          <p>Petrogas Jatim Utama Cendana has big future plans and involves endless development both in infrastructure and human resource development. If you have the interest and enthusiasm to join our company, please send your resume to the email address below.</p>
+          <?php echo $this->setting['career1_content'] ?>
           
           <div class="py-4">
           <img src="<?php echo $this->assetBaseurl ?>bacs_line-middles_tengah.jpg" alt="" class="img img-fluid">  
           </div>
 
           <div class="buttons_bluedark">
-            <a href="mailto:career@petrogas.pwj.co.id" class="btn btn-link">career@petrogas.pwj.co.id</a>
+            <a href="mailto:<?php echo $this->setting['career_email'] ?>" class="btn btn-link"><?php echo $this->setting['career_email'] ?></a>
           </div>
         </div>
         <div class="py-4"></div>

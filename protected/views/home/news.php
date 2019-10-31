@@ -38,12 +38,12 @@
           <div class="row">
             <div class="col-md-35">
               <div class="pn_top">
-                <p class="mb-0"><b>SORTING ARTICLES:</b>  <a class="active" href="#">LATEST</a> / <a href="#">OLDEST</a></p>
+                <p class="mb-0"><b>SORTING ARTICLES:</b>  <a <?php if ($_GET['sorting'] == 'latest'): ?>class="active"<?php endif ?> href="<?php echo CHtml::normalizeUrl(array('/blog/index', 'sorting'=> 'latest')); ?>">LATEST</a> / <a <?php if ($_GET['sorting'] == 'oldest'): ?>class="active"<?php endif ?> href="<?php echo CHtml::normalizeUrl(array('/blog/index', 'sorting'=> 'oldest')); ?>">OLDEST</a></p>
               </div>
             </div>
             <div class="col-md-25">
               <div class="pagins">
-                <nav aria-label="...">
+                <!-- <nav aria-label="...">
                   <ul class="pagination pagination-sm justify-content-end">
                     <li class="page-item firsts_d">PAGE</li>
                     <li class="page-item disabled">
@@ -54,7 +54,7 @@
                     <li class="page-item"><a class="page-link" href="#">4</a></li>
                     <li class="page-item"><a class="page-link" href="#">5</a></li>
                   </ul>
-                </nav>
+                </nav> -->
                 <div class="clear"></div>
               </div>
             </div>
@@ -69,46 +69,23 @@
 
 		  <div class="box-list-newsdata">
           <div class="row no-gutters">
-            <?php for ($i=1; $i < 4; $i++) { ?>
+            <?php foreach ($dataBlog->getData() as $key => $value): ?>
+            <div class="col-md-20">
+              <div class="items">
+                <div class="pict">
+                  <a href="<?php echo CHtml::normalizeUrl(array('/blog/detail', 'id'=> $value->id)); ?>"><img src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(432,260, '/images/blog/'.$value->image , array('method' => 'resize', 'quality' => '90')) ?>" alt="<?php echo $value->description->title ?>" class="img img-fluid"></a>
+                </div>
+                <div class="info pt-3 px-3 text-center">
+                  <div class="nx-titles">
+                    <h6><?php echo $value->description->title ?></h6>
+                  </div>
+                  <a href="<?php echo CHtml::normalizeUrl(array('/blog/detail', 'id'=> $value->id)); ?>" class="btn btn-link p-0 nviews">VIEW ARTICLE</a>
+                  <div class="clear"></div>
+                </div>
+              </div>
+            </div>
+            <?php endforeach; ?>
 
-            <div class="col-md-20">
-              <div class="items">
-                <div class="pict"><img src="<?php echo $this->assetBaseurl ?>Layer-10.jpg" alt="" class="img img-fluid"></div>
-                <div class="info pt-3 px-3 text-center">
-                  <div class="nx-titles">
-                    <h6>Perkembangan status eksplorasi Kedung Keris bulan September 2019</h6>
-                  </div>
-                  <a href="#" class="btn btn-link p-0 nviews">VIEW ARTICLE</a>
-                  <div class="clear"></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-20">
-              <div class="items">
-                <div class="pict"><img src="<?php echo $this->assetBaseurl ?>Layer-11.jpg" alt="" class="img img-fluid"></div>
-                <div class="info pt-3 px-3 text-center">
-                  <div class="nx-titles">
-                    <h6>Perkembangan status eksplorasi Kedung Keris bulan September 2019</h6>
-                  </div>
-                  <a href="#" class="btn btn-link p-0 nviews">VIEW ARTICLE</a>
-                  <div class="clear"></div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-20">
-              <div class="items">
-                <div class="pict"><img src="<?php echo $this->assetBaseurl ?>Layer-12.jpg" alt="" class="img img-fluid"></div>
-                <div class="info pt-3 px-3 text-center">
-                  <div class="nx-titles">
-                    <h6>Perkembangan status eksplorasi Kedung Keris bulan September 2019</h6>
-                  </div>
-                  <a href="#" class="btn btn-link p-0 nviews">VIEW ARTICLE</a>
-                  <div class="clear"></div>
-                </div>
-              </div>
-            </div>
-            
-            <?php } ?>
           </div>
           <div class="clear"></div>
         </div>

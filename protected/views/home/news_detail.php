@@ -17,8 +17,8 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">HOME</a></li>
-              <li class="breadcrumb-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/news')); ?>">NEWS</a></li>
-              <li class="breadcrumb-item active" aria-current="page">title news</li>
+              <li class="breadcrumb-item"><a href="<?php echo CHtml::normalizeUrl(array('/blog/index')); ?>">NEWS</a></li>
+              <li class="breadcrumb-item active" aria-current="page"><?php echo $data->description->title; ?></li>
             </ol>
           </nav>
           <div class="clear"></div>
@@ -40,20 +40,19 @@
             <div class="col-md-60">
               <div class="box-content blogns_detail">
                 <div class="text-left tops_detailblog pb-4">
-                  <h1>Lorem Ipsum dolor sit amet,,</h1>
+                  <h1><?php echo $data->description->title; ?></h1>
                   <div class="py-1"></div>
-                  <span class="dates"><i class="fa fa-calendar"></i> &nbsp;<?php echo date("d M Y"); ?></span>
+                  <span class="dates"><i class="fa fa-calendar"></i> &nbsp;<?php echo date("d M Y", strtotime($data->date_input)); ?></span>
                   <div class="clear"></div>
                 </div>
                 <div class="picture">
-                  <img class="img img-fluid w-100" src="https://placehold.it/1280x690" alt="">
+                  <img class="img img-fluid w-100" src="<?php echo Yii::app()->baseUrl.'/images/blog/'. $data->image ?>" alt="<?php echo $data->description->title; ?>">
                 </div>
                 <div class="content pt-4 mt-3">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ultricies semper nibh et fermentum. Etiam posuere orci quis enim interdum lacinia. Mauris leo felis, congue et ullamcorper eget, ultricies sit amet odio. Pellentesque congue tempor lacinia. Phasellus bibendum elit ut egestas eleifend. Vivamus sagittis lobortis lectus. In hac habitasse platea dictumst. In cursus rutrum pellentesque. Donec egestas nunc sed felis tempor luctus. Vivamus ut pretium turpis. <br><br>
+                  
+                  <?php echo $data->description->content; ?>
 
-                  Etiam molestie eget urna quis volutpat. Cras quam lectus, efficitur nec velit eget, pretium commodo lacus. Donec congue quam sed molestie suscipit. Nam facilisis dignissim eros, et pretium purus congue vitae. Fusce vitae ligula ante. Ut faucibus eros vitae lacus commodo, rhoncus vulputate nulla mollis. Proin et pulvinar odio, eget bibendum magna. Vestibulum non posuere odio, at efficitur velit. Morbi maximus sem nec eros euismod accumsan. Proin id viverra lacus, sit amet feugiat augue. <br><br>
-
-                  In facilisis eu justo sed hendrerit. Praesent sit amet diam tellus. Donec luctus sapien interdum lacus dignissim vehicula. Cras eleifend purus at sagittis iaculis. Maecenas egestas aliquet blandit. Quisque lacinia nunc lacus, eget consequat ex lobortis quis. Morbi elementum in sem nec tincidunt. Cras et aliquam quam. Fusce auctor vitae mauris ut malesuada.</p>
+                  <div class="clear clearfix"></div>
                 </div>
               </div>
             </div>
@@ -63,20 +62,22 @@
 
           <div class="box-list-newsdata">
               <div class="row no-gutters">
-                <?php for ($i=1; $i <= 3; $i++) { ?>
+               <?php foreach ($dataBlogs->getData() as $key => $value): ?>
                 <div class="col-md-20">
                   <div class="items">
-                    <div class="pict"><img src="<?php echo $this->assetBaseurl ?>Layer-10.jpg" alt="" class="img img-fluid"></div>
+                    <div class="pict">
+                      <a href="<?php echo CHtml::normalizeUrl(array('/blog/detail', 'id'=> $value->id)); ?>"><img src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(432,260, '/images/blog/'.$value->image , array('method' => 'resize', 'quality' => '90')) ?>" alt="<?php echo $value->description->title ?>" class="img img-fluid"></a>
+                    </div>
                     <div class="info pt-3 px-3 text-center">
                       <div class="nx-titles">
-                        <h6>Perkembangan status eksplorasi Kedung Keris bulan September 2019</h6>
+                        <h6><?php echo $value->description->title ?></h6>
                       </div>
-                      <a href="#" class="btn btn-link p-0 nviews">VIEW ARTICLE</a>
+                      <a href="<?php echo CHtml::normalizeUrl(array('/blog/detail', 'id'=> $value->id)); ?>" class="btn btn-link p-0 nviews">VIEW ARTICLE</a>
                       <div class="clear"></div>
                     </div>
                   </div>
                 </div>
-                <?php } ?>
+                <?php endforeach; ?>
 
               </div>
               <div class="clear"></div>

@@ -23,7 +23,12 @@ class BlogController extends Controller
 
 		$criteria->addCondition('description.language_id = :language_id');
 		$criteria->params[':language_id'] = $this->languageID;
-		$criteria->order = 'date_input DESC';
+
+		if ( isset($_GET['sorting']) && $_GET['sorting'] == 'oldest' ) {
+			$criteria->order = 'date_input ASC';
+		}else{
+			$criteria->order = 'date_input DESC';
+		}
 
 		$dataBlog = new CActiveDataProvider('Blog', array(
 			'criteria'=>$criteria,
@@ -46,17 +51,11 @@ class BlogController extends Controller
 		// ));
 
 		$this->layout='//layouts/column2';
-		$this->pageTitle = 'News & Events - '.$this->pageTitle;
+		$this->pageTitle = 'News - '.$this->pageTitle;
 		
-		if ( isset($_GET['category']) AND $_GET['category'] == 'financial' ) {
-			$this->render('//home/investorfinancial', array(
-				'dataBlog'=>$dataBlog,
-			));
-		} else {
-			$this->render('index', array(
-				'dataBlog'=>$dataBlog,
-			));
-		}
+		$this->render('//home/news', array(
+			'dataBlog'=>$dataBlog,
+		));
 		
 	}
 
@@ -87,7 +86,7 @@ class BlogController extends Controller
 		$this->pageTitle = $data->description->title . ' - News & Events - '.$this->pageTitle;
 		$this->layout='//layouts/column2';
 
-		$this->render('detail', array(
+		$this->render('//home/news_detail', array(
 			'data' => $data,
 			'dataBlogs' => $dataBlogs,
 		));
