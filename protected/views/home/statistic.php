@@ -2,7 +2,7 @@
 <section class="coverpages ill-about" style="background-image: url('<?php echo Yii::app()->baseUrl.'/images/static/'. $this->setting['career_hero_image']; ?>');">
   <!-- <div class="prelatife container"> -->
     <div class="inners_npage_ill">
-      <h1><?php echo $this->setting['career_hero_title'] ?></h1>
+      <h1>STATISTIC CHART</h1>
     </div>
     <div class="clear"></div>
   <!-- </div> -->
@@ -17,7 +17,7 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">HOME</a></li>
-              <li class="breadcrumb-item active" aria-current="page"><?php echo $this->setting['career_hero_title'] ?></li>
+              <li class="breadcrumb-item active" aria-current="page">STATISTIC CHART</li>
             </ol>
           </nav>
           <div class="clear"></div>
@@ -34,17 +34,80 @@
     <div class="insides">
       <div class="content-text t-about text-center">
         <div class="py-4 d-none d-sm-block"></div>
-        <div class="mw1091 mx-auto">
-          <?php echo $this->setting['career1_content'] ?>
-          
-          <div class="py-4">
-          <img src="<?php echo $this->assetBaseurl ?>bacs_line-middles_tengah.jpg" alt="" class="img img-fluid">  
+
+        <div class="mw1091 mx-auto blocks_pg_statistic">
+          <?php foreach ($data as $key => $value): ?>
+          <?php 
+          if ($key >= 1):
+          continue;
+          endif; 
+          ?>
+          <div class="tops_feature">
+            <div class="pict">
+              <img src="<?php echo Yii::app()->baseUrl .'/images/statistik/'. $value->image; ?>" alt="" class="img img-fluid d-block mx-auto">
+            </div>
+            <div class="infos py-3 pt-4">
+              <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                <tr>
+                  <th>Date Statistic</th>
+                  <th>BOPD</th>
+                  <th>MSCFD</th>
+                  <th>BWPD</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td><span class="date"><?php echo strtoupper( date('d M Y', strtotime($value->tgl_statistik)) ); ?></span></td>
+                  <td><?php echo $value->bopd ?></td>
+                  <td><?php echo $value->mscfd ?></td>
+                  <td><?php echo $value->bwpd ?></td>
+                </tr>
+                </tbody>
+              </table>
+              </div>
+              <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <?php endforeach ?>
+
+          <div class="py-1"></div>
+          <hr>
+          <div class="py-3 my-2"></div>
+
+          <div class="lists_table">
+            <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+              <tr>
+                <th>Date Statistic</th>
+                <th>BOPD</th>
+                <th>MSCFD</th>
+                <th>BWPD</th>
+              </tr>
+              </thead>
+              <tbody>
+                <?php foreach ($data as $key => $value2): ?>
+                <?php  if ($key != 0): ?>
+                <tr>
+                  <td><span class="date"><?php echo strtoupper( date('d M Y', strtotime($value2->tgl_statistik)) ); ?></span></td>
+                  <td><?php echo $value2->bopd ?></td>
+                  <td><?php echo $value2->mscfd ?></td>
+                  <td><?php echo $value2->bwpd ?></td>
+                </tr>
+                <?php endif; ?>
+                <?php endforeach ?>
+              </tbody>
+            </table>
+            </div>
+            <div class="clear"></div>
           </div>
 
-          <div class="buttons_bluedark">
-            <a href="mailto:<?php echo $this->setting['career_email'] ?>" class="btn btn-link"><?php echo $this->setting['career_email'] ?></a>
-          </div>
+          <div class="clear clearfix"></div>
         </div>
+
         <div class="py-4"></div>
 
         <div class="clear"></div>
@@ -55,8 +118,11 @@
     <div class="py-2 d-none d-sm-block"></div>
     <div class="py-4 d-none d-sm-block"></div>
   </div>
-
 </section>
+
+
+
+
 
 
 <?php

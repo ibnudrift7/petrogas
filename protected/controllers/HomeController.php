@@ -1062,9 +1062,7 @@ Staff dari perabotplastik.com akan menghubungi anda untuk konfirmasi dan penjela
 
 		$this->render('cara_beli', array(	
 		));
-	}
-
-	
+	}	
 
 	public function actionCareer()
 	{
@@ -1119,6 +1117,23 @@ Staff dari perabotplastik.com akan menghubungi anda untuk konfirmasi dan penjela
 
 		$this->render('career', array(
 			'model'	=>$model,
+		));
+	}
+
+	public function actionStatistic()
+	{
+		$this->pageTitle = 'Statistic - '.$this->pageTitle;
+		$this->layout='//layouts/column2';
+
+		$criteria = new CDbCriteria;
+	    $criteria->addCondition('status = "1"');
+	    $criteria->order = 'date_input DESC';
+	    // $criteria->limit = 3;
+		$data = StatistikList::model()->findAll($criteria);
+
+		$this->render('statistic', array(	
+			'data' => $data,
+			// 'data_first' => $data_first,
 		));
 	}
 

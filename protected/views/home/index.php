@@ -8,25 +8,23 @@
 				</div>
 			</div>
 		</div>
+		<?php 
+        $criteria = new CDbCriteria;
+        $criteria->order = 't.id ASC';
+        $data_block = Blockbuilding::model()->findAll($criteria);
+        ?>
 		<div class="row no-gutters">
-			<div class="col-md-30">
-				<div class="image-atass">
-					<img class="w-100" src="<?php echo $this->assetBaseurl; ?>hhhh_03.jpg" alt="">
-					<div class="insidesss">
-						<h5>Banyu Urip Plant</h5>
-						<p>Cepu Block</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-30">
-				<div class="image-atass">
-					<img class="w-100" src="<?php echo $this->assetBaseurl; ?>hhh_04.jpg" alt="">
-					<div class="insidesss">
-						<h5>Kedung Keris Field</h5>
-						<p>Cepu Block</p>
-					</div>
-				</div>
-			</div>
+			<?php foreach ($data_block as $key => $value): ?>
+            <div class="col-md-30">
+                <div class="image-atass">
+                    <a href="<?php echo CHtml::normalizeUrl(array('/home/business_detail', 'id'=> $value->id)); ?>"><img class="w-100 img img-fluid" src="<?php echo Yii::app()->baseUrl.'/images/building/'. $value->image ?>" alt=""></a>
+                    <div class="insidesss">
+                        <h5><?php echo $value->nama ?></h5>
+                        <p><?php echo ucwords(strtolower($value->lokasi_blok)); ?></p>
+                    </div>
+                </div>
+            </div>
+            <?php endforeach; ?>
 		</div>
 
 		<div class="row no-gutters pt-4 mt-4">

@@ -11,20 +11,16 @@
             <div class="carousel-inner">
                 <div class="carousel-item <?php if ($key == 0): ?>active<?php endif ?> home-slider-new">
                     <img class="w-100" src="<?php echo $this->assetBaseurl; ?>Layer-71.jpg" alt="First slide" style="background-repeat: no-repeat;background-size: cover;">
-                     
                     <img class="w-100 d-none d-sm-block" src="<?php echo $this->assetBaseurl; ?>Layer-71.jpg" alt="">
                     <div class="carousel-caption caption-slider-home">
                         <div class="prelative container">
                             <div class="bxsl_tx_fcs">
                                 <div class="row no-gutters">
                                     <div class="col-md-60">
-
-                                        <!-- <h5>WHAT WE DO</h5>
-                                        <h4>Operating Oil and Gas Exploration in Cepu Block, For the contribution of oil and gas consumption in Indonesia</h4> -->
                                         <?php echo $this->setting['home_sectionf_text'] ?>
 
                                         <h3 class="d-none d-sm-block">LATEST EXPLORATION STATISTIC</h3>
-                                        <img class="d-none d-sm-block" src="<?php echo $this->assetBaseurl; ?>1202-BWPD.png" alt="">
+                                        <?php echo $this->renderPartial('//home/_latest_statistik', array()); ?>
                                     </div>
                                 </div>
                             </div>

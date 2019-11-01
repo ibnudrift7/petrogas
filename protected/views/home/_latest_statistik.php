@@ -1,0 +1,27 @@
+<?php 
+$criteria = new CDbCriteria;
+$criteria->addCondition('status = "1"');
+$criteria->order = 'date_input DESC';
+// $criteria->limit = 3;
+$data_fet = StatistikList::model()->find($criteria);
+?>
+<div class="blocks_latestHome">
+	<div class="row">
+		<div class="col col-15 inf-date my-auto">
+			<span><?php echo strtoupper( date('d M Y') ); ?></span>
+		</div>
+		<div class="col small_inf my-auto">
+			<p><?php echo $data_fet->bopd ?><br><b>BOPD</b></p>
+		</div>
+		<div class="col small_inf my-auto">
+			<p><?php echo $data_fet->mscfd ?><br><b>MSCFD</b></p>
+		</div>
+		<div class="col small_inf my-auto">
+			<p><?php echo $data_fet->bwpd ?><br><b>BWPD</b></p>
+		</div>
+		<div class="col buttons_chart my-auto">
+			<p><a href="<?php echo CHtml::normalizeUrl(array('/home/statistic')); ?>"><img src="<?php echo $this->assetBaseurl ?>btn-charts-hometop.png" alt=""></a></p>
+		</div>
+	</div>
+	<div class="clear"></div>
+</div>

@@ -65,6 +65,7 @@ class StatistikListController extends ControllerAdmin
 					if ($image->name != '') {
 						$image->saveAs(Yii::getPathOfAlias('webroot').'/images/statistik/'.$model->image);
 					}
+					$model->date_input = date("Y-m-d H:i:s");
 
 					$model->save();
 					Log::createLog("StatistikListController Create $model->id");

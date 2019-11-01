@@ -25,7 +25,7 @@
       <div class="col-md-12">
         <div class="image-kanan">
           <div class="text">
-            <a href="#"><span><img src="<?php echo $this->assetBaseurl; ?>line-graph.png" alt=""></span>STATISTIC CHART</a>
+            <a href="<?php echo CHtml::normalizeUrl(array('/home/statistic')); ?>"><span><img src="<?php echo $this->assetBaseurl; ?>line-graph.png" alt=""></span>STATISTIC CHART</a>
           </div>
         </div>
       </div>
