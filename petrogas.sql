@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 31 Okt 2019 pada 12.36
+-- Waktu pembuatan: 01 Nov 2019 pada 08.42
 -- Versi server: 10.1.37-MariaDB
 -- Versi PHP: 7.1.24
 
@@ -1831,7 +1831,7 @@ CREATE TABLE `tb_statistik_list` (
   `mscfd` varchar(225) DEFAULT NULL,
   `bwpd` varchar(225) DEFAULT NULL,
   `image` varchar(225) DEFAULT NULL,
-  `date_input` date DEFAULT NULL,
+  `date_input` datetime DEFAULT NULL,
   `status` int(5) DEFAULT NULL,
   `sorts` int(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -1841,16 +1841,16 @@ CREATE TABLE `tb_statistik_list` (
 --
 
 INSERT INTO `tb_statistik_list` (`id`, `tgl_statistik`, `bopd`, `mscfd`, `bwpd`, `image`, `date_input`, `status`, `sorts`) VALUES
-(1, '2019-11-01', '5048', '2757', '1358', 'ea0ac-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', NULL, 1, NULL),
-(2, '2019-10-31', '5058', '2578', '1259', '8b76c-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', NULL, 1, NULL),
-(3, '2019-11-02', '5049', '2565', '1349', '06930-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', NULL, 1, NULL),
-(4, '2019-11-01', '5054', '2389', '1472', '9991b-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', NULL, 1, NULL),
-(5, '2019-10-31', '5023', '2197', '1268', 'c0dd6-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', NULL, 1, NULL),
-(6, '2019-11-02', '4392', '1932', '1543', '1c3e9-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', NULL, 1, NULL),
-(7, '2019-11-03', '4321', '3215', '2536', '221ab-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', NULL, 1, NULL),
-(8, '2019-11-03', '2531', '5362', '4621', 'cc9e3-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', NULL, 1, NULL),
-(9, '2019-11-01', '2612', '5238', '5272', '543a2-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', NULL, 1, NULL),
-(10, '2019-11-03', '5246', '2384', '5238', '65a8a-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', NULL, 1, NULL);
+(1, '2019-11-01', '5048', '2757', '1358', 'ea0ac-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', '2019-11-01 08:15:00', 1, NULL),
+(2, '2019-10-31', '5058', '2578', '1259', '8b76c-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', '2019-10-31 05:05:00', 1, NULL),
+(3, '2019-11-02', '5049', '2565', '1349', '06930-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', '2019-10-31 00:00:00', 1, NULL),
+(4, '2019-11-01', '5054', '2389', '1472', '9991b-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', '2019-10-30 00:00:00', 1, NULL),
+(5, '2019-10-31', '5023', '2197', '1268', 'c0dd6-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', '2019-10-29 00:00:00', 1, NULL),
+(6, '2019-11-02', '4392', '1932', '1543', '1c3e9-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', '2019-10-28 00:00:00', 1, NULL),
+(7, '2019-11-03', '4321', '3215', '2536', '221ab-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', '2019-10-27 00:00:00', 1, NULL),
+(8, '2019-11-03', '2531', '5362', '4621', 'cc9e3-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', '2019-10-26 00:00:00', 1, NULL),
+(9, '2019-11-01', '2612', '5238', '5272', '543a2-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', '2019-10-25 00:00:00', 1, NULL),
+(10, '2019-11-03', '5246', '2384', '5238', '65a8a-WhatsApp Image 2019-10-31 at 15.26.00.jpeg', '2019-10-24 00:00:00', 1, NULL);
 
 -- --------------------------------------------------------
 
