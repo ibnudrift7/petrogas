@@ -36,15 +36,9 @@
         <div class="py-4 d-none d-sm-block"></div>
 
         <div class="mw1091 mx-auto blocks_pg_statistic">
-          <?php foreach ($data as $key => $value): ?>
-          <?php 
-          if ($key >= 1):
-          continue;
-          endif; 
-          ?>
           <div class="tops_feature">
             <div class="pict">
-              <img src="<?php echo Yii::app()->baseUrl .'/images/statistik/'. $value->image; ?>" alt="" class="img img-fluid d-block mx-auto">
+              <img src="<?php echo Yii::app()->baseUrl .'/images/statistik/'. $data_first->image; ?>" alt="" class="img img-fluid d-block mx-auto">
             </div>
             <div class="infos py-3 pt-4">
               <div class="table-responsive">
@@ -59,10 +53,10 @@
                 </thead>
                 <tbody>
                 <tr>
-                  <td><span class="date"><?php echo strtoupper( date('d M Y', strtotime($value->tgl_statistik)) ); ?></span></td>
-                  <td><?php echo $value->bopd ?></td>
-                  <td><?php echo $value->mscfd ?></td>
-                  <td><?php echo $value->bwpd ?></td>
+                  <td><?php echo $value->id ?><span class="date"><?php echo strtoupper( date('d M Y', strtotime($data_first->tgl_statistik)) ); ?></span></td>
+                  <td><?php echo $data_first->bopd ?></td>
+                  <td><?php echo $data_first->mscfd ?></td>
+                  <td><?php echo $data_first->bwpd ?></td>
                 </tr>
                 </tbody>
               </table>
@@ -71,7 +65,6 @@
             </div>
             <div class="clear"></div>
           </div>
-          <?php endforeach ?>
 
           <div class="py-1"></div>
           <hr>
@@ -86,18 +79,21 @@
                 <th>BOPD</th>
                 <th>MSCFD</th>
                 <th>BWPD</th>
+                <th>&nbsp;</th>
               </tr>
               </thead>
               <tbody>
                 <?php foreach ($data as $key => $value2): ?>
-                <?php  if ($key != 0): ?>
+                <?php  if ($key == 0): ?>
+                <?php  continue; ?>
+                <?php endif; ?>
                 <tr>
-                  <td><span class="date"><a data-fancybox href="<?php echo Yii::app()->baseUrl .'/images/statistik/'. $value->image; ?>"><?php echo strtoupper( date('d M Y', strtotime($value2->tgl_statistik)) ); ?></a></span></td>
+                  <td><span class="date"><?php echo strtoupper( date('d M Y', strtotime($value2->tgl_statistik)) ); ?></span></td>
                   <td><?php echo $value2->bopd ?></td>
                   <td><?php echo $value2->mscfd ?></td>
                   <td><?php echo $value2->bwpd ?></td>
+                  <td><a data-fancybox href="<?php echo Yii::app()->baseUrl .'/images/statistik/'. $value->image; ?>">View Chart</a></td>
                 </tr>
-                <?php endif; ?>
                 <?php endforeach ?>
               </tbody>
             </table>
@@ -124,7 +120,7 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 <script type="text/javascript">
   $(function(){
-    
+
   });
 </script>
 

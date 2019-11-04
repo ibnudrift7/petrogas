@@ -76,7 +76,7 @@
 		<div class="row no-gutters">
 			<?php foreach ($dataBlog->getData() as $key => $value): ?>
 			<div class="col-md-20">
-				<img src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(432,260, '/images/blog/'. $value->image , array('method' => 'adaptiveResize', 'quality' => '90')) ?>" alt="">
+				<img src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(432,260, '/images/blog/'. $value->image , array('method' => 'adaptiveResize', 'quality' => '90')) ?>" class="img img-fluid" alt="">
 				<div class="box-content">
 					<h4><?php echo $value->description->title ?></h4>
 					<a href="<?php echo CHtml::normalizeUrl(array('/blog/detail', 'id'=> $value->id)); ?>">view article</a>
