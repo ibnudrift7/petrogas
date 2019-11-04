@@ -18,8 +18,11 @@
         </div>
       </div>
       <div class="col-md-36">
-        <div class="image-tengah">
-          <a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>"><img src="<?php echo $this->assetBaseurl; ?>Petrogas-copy.png" alt=""></a>
+        <div class="image-tengah logo_headers">
+          <a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">
+            <!-- <img src="<?php echo $this->assetBaseurl; ?>Petrogas-copy.png" alt=""> -->
+            <img class="img img-fluid" src="<?php echo $this->assetBaseurl; ?>logo-petro.svg" alt="">
+          </a>
         </div>
       </div>
       <div class="col-md-12">
