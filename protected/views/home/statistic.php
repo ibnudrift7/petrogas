@@ -92,7 +92,7 @@
                 <?php foreach ($data as $key => $value2): ?>
                 <?php  if ($key != 0): ?>
                 <tr>
-                  <td><span class="date"><?php echo strtoupper( date('d M Y', strtotime($value2->tgl_statistik)) ); ?></span></td>
+                  <td><span class="date"><a data-fancybox href="<?php echo Yii::app()->baseUrl .'/images/statistik/'. $value->image; ?>"><?php echo strtoupper( date('d M Y', strtotime($value2->tgl_statistik)) ); ?></a></span></td>
                   <td><?php echo $value2->bopd ?></td>
                   <td><?php echo $value2->mscfd ?></td>
                   <td><?php echo $value2->bwpd ?></td>
@@ -120,10 +120,13 @@
   </div>
 </section>
 
-
-
-
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script type="text/javascript">
+  $(function(){
+    
+  });
+</script>
 
 <?php
 /*
