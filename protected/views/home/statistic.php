@@ -92,7 +92,7 @@
                   <td><?php echo $value2->bopd ?></td>
                   <td><?php echo $value2->mscfd ?></td>
                   <td><?php echo $value2->bwpd ?></td>
-                  <td><a data-fancybox href="<?php echo Yii::app()->baseUrl .'/images/statistik/'. $value->image; ?>">View Chart</a></td>
+                  <td><a data-fancybox href="<?php echo Yii::app()->baseUrl .'/images/statistik/'. $value2->image; ?>">View Chart</a></td>
                 </tr>
                 <?php endforeach ?>
               </tbody>
