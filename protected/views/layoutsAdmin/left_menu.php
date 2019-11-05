@@ -35,12 +35,27 @@
                 <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/slide/create')); ?>">Create Slide</a></li>
             </ul>
         </li>
-
+        <?php
+        $sub_page = array(
+                    'profile'=>'Profile',
+                    'structure'=>'Organisation Structure',
+                    'commissary'=>'Board of Commissary',
+                    'director'=>'Board of Director',
+                    'share_holders'=>'Share Holders',
+                    'rups'=>'RUPS',
+                    'financial_report'=>'Financial Report',
+                    'production_profile'=>'Production Profile',
+                    );
+        ?>
         <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/homepage')); ?>"><span class="fa fa-building"></span> <?php echo Tt::t('admin', 'Homepage') ?></a></li>
 
         <li class="dropdown"><a href="#"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'About Us') ?></a>
             <ul>
                 <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/about')); ?>">Static About</a></li>
+                <li>&nbsp;</li>
+                <?php foreach ($sub_page as $key => $value): ?>
+                    <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/page_type', 'name'=> $key)); ?>">Static <?php echo $value ?></a></li>
+                <?php endforeach ?>
             </ul>
         </li>
 

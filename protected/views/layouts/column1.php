@@ -19,7 +19,7 @@
                                     <div class="col-md-60">
                                         <?php echo $this->setting['home_sectionf_text'] ?>
 
-                                        <h3 class="d-none d-sm-block">LATEST EXPLORATION STATISTIC</h3>
+                                        <h3 class="d-none d-sm-block">LATEST PRODUCTION</h3>
                                         <?php echo $this->renderPartial('//home/_latest_statistik', array()); ?>
                                     </div>
                                 </div>

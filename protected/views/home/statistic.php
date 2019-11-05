@@ -2,7 +2,7 @@
 <section class="coverpages ill-about" style="background-image: url('<?php echo Yii::app()->baseUrl.'/images/static/'. $this->setting['career_hero_image']; ?>');">
   <!-- <div class="prelatife container"> -->
     <div class="inners_npage_ill">
-      <h1>STATISTIC CHART</h1>
+      <h1><?php echo ucwords('production profile') ?></h1>
     </div>
     <div class="clear"></div>
   <!-- </div> -->
@@ -17,7 +17,7 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">HOME</a></li>
-              <li class="breadcrumb-item active" aria-current="page">STATISTIC CHART</li>
+              <li class="breadcrumb-item active" aria-current="page"><?php echo strtoupper('production profile') ?></li>
             </ol>
           </nav>
           <div class="clear"></div>

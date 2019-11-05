@@ -12,12 +12,12 @@
 <section class="header d-none d-sm-block">
   <div class="prelative container-header header-tops">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-15">
         <div class="image-kiri">
-          <img src="<?php echo $this->assetBaseurl; ?>Rectangle-2-copy-2.png" alt="">
+          <a href="#" class="view-leftmenu"><img src="<?php echo $this->assetBaseurl; ?>Rectangle-2-copy-2.png" alt=""></a>
         </div>
       </div>
-      <div class="col-md-36">
+      <div class="col-md-30">
         <div class="image-tengah logo_headers">
           <a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">
             <!-- <img src="<?php echo $this->assetBaseurl; ?>Petrogas-copy.png" alt=""> -->
@@ -25,10 +25,10 @@
           </a>
         </div>
       </div>
-      <div class="col-md-12">
+      <div class="col-md-15">
         <div class="image-kanan">
           <div class="text">
-            <a href="<?php echo CHtml::normalizeUrl(array('/home/statistic')); ?>"><span><img src="<?php echo $this->assetBaseurl; ?>line-graph.png" alt=""></span>STATISTIC CHART</a>
+            <a href="<?php echo CHtml::normalizeUrl(array('/home/statistic')); ?>"><span><img src="<?php echo $this->assetBaseurl; ?>line-graph.png" alt=""></span>PRODUCTION PROFILE</a>
           </div>
         </div>
       </div>
@@ -36,7 +36,7 @@
   </div>
   <div class="header-bottom">
     <div class="row no-gutters">
-      <div class="col-md-50">
+      <div class="col-md-45">
         <div class="image logo-image">
           <nav class="navbar navbar-expand-lg">
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -64,211 +64,15 @@
           </nav>
         </div>
       </div>
+      <div class="col-md-15 text-right">
+        <div class="py-2 my-1"></div>
+        <img src="<?php echo $this->assetBaseurl ?>taglines_headernxs_txt.png" alt="" class="img img-fluid">
+      </div>
     </div>
 
     
   </div>
-  
-<!--  <div class="blocks_menu_dropdown about-n1" id="menu-whatwedo">-->
-<!--    <div class="prelative container pt-2 pb-5">-->
-<!--      <div class="row">-->
-<!--        <div class="col-md-15"></div>-->
-<!--        <div class="col-md-45">-->
-<!--          <div class="bx-inners_sub">-->
-<!--            <div class="py-2"></div>-->
-<!--            <div class="lines-grey"></div>-->
-<!--            <div class="py-2"></div>-->
-<!--            <div class="py-1"></div>-->
-<!--            <div class="prelatife row">-->
-<!--              <div class="col-md-55">-->
-<!--                <div class="menu-sub">-->
-<!--                  <ul class="list-unstyled">-->
-<!--                    --><?php
-//                    $criteria = new CDbCriteria;
-//                    $criteria->with = array('description');
-//                    $criteria->addCondition('description.language_id = :language_id');
-//                    $criteria->params[':language_id'] = $this->languageID;
-//                    $data_ser = Service::model()->findAll($criteria);
-//                    ?>
-<!--                    --><?php //foreach ($data_ser as $key => $value): ?>
-<!--                    <li><a href="--><?php //echo CHtml::normalizeUrl(array('/home/whatwedo', 'id'=> $value->id, 'lang'=>Yii::app()->language)); ?><!--">--><?php //echo ucwords( strtolower( $value->description->title) ) ?><!--</a></li>-->
-<!--                    --><?php //endforeach; ?>
-<!--                  </ul>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--              <div class="col-md-5">-->
-<!--                <div class="blc_right_close_menu"><a class="btn btn-link closing_menu" href="#" ><i class="fa fa-times fa-2x"></i></a></div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            <div class="clear clearfix"></div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="clear"></div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!---->
-<!--  <div class="blocks_menu_dropdown about-n1" id="menu-investor">-->
-<!--    <div class="prelative container pt-2 pb-5">-->
-<!--      <div class="row">-->
-<!--        <div class="col-md-15"></div>-->
-<!--        <div class="col-md-45">-->
-<!--          <div class="bx-inners_sub">-->
-<!--            <div class="py-2"></div>-->
-<!--            <div class="lines-grey"></div>-->
-<!--            <div class="py-2"></div>-->
-<!--            <div class="py-1"></div>-->
-<!--            <div class="prelatife row">-->
-<!--              <div class="col-md-55">-->
-<!--                <div class="menu-sub">-->
-<!--                  <ul class="list-unstyled">-->
-<!--                    <li><a href="--><?php //echo CHtml::normalizeUrl(array('/home/investorreports', 'lang'=>Yii::app()->language)); ?><!--">Annual Financial Reports</a></li>-->
-<!--                    <li><a href="--><?php //echo CHtml::normalizeUrl(array('/blog/index', 'category'=>'financial', 'lang'=>Yii::app()->language)); ?><!--">Financial Highlights</a></li>-->
-<!--                    <li><a href="--><?php //echo CHtml::normalizeUrl(array('/home/investorfactsheet', 'lang'=>Yii::app()->language)); ?><!--">Factsheets</a></li>-->
-<!--                  </ul>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--              <div class="col-md-5">-->
-<!--                <div class="blc_right_close_menu"><a class="btn btn-link closing_menu" href="#" ><i class="fa fa-times fa-2x"></i></a></div>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--            <div class="clear clearfix"></div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="clear"></div>-->
-<!--    </div>-->
-<!--  </div>-->
 </section>
-
-<!-- <section id="myAffix" class="header-affixs affix-top">
-  <div class="prelative container cont-header mx-auto">
-    <div class="row">
-      <div class="col-md-15 col-sm-15">
-        <div class="lgo_web_headrs_wb">
-          <a href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=>Yii::app()->language)); ?>">
-            <img src="<?php echo $this->assetBaseurl; ?>corpus-header-op.png" alt="" class="img img-fluid">
-          </a>
-        </div>
-      </div>
-      <div class="col-md-35 col-sm-35">
-        <nav class="navbar navbar-expand-lg">
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/whatwedo', 'lang'=>Yii::app()->language)); ?>" data-id="menu-whatwedo2">Our Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about', 'lang'=>Yii::app()->language)); ?>" data-id="menu-investor2">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/case', 'lang'=>Yii::app()->language)); ?>">Case Studies</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/blog/index', 'lang'=>Yii::app()->language)); ?>">News & Events</a>
-              </li>    
-              <li class="nav-item">
-                <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/career', 'lang'=>Yii::app()->language)); ?>">Career</a>
-              </li>         
-              <li class="nav-item contact">
-                <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/contactus', 'lang'=>Yii::app()->language)); ?>">Contact Us</a>
-              </li>             
-            </ul>
-          </div>
-        </nav>
-      </div>
-      <div class="col-md-10 col-sm-10">
-        <div class="kanan-sendiri text-right">
-          <div class="wa-kanan">
-            <a href="https://wa.me/<?php echo str_replace(' ', '', $this->setting['contact_wa']) ?>">
-              <img src="<?php echo $this->assetBaseurl; ?>WA-Logo-sticky.png" alt="">
-            </a>
-          </div>
-          <div class="en-in">
-            <?php
-            $get = $_GET;
-            $get['lang'] = 'en';
-            ?>
-            <a href="<?php echo $this->createUrl($this->route, $get) ?>" title="ENG">EN | </a>
-            <?php
-            $get = $_GET;
-            $get['lang'] = 'id';
-            ?>
-            <a href="<?php echo $this->createUrl($this->route, $get) ?>" title="Bahasa">ID</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="clear"></div>
-  </div>
-
-    <div class="blocks_menu_dropdown about-n1" id="menu-whatwedo2">
-    <div class="prelative container pt-2 pb-5">
-      <div class="row">
-        <div class="col-md-15"></div>
-        <div class="col-md-45">
-          <div class="bx-inners_sub">
-            <div class="py-2"></div>
-            <div class="lines-grey"></div>
-            <div class="py-2"></div>
-            <div class="py-1"></div>
-            <div class="prelatife row">
-              <div class="col-md-55">
-                <div class="menu-sub">
-                  <ul class="list-unstyled">
-                    <?php
-                    $data_ser = Service::model()->findAll($criteria);
-                    ?>
-                    <?php foreach ($data_ser as $key => $value): ?>
-                    <li><a href="<?php echo CHtml::normalizeUrl(array('/home/whatwedo', 'id'=> $value->id, 'lang'=>Yii::app()->language)); ?>"><?php echo ucwords( strtolower( $value->description->title) ) ?></a></li>
-                    <?php endforeach; ?>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-md-5">
-                <div class="blc_right_close_menu"><a class="btn btn-link closing_menu" href="#" ><i class="fa fa-times fa-2x"></i></a></div>
-              </div>
-            </div>
-            <div class="clear clearfix"></div>
-          </div>
-        </div>
-      </div>
-      <div class="clear"></div>
-    </div>
-  </div>
-
-  <div class="blocks_menu_dropdown about-n1" id="menu-investor2">
-    <div class="prelative container pt-2 pb-5">
-      <div class="row">
-        <div class="col-md-15"></div>
-        <div class="col-md-45">
-          <div class="bx-inners_sub">
-            <div class="py-2"></div>
-            <div class="lines-grey"></div>
-            <div class="py-2"></div>
-            <div class="py-1"></div>
-            <div class="prelatife row">
-              <div class="col-md-55">
-                <div class="menu-sub">
-                  <ul class="list-unstyled">
-                    <li><a href="<?php echo CHtml::normalizeUrl(array('/home/investorreports', 'lang'=>Yii::app()->language)); ?>">Annual Financial Reports</a></li>
-                    <li><a href="<?php echo CHtml::normalizeUrl(array('/blog/index', 'category'=>'financial', 'lang'=>Yii::app()->language)); ?>">Financial Highlights</a></li>
-                    <li><a href="<?php echo CHtml::normalizeUrl(array('/home/investorfactsheet', 'lang'=>Yii::app()->language)); ?>">Factsheets</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-md-5">
-                <div class="blc_right_close_menu"><a class="btn btn-link closing_menu" href="#" ><i class="fa fa-times fa-2x"></i></a></div>
-              </div>
-            </div>
-            <div class="clear clearfix"></div>
-          </div>
-        </div>
-      </div>
-      <div class="clear"></div>
-    </div>
-  </div>
-</section> -->
 
 <header class="header-mobile homepage_head">
   <nav class="navbar fixed-top navbar-light">
@@ -351,11 +155,130 @@
   });
 </script>
 
-
-
 <script>
   // $(document).ready(function(){
   //   $("#headerproduct").css("display","none");
   // });
 </script>
 
+<section class="backs_leftmenun_blue back_blue box-left-menu-block">
+  <div class="inner">
+    <div class="tops_blun">
+      <div class="row">
+        <div class="col-45">
+          <div class="logo_snheaders">
+            <a href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=> Yii::app()->language)); ?>"><img src="<?php echo $this->assetBaseurl ?>logo-update-lefts_menu.png" alt="<?php echo Yii::app()->name; ?>" class="img img-fluid"></a>
+          </div>
+        </div>
+        <div class="col-15 text-right">
+          <div class="blc_rights_tx py-3 my-2 c-icon-close">
+            <a href="#" class="to_closeLeft"><img src="<?php echo $this->assetBaseurl ?>btn-xnim-close.png" alt="" class="img img-fluid"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="middles">
+      <ul class="list-unstyled ff_menu">
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=> Yii::app()->language)); ?>">Home</a></li>
+        <li class="dropdown"><a href="<?php echo CHtml::normalizeUrl(array('/home/about', 'lang'=> Yii::app()->language)); ?>">About</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Organisation Structure</a></li>
+            <li><a href="#">Board of Commissary</a></li>
+            <li><a href="#">Board of Director</a></li>
+            <li><a href="#">Share Holders</a></li>
+            <li><a href="#">RUPS</a></li>
+            <li><a href="#">Financial Report</a></li>
+            <li><a href="#">Production Profile</a></li>
+          </ul>
+        </li>
+        
+        <?php 
+        $criteria = new CDbCriteria;
+        $criteria->order = 't.id ASC';
+        $data_block = Blockbuilding::model()->findAll($criteria);
+        ?>
+        <li class="dropdown"><a href="<?php echo CHtml::normalizeUrl(array('/home/business', 'lang'=> Yii::app()->language)); ?>">Our Business</a>
+          <ul class="dropdown-menu">
+            <?php foreach ($data_block as $key => $value): ?>
+            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/business_detail', 'id'=> $value->id)); ?>"><?php echo $value->nama ?></a></li>
+            <?php endforeach; ?>
+          </ul>
+        </li>
+
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/news', 'lang'=> Yii::app()->language)); ?>">News</a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/career', 'lang'=> Yii::app()->language)); ?>">Career</a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/contact', 'lang'=> Yii::app()->language)); ?>">Contact us</a></li>
+      </ul>
+
+      <div class="py-3"></div>
+      <div class="changes_lang py-3">
+        <div class="row no-gutters py-1">
+          <div class="col-md-20"><p>Language</p></div>
+          <div class="col-md-40">
+            <p><a href="#">EN</a>
+              &nbsp;&nbsp;|&nbsp;&nbsp;
+              <a href="#">IN</a>
+              </p>
+          </div>
+        </div>
+      </div>
+      <div class="py-3"></div>
+      <div class="infos_nbottom">
+        <div class="row no-gutters pb-1">
+          <div class="col-md-20"><p><span>Whatsapp</span></p></div>
+          <div class="col-md-40"><p><a href="https://wa.me/628164807016">081 6480 7016</a></p></div>
+        </div>
+        <div class="row no-gutters pb-1">
+          <div class="col-md-20"><p><span>Telephone</span></p></div>
+          <div class="col-md-40"><p><a href="tel:+62215907777">+62 21 590 7777</a></p></div>
+        </div>
+        <div class="row no-gutters pb-1">
+          <div class="col-md-20"><p><span>Email</span></p></div>
+          <div class="col-md-40"><p><a href="mailto:info@pjuc.co.id">info@pjuc.co.id</a></p></div>
+        </div>
+        
+        <div class="clear"></div>
+      </div>
+
+      <div class="clear clearfix"></div>
+    </div>
+    <div class="clear clearfix"></div>
+  </div>
+</section>
+
+
+<script type="text/javascript">
+  $(document).ready(function() { // makes sure the whole site is loaded
+    var link_hide = $('.c-icon-close > a');
+    var icon_hides = $('.c-icon-close');
+
+    var link_show = $('a.view-leftmenu');
+
+    var left_panel = $('.box-left-menu-block');
+
+    $(link_hide).on('click', function(){
+      $(left_panel).animate({"margin-left": '-1200'}, "normal");
+      
+      setTimeout(function() {
+        $(link_show).show();
+      }, 350);
+      return false;
+    });
+
+    $(link_show).on('click', function(){
+      $(left_panel).animate({"margin-left": '0', "left": '0'}, "normal");
+
+      setTimeout(function() {
+        $(link_show).hide();
+      }, 500);
+      return false;
+    });
+
+    // var widths = $(window).width();
+    // if (widths < 767){
+    //   $('.inside-cont-black-foot.content-text p').find('br').remove();
+    // };
+    
+  });
+</script>

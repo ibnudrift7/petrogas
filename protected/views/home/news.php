@@ -66,7 +66,7 @@
         <div class="py-4 my-3 d-none d-sm-block"></div>
 		  <div class="py-2 my-2 d-block d-sm-none"></div>
 
-
+      <?php if ($dataBlogs->getTotalItemCount > 0): ?>
 		  <div class="box-list-newsdata">
           <div class="row no-gutters">
             <?php foreach ($dataBlog->getData() as $key => $value): ?>
@@ -85,10 +85,12 @@
               </div>
             </div>
             <?php endforeach; ?>
-
           </div>
           <div class="clear"></div>
         </div>
+        <?php else: ?>
+        <h5>Sory, Data is empty.</h5>
+        <?php endif ?>
         
         <div class="clear"></div>
       </div>

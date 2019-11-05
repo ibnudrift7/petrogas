@@ -78,6 +78,20 @@ class StaticController extends ControllerAdmin
 		));
 	}
 
+	public function actionPage_type()
+	{
+		$model = Setting::model()->getModelSetting('data');
+
+		$model = $this->loadData($model);
+
+		$names_page = $_GET['name'];
+
+		$this->render('page_type',array(
+			'model'=>$model,
+			'pagename' => $names_page,
+		));
+	}
+
 	public function loadData($model='')
 	{
 		if(isset($_POST['Setting']))

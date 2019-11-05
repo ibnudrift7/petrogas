@@ -20,7 +20,11 @@ $data_fet = StatistikList::model()->find($criteria);
 			<p><?php echo $data_fet->bwpd ?><br><b>BWPD</b></p>
 		</div>
 		<div class="col buttons_chart my-auto">
-			<p><a href="<?php echo CHtml::normalizeUrl(array('/home/statistic')); ?>"><img src="<?php echo $this->assetBaseurl ?>btn-charts-hometop.png" alt=""></a></p>
+			<p>
+				<a href="<?php echo CHtml::normalizeUrl(array('/home/statistic')); ?>">
+				<span><img src="<?php echo $this->assetBaseurl; ?>line-graph.png" alt=""></span>PRODUCTION PROFILE
+				</a>
+			</p>
 		</div>
 	</div>
 	<div class="clear"></div>

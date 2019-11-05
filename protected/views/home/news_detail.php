@@ -59,7 +59,7 @@
           </div>
           <div class="py-5"></div>
 
-
+          <?php if ($dataBlogs->getTotalItemCount > 0): ?>
           <div class="box-list-newsdata">
               <div class="row no-gutters">
                <?php foreach ($dataBlogs->getData() as $key => $value): ?>
@@ -78,10 +78,10 @@
                   </div>
                 </div>
                 <?php endforeach; ?>
-
               </div>
               <div class="clear"></div>
             </div>
+            <?php endif ?>
         
         <div class="clear"></div>
       </div>
