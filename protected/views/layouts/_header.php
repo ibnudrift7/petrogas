@@ -83,23 +83,33 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-		<li class="list-inline-item">
-			<a href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=>Yii::app()->language)); ?>">Home</a>
+		<li class="nav-item">
+			<a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=>Yii::app()->language)); ?>">Home</a>
 		</li>
-		<li class="list-inline-item">
-			<a href="<?php echo CHtml::normalizeUrl(array('/home/about', 'lang'=>Yii::app()->language)); ?>">About Us</a>
+		<li class="nav-item dropdown">
+			<a class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="<?php echo CHtml::normalizeUrl(array('/home/about', 'lang'=>Yii::app()->language)); ?>">About Us</a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'profile')); ?>">Profile</a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'structure')); ?>">Organisation Structure</a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'commissary')); ?>">Board of Commissary</a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'director')); ?>">Board of Director</a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'share_holders')); ?>">Share Holders</a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'rups')); ?>">RUPS</a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'financial_report')); ?>">Financial Report</a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'production_profile')); ?>">Production Profile</a></li>
+      </ul>
 		</li>
-		<li class="list-inline-item">
-			<a href="<?php echo CHtml::normalizeUrl(array('/home/business', 'lang'=>Yii::app()->language)); ?>">Our Business</a>
+		<li class="nav-item">
+			<a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/business', 'lang'=>Yii::app()->language)); ?>">Our Business</a>
 		</li>
-		<li class="list-inline-item">
-			<a href="<?php echo CHtml::normalizeUrl(array('/home/news', 'lang'=>Yii::app()->language)); ?>">News</a>
+		<li class="nav-item">
+			<a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/news', 'lang'=>Yii::app()->language)); ?>">News</a>
 		</li>
-		<li class="list-inline-item">
-			<a href="<?php echo CHtml::normalizeUrl(array('/home/career', 'lang'=>Yii::app()->language)); ?>">Career</a>
+		<li class="nav-item">
+			<a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/career', 'lang'=>Yii::app()->language)); ?>">Career</a>
 		</li>
-		<li class="list-inline-item">
-			<a href="<?php echo CHtml::normalizeUrl(array('/home/contact', 'lang'=>Yii::app()->language)); ?>">Contact Us</a>
+		<li class="nav-item">
+			<a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/contact', 'lang'=>Yii::app()->language)); ?>">Contact Us</a>
 		</li>
 	</ul>
   </div>
@@ -182,14 +192,14 @@
         <li><a href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=> Yii::app()->language)); ?>">Home</a></li>
         <li class="dropdown"><a href="<?php echo CHtml::normalizeUrl(array('/home/about', 'lang'=> Yii::app()->language)); ?>">About</a>
           <ul class="dropdown-menu">
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Organisation Structure</a></li>
-            <li><a href="#">Board of Commissary</a></li>
-            <li><a href="#">Board of Director</a></li>
-            <li><a href="#">Share Holders</a></li>
-            <li><a href="#">RUPS</a></li>
-            <li><a href="#">Financial Report</a></li>
-            <li><a href="#">Production Profile</a></li>
+            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'profile')); ?>">Profile</a></li>
+            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'structure')); ?>">Organisation Structure</a></li>
+            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'commissary')); ?>">Board of Commissary</a></li>
+            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'director')); ?>">Board of Director</a></li>
+            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'share_holders')); ?>">Share Holders</a></li>
+            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'rups')); ?>">RUPS</a></li>
+            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'financial_report')); ?>">Financial Report</a></li>
+            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'production_profile')); ?>">Production Profile</a></li>
           </ul>
         </li>
         
@@ -216,9 +226,15 @@
         <div class="row no-gutters py-1">
           <div class="col-md-20"><p>Language</p></div>
           <div class="col-md-40">
-            <p><a href="#">EN</a>
+            <?php
+            $get = $_GET; $get['lang'] = 'en';
+            ?>
+            <p><a class="<?php if (Yii::app()->language == 'en'): ?>active<?php endif ?>" href="<?php echo $this->createUrl($this->route, $get) ?>">EN</a>
               &nbsp;&nbsp;|&nbsp;&nbsp;
-              <a href="#">IN</a>
+              <?php
+              $get = $_GET; $get['lang'] = 'id';
+              ?>
+              <a class="<?php if (Yii::app()->language == 'id'): ?>active<?php endif ?>" href="<?php echo $this->createUrl($this->route, $get) ?>">IN</a>
               </p>
           </div>
         </div>

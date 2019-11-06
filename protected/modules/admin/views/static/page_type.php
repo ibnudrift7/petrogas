@@ -1,13 +1,14 @@
 <?php
+
 $this->breadcrumbs=array(
 	'setting'=>array('/admin/setting/index'),
-	'Career',
+	ucwords(str_replace('_', ' ', $pagename)),
 );
 
 $this->pageHeader=array(
-	'icon'=>'fa fa-phone',
+	'icon'=>'fa fa-folder',
 	'title'=>'Setting',
-	'subtitle'=>'Career',
+	'subtitle'=> 'About > '.ucwords(str_replace('_', ' ', $pagename)),
 );
 ?>
 <?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm',array(
@@ -53,7 +54,7 @@ $this->pageHeader=array(
 			<div class="divider5"></div>
 
 
-				<?php $type = 'career_hero_image' ?>
+				<?php $type = $pagename.'_hero_image' ?>
 				<?php Common::createSetting($type, 'Image', 'image', 'n') ?>
 				<label for="Setting_<?php echo $model[$type]['data']->name ?>" class="control-label required"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
 				<?php echo CHtml::fileField('Setting['.$model[$type]['data']->name.']', $model[$type]['data']->value, array('class'=>'span12')) ?>
@@ -66,7 +67,7 @@ $this->pageHeader=array(
 					<div class="clearfix" style="height: 1px;"></div>
 				<?php endif ?>
 
-				<?php $type = 'career_hero_title' ?>
+				<?php $type = $pagename.'_hero_title' ?>
 				<?php Common::createSetting($type, 'Title', 'text', 'y') ?>
 				<?php foreach (Language::model()->getLanguage() as $key => $value): ?>
 					<div class="pj-multilang-wrap myLanguage control-group" style="display: <?php if ($value->code==$this->setting['lang_deff']): ?>block<?php else: ?>none<?php endif ?>;" data-id="<?php echo $value->id ?>">
@@ -108,7 +109,7 @@ $this->pageHeader=array(
 		    </div>
 			<div class="widgetcontent">
 
-				<?php $type = 'career1_content' ?>
+				<?php $type = $pagename.'1_content' ?>
 				<?php Common::createSetting($type, 'Content', 'text', 'y') ?>
 				<?php foreach (Language::model()->getLanguage() as $key => $value): ?>
 					<div class="pj-multilang-wrap myLanguage control-group" style="display: <?php if ($value->code==$this->setting['lang_deff']): ?>block<?php else: ?>none<?php endif ?>;" data-id="<?php echo $value->id ?>">
@@ -119,11 +120,6 @@ $this->pageHeader=array(
 					    <span class="help-inline _em_" style="display: none;">Please correct the error</span>
 					</div>
 				<?php endforeach ?>
-
-				<?php $type = 'career_email' ?>
-				<?php Common::createSetting($type, 'Career Email', 'text', 'n') ?>
-				<label for="Setting_<?php echo $model[$type]['data']->name ?>" class="control-label required"><?php echo $model[$type]['data']->label ?><span class="required"></span></label>
-				<?php echo CHtml::textField('Setting['.$model[$type]['data']->name.']', $model[$type]['data']->value, array('class'=>'span12')) ?>
 
 				<div class="divider10"></div>
 				<?php $this->widget('bootstrap.widgets.TbButton', array(

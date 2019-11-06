@@ -684,7 +684,7 @@ hr{
 
 	left: 0px;
 	margin-left: -1200px;
-	
+
 	.inner{
 		.tops_blun{
 			.logo_snheaders{
@@ -817,9 +817,11 @@ hr{
 	.blocks_latestHome{
 		padding: 1rem 0;
 	}
+
 	.carousel-caption.caption-slider-home .bxsl_tx_fcs h4{
-		font-size: 18px;
+		font-size: 17px !important;
 	}
+
 	.blocks_latestHome .inf-date span{
 		font-size: 20px;
 	}
@@ -841,6 +843,36 @@ hr{
 	}
 	.blocks_latestHome .buttons_chart img{
 		max-width: 180px;
+	}
+
+	.blocks_latestHome .buttons_chart a{
+		position: relative;
+		top: inherit;
+		left: inherit;
+		display: inline-block;
+		margin: 0px;
+		margin-left: 0rem;
+	}
+
+	.navbar-nav {
+		li{
+			a.nav-link{
+				padding-top: 0; padding-bottom: 0;
+			}
+		}
+		.dropdown-menu{
+			border: 0px;
+			padding-top: 0;
+			padding-bottom: 0;
+			li{
+				a{
+					font-size: 12px !important;
+				}
+			}
+			li:last-child{
+				border-bottom: 0 !important;
+			}
+		}
 	}
 
 }

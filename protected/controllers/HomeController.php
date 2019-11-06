@@ -520,6 +520,16 @@ class HomeController extends Controller
 		));
 	}
 
+	public function actionAbout_us()
+	{
+		$this->pageTitle = 'About Us - '.$this->pageTitle;
+		$this->layout='//layouts/column2';
+
+		$this->render('about_page', array(	
+			'type_page' => htmlspecialchars($_GET['name']),
+		));
+	}
+
 	public function actionCase()
 	{
 		$this->pageTitle = 'Case - '.$this->pageTitle;
