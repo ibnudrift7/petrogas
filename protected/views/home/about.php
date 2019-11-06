@@ -16,14 +16,14 @@
 					<nav aria-label="breadcrumb">
 					  <ol class="breadcrumb">
 					    <li class="breadcrumb-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">HOME</a></li>
-					    <li class="breadcrumb-item active" aria-current="page">ABOUT US</li>
+					    <li class="breadcrumb-item active" aria-current="page"><?php echo Tt::t('front', 'About Us') ?></li>
 					  </ol>
 					</nav>
 					<div class="clear"></div>
 				</div>
 				<div class="col-md-20 text-right col-20">
 					<div class="blocc_back">
-						<a href="#" onclick="window.history.back();" class="btn btn-link">BACK</a>
+						<a href="#" onclick="window.history.back();" class="btn btn-link"><?php echo Tt::t('front', 'BACK') ?></a>
 					</div>
 				</div>
 			</div>
@@ -120,13 +120,13 @@
 	<div class="outers_block_visionnmission">
 		<div class="prelatife container">
 			<div class="insides content-text">
-				<h2 class="subtitle text-center">Vision & Mission</h2>
+				<h2 class="subtitle text-center"><?php echo Tt::t('front', 'Vision & Mission') ?></h2>
 				<div class="py-5 d-none d-sm-block"></div>
 				<div class="row">
 					<div class="col-md-30">
 						<div class="inners_vision">
 							<div class="d-inline-block align-top b-titles">
-								<h4>Our Vision</h4>
+								<h4><?php echo Tt::t('front', 'Our Vision') ?></h4>
 							</div>
 							<div class="d-inline-block align-top b-lines pt-2 mx-4">
 								<div class="lines-grey"></div>
@@ -139,7 +139,7 @@
 					<div class="col-md-30">
 						<div class="inners_vision">
 							<div class="d-inline-block align-top b-titles">
-								<h4>Our Mission</h4>
+								<h4><?php echo Tt::t('front', 'Our Mission') ?></h4>
 							</div>
 							<div class="d-inline-block align-top b-lines pt-2 mx-4">
 								<div class="lines-grey"></div>

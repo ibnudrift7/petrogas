@@ -17,14 +17,14 @@
                     <nav aria-label="breadcrumb">
                       <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">HOME</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">OUR BUSINESS</li>
+                        <li class="breadcrumb-item active" aria-current="page"><?php echo Tt::t('front', 'Our Business') ?></li>
                       </ol>
                     </nav>
                     <div class="clear"></div>
                 </div>
                 <div class="col-md-20 col-20 text-right">
                     <div class="blocc_back">
-                        <a href="#" onclick="window.history.back();" class="btn btn-link">BACK</a>
+                        <a href="#" onclick="window.history.back();" class="btn btn-link"><?php echo Tt::t('front', 'BACK') ?></a>
                     </div>
                 </div>
             </div>
@@ -46,8 +46,13 @@
 
                 <section class="outers_business3n">
                     <div class="content-text">
+                    <?php if (Yii::app()->language == 'en'): ?>
                     <h4>Our Business Operation Field</h4>
                     <p class="n_small">CLICK ON EACH OPERATION FIELD TO EXPLORE MORE</p>
+                    <?php else: ?>
+                    <h4> Bidang Operasi Bisnis Kami</h4>
+                    <p class = "n_small">KLIK TENTANG SETIAP OPERASI BIDANG UNTUK MENJELAJAHI LEBIH LANJUT</p>
+                    <?php endif ?>
                     </div>
                     <div class="py-2  d-none d-sm-block"></div>
                     <?php 

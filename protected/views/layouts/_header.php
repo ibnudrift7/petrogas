@@ -20,7 +20,7 @@
       <div class="col-md-30">
         <div class="image-tengah logo_headers">
           <a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">
-            <!-- <img src="<?php echo $this->assetBaseurl; ?>Petrogas-copy.png" alt=""> -->
+            <?php /*<!-- <img src="<?php echo $this->assetBaseurl; ?>Petrogas-copy.png" alt=""> -->*/ ?>
             <img class="img img-fluid" src="<?php echo $this->assetBaseurl; ?>logo-petro.svg" alt="">
           </a>
         </div>
@@ -28,7 +28,7 @@
       <div class="col-md-15">
         <div class="image-kanan">
           <div class="text">
-            <a href="<?php echo CHtml::normalizeUrl(array('/home/statistic')); ?>"><span><img src="<?php echo $this->assetBaseurl; ?>line-graph.png" alt=""></span>PRODUCTION PROFILE</a>
+            <a href="<?php echo CHtml::normalizeUrl(array('/home/statistic')); ?>"><span><img src="<?php echo $this->assetBaseurl; ?>line-graph.png" alt=""></span><?php echo Tt::t('front', 'PRODUCTION PROFILE') ?></a>
           </div>
         </div>
       </div>
@@ -42,22 +42,22 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav">
                 <li class="nav-item <?php echo ($active_menu_pg == 'home/index')? 'active':'' ?>">
-                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=>Yii::app()->language)); ?>">Home</a>
+                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Home') ?></a>
                 </li>
                 <li class="nav-item <?php echo ($active_menu_pg == 'home/about')? 'active':'' ?>">
-                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about', 'lang'=>Yii::app()->language)); ?>">About Us</a>
+                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'About Us') ?></a>
                 </li>
                 <li class="nav-item <?php echo ($active_menu_pg == 'home/business')? 'active':'' ?>">
-                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/business', 'lang'=>Yii::app()->language)); ?>">Our Business</a>
+                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/business', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Our Business') ?></a>
                 </li>
                 <li class="nav-item <?php echo ($active_menu_pg == 'home/news')? 'active':'' ?>">
-                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/news', 'lang'=>Yii::app()->language)); ?>">News</a>
+                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/news', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'News') ?></a>
                 </li>
                 <li class="nav-item <?php echo ($active_menu_pg == 'home/career')? 'active':'' ?>">
-                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/career', 'lang'=>Yii::app()->language)); ?>">Career</a>
+                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/career', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Career') ?></a>
                 </li>             
                 <li class="nav-item <?php echo ($active_menu_pg == 'home/contact')? 'active':'' ?>">
-                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/contact', 'lang'=>Yii::app()->language)); ?>">Contact Us</a>
+                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/contact', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Contact Us') ?></a>
                 </li>             
               </ul>
             </div>
@@ -84,32 +84,32 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
 		<li class="nav-item">
-			<a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=>Yii::app()->language)); ?>">Home</a>
+			<a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Home') ?></a>
 		</li>
 		<li class="nav-item dropdown">
-			<a class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="<?php echo CHtml::normalizeUrl(array('/home/about', 'lang'=>Yii::app()->language)); ?>">About Us</a>
+			<a class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="<?php echo CHtml::normalizeUrl(array('/home/about', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'About Us') ?></a>
       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'profile')); ?>">Profile</a></li>
-        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'structure')); ?>">Organisation Structure</a></li>
-        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'commissary')); ?>">Board of Commissary</a></li>
-        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'director')); ?>">Board of Director</a></li>
-        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'share_holders')); ?>">Share Holders</a></li>
-        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'rups')); ?>">RUPS</a></li>
-        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'financial_report')); ?>">Financial Report</a></li>
-        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'production_profile')); ?>">Production Profile</a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'profile')); ?>"><?php echo Tt::t('front', 'Profile') ?></a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'structure')); ?>"><?php echo Tt::t('front', 'Organisation Structure') ?></a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'commissary')); ?>"><?php echo Tt::t('front', 'Board of Commissary') ?></a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'director')); ?>"><?php echo Tt::t('front', 'Board of Director') ?></a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'share_holders')); ?>"><?php echo Tt::t('front', 'Share Holders') ?></a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'rups')); ?>"><?php echo Tt::t('front', 'RUPS') ?></a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'financial_report')); ?>"><?php echo Tt::t('front', 'Financial Report') ?></a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'production_profile')); ?>"><?php echo Tt::t('front', 'Production Profile') ?></a></li>
       </ul>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/business', 'lang'=>Yii::app()->language)); ?>">Our Business</a>
+			<a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/business', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Our Business') ?></a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/news', 'lang'=>Yii::app()->language)); ?>">News</a>
+			<a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/news', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'News') ?></a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/career', 'lang'=>Yii::app()->language)); ?>">Career</a>
+			<a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/career', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Career') ?></a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/contact', 'lang'=>Yii::app()->language)); ?>">Contact Us</a>
+			<a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/contact', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Contact Us') ?></a>
 		</li>
 	</ul>
   </div>
@@ -189,17 +189,17 @@
     </div>
     <div class="middles">
       <ul class="list-unstyled ff_menu">
-        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=> Yii::app()->language)); ?>">Home</a></li>
-        <li class="dropdown"><a href="<?php echo CHtml::normalizeUrl(array('/home/about', 'lang'=> Yii::app()->language)); ?>">About</a>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=> Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Home') ?></a></li>
+        <li class="dropdown"><a href="<?php echo CHtml::normalizeUrl(array('/home/about', 'lang'=> Yii::app()->language)); ?>"><?php echo Tt::t('front', 'About') ?></a>
           <ul class="dropdown-menu">
-            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'profile')); ?>">Profile</a></li>
-            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'structure')); ?>">Organisation Structure</a></li>
-            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'commissary')); ?>">Board of Commissary</a></li>
-            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'director')); ?>">Board of Director</a></li>
-            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'share_holders')); ?>">Share Holders</a></li>
-            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'rups')); ?>">RUPS</a></li>
-            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'financial_report')); ?>">Financial Report</a></li>
-            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'production_profile')); ?>">Production Profile</a></li>
+            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'profile')); ?>"><?php echo Tt::t('front', 'Profile') ?></a></li>
+            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'structure')); ?>"><?php echo Tt::t('front', 'Organisation Structure') ?></a></li>
+            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'commissary')); ?>"><?php echo Tt::t('front', 'Board of Commissary') ?></a></li>
+            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'director')); ?>"><?php echo Tt::t('front', 'Board of Director') ?></a></li>
+            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'share_holders')); ?>"><?php echo Tt::t('front', 'Share Holders') ?></a></li>
+            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'rups')); ?>"><?php echo Tt::t('front', 'RUPS') ?></a></li>
+            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'financial_report')); ?>"><?php echo Tt::t('front', 'Financial Report') ?></a></li>
+            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'production_profile')); ?>"><?php echo Tt::t('front', 'Production Profile') ?></a></li>
           </ul>
         </li>
         
@@ -208,7 +208,7 @@
         $criteria->order = 't.id ASC';
         $data_block = Blockbuilding::model()->findAll($criteria);
         ?>
-        <li class="dropdown"><a href="<?php echo CHtml::normalizeUrl(array('/home/business', 'lang'=> Yii::app()->language)); ?>">Our Business</a>
+        <li class="dropdown"><a href="<?php echo CHtml::normalizeUrl(array('/home/business', 'lang'=> Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Our Business') ?></a>
           <ul class="dropdown-menu">
             <?php foreach ($data_block as $key => $value): ?>
             <li><a href="<?php echo CHtml::normalizeUrl(array('/home/business_detail', 'id'=> $value->id)); ?>"><?php echo $value->nama ?></a></li>
@@ -216,15 +216,15 @@
           </ul>
         </li>
 
-        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/news', 'lang'=> Yii::app()->language)); ?>">News</a></li>
-        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/career', 'lang'=> Yii::app()->language)); ?>">Career</a></li>
-        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/contact', 'lang'=> Yii::app()->language)); ?>">Contact us</a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/news', 'lang'=> Yii::app()->language)); ?>"><?php echo Tt::t('front', 'News') ?></a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/career', 'lang'=> Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Career') ?></a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/contact', 'lang'=> Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Contact Us') ?></a></li>
       </ul>
 
       <div class="py-3"></div>
       <div class="changes_lang py-3">
         <div class="row no-gutters py-1">
-          <div class="col-md-20"><p>Language</p></div>
+          <div class="col-md-20"><p><?php echo Tt::t('front', 'Language') ?></p></div>
           <div class="col-md-40">
             <?php
             $get = $_GET; $get['lang'] = 'en';
@@ -243,15 +243,15 @@
       <div class="infos_nbottom">
         <div class="row no-gutters pb-1">
           <div class="col-md-20"><p><span>Whatsapp</span></p></div>
-          <div class="col-md-40"><p><a href="https://wa.me/628164807016">081 6480 7016</a></p></div>
+          <div class="col-md-40"><p><a href="https://wa.me/<?php echo str_replace(' ', '', $this->setting['contact_wa']); ?>">+<?php echo $this->setting['contact_wa'] ?></a></p></div>
         </div>
         <div class="row no-gutters pb-1">
-          <div class="col-md-20"><p><span>Telephone</span></p></div>
-          <div class="col-md-40"><p><a href="tel:+62215907777">+62 21 590 7777</a></p></div>
+          <div class="col-md-20"><p><span><?php echo Tt::t('front', 'Telephone') ?></span></p></div>
+          <div class="col-md-40"><p><a href="tel:<?php echo str_replace(' ', '', $this->setting['contact_phone']) ?>"><?php echo $this->setting['contact_phone'] ?></a></p></div>
         </div>
         <div class="row no-gutters pb-1">
           <div class="col-md-20"><p><span>Email</span></p></div>
-          <div class="col-md-40"><p><a href="mailto:info@pjuc.co.id">info@pjuc.co.id</a></p></div>
+          <div class="col-md-40"><p><a href="mailto:<?php echo $this->setting['contact_email'] ?>"><?php echo $this->setting['contact_email'] ?></a></p></div>
         </div>
         
         <div class="clear"></div>

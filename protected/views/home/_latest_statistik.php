@@ -22,7 +22,7 @@ $data_fet = StatistikList::model()->find($criteria);
 		<div class="col buttons_chart my-auto">
 			<p>
 				<a href="<?php echo CHtml::normalizeUrl(array('/home/statistic')); ?>">
-				<span><img src="<?php echo $this->assetBaseurl; ?>line-graph.png" alt=""></span>PRODUCTION PROFILE
+				<span><img src="<?php echo $this->assetBaseurl; ?>line-graph.png" alt=""></span><?php echo Tt::t('front', 'PRODUCTION PROFILE') ?>
 				</a>
 			</p>
 		</div>

@@ -40,7 +40,7 @@
 								<div class="teks">
 									<?php echo $this->setting['home2_banner_content'] ?>
 									<a target="_blank" href="<?php echo $this->setting['home2_banner_link'] ?>">
-										<span><img src="<?php echo $this->assetBaseurl; ?>right-thin.png" alt=""></span>READ MORE
+										<span><img src="<?php echo $this->assetBaseurl; ?>right-thin.png" alt=""></span><?php echo Tt::t('front', 'READ MORE') ?>
 									</a>
 								</div>
 							</div>
@@ -70,7 +70,7 @@
 <?php if ($dataBlog->TotalItemCount > 0): ?>
 <section class="home-sec-2">
 	<div class="title-sec">
-		<h5>Latest News Update</h5>
+		<h5>><?php echo Tt::t('front', 'Latest News Update') ?></h5>
 	</div>
 	<div class="prelative container2">
 		<div class="row no-gutters">
@@ -79,14 +79,14 @@
 				<img src="<?php echo Yii::app()->baseUrl.ImageHelper::thumb(432,260, '/images/blog/'. $value->image , array('method' => 'adaptiveResize', 'quality' => '90')) ?>" class="img img-fluid" alt="">
 				<div class="box-content">
 					<h4><?php echo $value->description->title ?></h4>
-					<a href="<?php echo CHtml::normalizeUrl(array('/blog/detail', 'id'=> $value->id)); ?>">view article</a>
+					<a href="<?php echo CHtml::normalizeUrl(array('/blog/detail', 'id'=> $value->id)); ?>"><?php echo Tt::t('front', 'view article') ?></a>
 				</div>
 			</div>
 			<?php endforeach ?>
 
 		</div>
 		<div class="more-news">
-			<a href="<?php echo CHtml::normalizeUrl(array('/blog/index')); ?>"> <span><img src="<?php echo $this->assetBaseurl; ?>right-thin.png" alt=""></span>MORE NEWS</a>
+			<a href="<?php echo CHtml::normalizeUrl(array('/blog/index')); ?>"> <span><img src="<?php echo $this->assetBaseurl; ?>right-thin.png" alt=""></span><?php echo Tt::t('front', 'MORE NEWS') ?></a>
 		</div>
 	</div>
 </section>

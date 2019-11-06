@@ -2,7 +2,7 @@
 <section class="coverpages ill-news">
   <!-- <div class="prelatife container"> -->
     <div class="inners_npage_ill">
-      <h1>News</h1>
+      <h1><?php echo Tt::t('front', 'News') ?></h1>
     </div>
     <div class="clear"></div>
   <!-- </div> -->
@@ -17,14 +17,14 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">HOME</a></li>
-              <li class="breadcrumb-item active" aria-current="page">NEWS</li>
+              <li class="breadcrumb-item active" aria-current="page"><?php echo Tt::t('front', 'NEWS') ?></li>
             </ol>
           </nav>
           <div class="clear"></div>
         </div>
         <div class="col-md-20 text-right col-20">
           <div class="blocc_back">
-            <a href="#" onclick="window.history.back();" class="btn btn-link">BACK</a>
+            <a href="#" onclick="window.history.back();" class="btn btn-link"><?php echo Tt::t('front', 'BACK') ?></a>
           </div>
         </div>
       </div>

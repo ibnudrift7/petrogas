@@ -7,10 +7,10 @@
 			<div class="col-md-36">
 				<ul>
 					<li>
-						<p>Whatsapp <a href="#"><?php echo $this->setting['contact_wa'] ?></a></p>
+						<p>Whatsapp <a href="https://wa.me/<?php echo str_replace(' ', '', $this->setting['contact_wa']); ?>"><?php echo $this->setting['contact_wa'] ?></a></p>
 					</li>
 					<li>
-						<p>Telephone <a href="#"><?php echo $this->setting['contact_phone'] ?></a></p>
+						<p>Telephone <a href="tel:<?php echo str_replace(' ', '', $this->setting['contact_phone']) ?>"><?php echo $this->setting['contact_phone'] ?></a></p>
 					</li>
 					<li class="nooo">
 						<p>Email <a href="mailto:<?php echo $this->setting['contact_email'] ?>"><?php echo $this->setting['contact_email'] ?></a></p>

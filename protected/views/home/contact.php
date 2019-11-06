@@ -44,7 +44,11 @@
             <?php echo $this->setting['contact_bottom_content'] ?>
           </div>
           <div class="col-md-30">
+            <?php if (Yii::app()->language == 'en'): ?>
             <h3><b>For any inquiries and information request, please fill out the form below</b></h3>
+            <?php else: ?>
+            <h3><b>Untuk pertanyaan dan permintaan informasi apa pun, silakan isi formulir di bawah ini</b></h3>
+            <?php endif ?>
 
             <div class="row boxn_form">
               <div class="col-md-10 col-10">
@@ -53,31 +57,31 @@
               <div class="col-md-50 col-50">
                 <form method="post" action="#" onsubmit="alert('underconstruction');">
                   <div class="form-group">
-                    <label for="exn1">name</label>
+                    <label for="exn1"><?php echo Tt::t('front', 'NAME') ?></label>
                     <div class="pl-5 ml-4">
                     <input type="text" class="form-control" id="exn1" placeholder="">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="exn12">COMPANY</label>
+                    <label for="exn12"><?php echo Tt::t('front', 'COMPANY') ?></label>
                     <div class="pl-5 ml-4">
                     <input type="text" class="form-control" id="exn1" placeholder="">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="exn13">PHONE</label>
+                    <label for="exn13"><?php echo Tt::t('front', 'PHONE') ?></label>
                     <div class="pl-5 ml-4">
                     <input type="text" class="form-control" id="exn1" placeholder="">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="exn14">EMAIL</label>
+                    <label for="exn14"><?php echo Tt::t('front', 'EMAIL') ?></label>
                     <div class="pl-5 ml-4">
                     <input type="text" class="form-control" id="exn1" placeholder="">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="exn15">MESSAGE</label>
+                    <label for="exn15"><?php echo Tt::t('front', 'MESSAGE') ?></label>
                     <div class="pl-5 ml-4">
                     <input type="text" class="form-control" id="exn1" placeholder="">
                     </div>
