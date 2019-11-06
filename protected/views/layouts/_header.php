@@ -19,7 +19,7 @@
       </div>
       <div class="col-md-30">
         <div class="image-tengah logo_headers">
-          <a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">
+          <a href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=>Yii::app()->language)); ?>">
             <?php /*<!-- <img src="<?php echo $this->assetBaseurl; ?>Petrogas-copy.png" alt=""> -->*/ ?>
             <img class="img img-fluid" src="<?php echo $this->assetBaseurl; ?>logo-petro.svg" alt="">
           </a>
@@ -28,7 +28,7 @@
       <div class="col-md-15">
         <div class="image-kanan">
           <div class="text">
-            <a href="<?php echo CHtml::normalizeUrl(array('/home/statistic')); ?>"><span><img src="<?php echo $this->assetBaseurl; ?>line-graph.png" alt=""></span><?php echo Tt::t('front', 'PRODUCTION PROFILE') ?></a>
+            <a href="<?php echo CHtml::normalizeUrl(array('/home/statistic', 'lang'=>Yii::app()->language)); ?>"><span><img src="<?php echo $this->assetBaseurl; ?>line-graph.png" alt=""></span><?php echo Tt::t('front', 'PRODUCTION PROFILE') ?></a>
           </div>
         </div>
       </div>

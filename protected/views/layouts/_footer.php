@@ -2,7 +2,7 @@
 	<div class="prelative container">
 		<div class="row">
 			<div class="col-md-12">
-				<div class="image"><img src="<?php echo $this->assetBaseurl; ?>Petrogas-copy-2.png" alt=""></div>
+				<div class="image"><a href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=> Yii::app()->language )); ?>"><img src="<?php echo $this->assetBaseurl; ?>Petrogas-copy-2.png" alt="<?php echo Yii::app()->name ?>"></a></div>
 			</div>
 			<div class="col-md-36">
 				<ul>

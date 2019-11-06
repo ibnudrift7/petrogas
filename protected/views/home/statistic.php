@@ -2,7 +2,7 @@
 <section class="coverpages ill-about" style="background-image: url('<?php echo Yii::app()->baseUrl.'/images/static/'. $this->setting['career_hero_image']; ?>');">
   <!-- <div class="prelatife container"> -->
     <div class="inners_npage_ill">
-      <h1><?php echo ucwords('production profile') ?></h1>
+      <h1><?php echo ucwords(strtolower('PRODUCTION PROFILE')) ?></h1>
     </div>
     <div class="clear"></div>
   <!-- </div> -->
@@ -17,14 +17,14 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="<?php echo CHtml::normalizeUrl(array('/home/index')); ?>">HOME</a></li>
-              <li class="breadcrumb-item active" aria-current="page"><?php echo strtoupper('production profile') ?></li>
+              <li class="breadcrumb-item active" aria-current="page"><?php echo strtoupper('PRODUCTION PROFILE') ?></li>
             </ol>
           </nav>
           <div class="clear"></div>
         </div>
         <div class="col-md-20 col-20 text-right">
           <div class="blocc_back">
-            <a href="#" onclick="window.history.back();" class="btn btn-link">BACK</a>
+            <a href="#" onclick="window.history.back();" class="btn btn-link"><?php echo Tt::t('front', 'BACK') ?></a>
           </div>
         </div>
       </div>
@@ -34,8 +34,26 @@
     <div class="insides">
       <div class="content-text t-about text-center">
         <div class="py-4 d-none d-sm-block"></div>
+        
 
         <div class="mw1091 mx-auto blocks_pg_statistic">
+            <div class="outer_frame_widget">
+              <div class="row">
+                <div class="col">
+                  <div class="frame_widget">
+                    <script type="text/javascript" src="https://www.oil-price.net/TABLE2/gen.php?lang=en"> </script><noscript> To get the WTI <a href="http://www.oil-price.net/dashboard.php?lang=en#TABLE2">oil price</a>, please enable Javascript.</noscript>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="frame_widget">
+                    <script type="text/javascript" src="https://www.oil-price.net/widgets/brent_crude_price_large/gen.php?lang=en"> </script> <noscript> To get the BRENT <a href="http://www.oil-price.net/dashboard.php?lang=en#brent_crude_price_large">oil price</a>, please enable Javascript.</noscript>
+                  </div>
+                </div>
+              </div>
+              <div class="clear clearfix"></div>
+            </div>
+            <div class="py-4"></div>
+
           <div class="tops_feature">
             <div class="pict">
               <img src="<?php echo Yii::app()->baseUrl .'/images/statistik/'. $data_first->image; ?>" alt="" class="img img-fluid d-block mx-auto">
@@ -100,6 +118,7 @@
             </div>
             <div class="clear"></div>
           </div>
+          
 
           <div class="clear clearfix"></div>
         </div>
