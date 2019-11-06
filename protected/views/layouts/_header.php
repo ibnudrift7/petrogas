@@ -97,6 +97,7 @@
         <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'rups')); ?>"><?php echo Tt::t('front', 'RUPS') ?></a></li>
         <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'financial_report')); ?>"><?php echo Tt::t('front', 'Financial Report') ?></a></li>
         <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'production_profile')); ?>"><?php echo Tt::t('front', 'Production Profile') ?></a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/annual_report')); ?>"><?php echo Tt::t('front', 'Annual Report') ?></a></li>
       </ul>
 		</li>
 		<li class="nav-item">
@@ -200,6 +201,7 @@
             <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'rups')); ?>"><?php echo Tt::t('front', 'RUPS') ?></a></li>
             <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'financial_report')); ?>"><?php echo Tt::t('front', 'Financial Report') ?></a></li>
             <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'production_profile')); ?>"><?php echo Tt::t('front', 'Production Profile') ?></a></li>
+            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/annual_report')); ?>"><?php echo Tt::t('front', 'Annual Report') ?></a></li>
           </ul>
         </li>
         

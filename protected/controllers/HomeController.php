@@ -530,6 +530,16 @@ class HomeController extends Controller
 		));
 	}
 
+	public function actionAnnual_report()
+	{
+		$this->pageTitle = 'Annual Report - '.$this->pageTitle;
+		$this->layout='//layouts/column2';
+
+		$this->render('anual_report', array(	
+			// 'type_page' => htmlspecialchars($_GET['name']),
+		));	
+	}
+
 	public function actionCase()
 	{
 		$this->pageTitle = 'Case - '.$this->pageTitle;

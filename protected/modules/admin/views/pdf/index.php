@@ -1,14 +1,14 @@
 <?php 
-	$criteria = new CDbCriteria;
-	$criteria->with = array('description');
-	$criteria->addCondition('description.language_id = :language_id');
-	$criteria->params[':language_id'] = 2;
-	$criteria->addCondition('t.id = :id');
-	$criteria->params[':id'] = $_GET['category'];
-	$criteria->group = 't.id';
-	$criteria->order = 't.sort ASC';
-	$detailCategory = PrdCategory::model()->find($criteria);
-	$titles_subm = $detailCategory->description->name;
+	// $criteria = new CDbCriteria;
+	// $criteria->with = array('description');
+	// $criteria->addCondition('description.language_id = :language_id');
+	// $criteria->params[':language_id'] = 2;
+	// $criteria->addCondition('t.id = :id');
+	// $criteria->params[':id'] = $_GET['category'];
+	// $criteria->group = 't.id';
+	// $criteria->order = 't.sort ASC';
+	// $detailCategory = PrdCategory::model()->find($criteria);
+	// $titles_subm = $detailCategory->description->name;
 ?>
 <?php
 $this->breadcrumbs=array(
@@ -18,7 +18,8 @@ $this->breadcrumbs=array(
 $this->pageHeader=array(
 	'icon'=>'fa fa-bank',
 	'title'=>'PDF',
-	'subtitle'=>'Data PDF > '. $titles_subm,
+	'subtitle'=>'Data PDF',
+	// 'subtitle'=>'Data PDF > '. $titles_subm,
 );
 
 $this->menu=array(
@@ -60,6 +61,6 @@ $this->menu=array(
 )); ?>
 </div>
 	<div class="span4">
-		<?php $this->renderPartial('/setting/page_menu') ?>
+		<?php // echo $this->renderPartial('/setting/page_menu') ?>
 	</div>
 </div>

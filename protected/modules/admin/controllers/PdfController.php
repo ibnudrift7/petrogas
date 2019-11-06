@@ -66,13 +66,21 @@ class PdfController extends ControllerAdmin
 				$model->addError('file','Ganti nama file anda, dan upload kembali, nama file ada yang sama');
 			}
 
+			$image = CUploadedFile::getInstance($model,'image');
+			if ($image->name != '') {
+				$model->image = substr(md5(time()),0,5).'-'.$image->name;
+			}
+
 			$model->date_input = date("Y-m-d H:i:s");
 			if(!$model->hasErrors() AND $model->validate()){
 				$transaction=$model->dbConnection->beginTransaction();
 				try
 				{
 					$file->saveAs(Yii::getPathOfAlias('webroot').'/images/pdf/'.$model->file);
-					
+					if ($image->name != '') {
+						$image->saveAs(Yii::getPathOfAlias('webroot').'/images/pdf/'.$model->image);
+					}
+
 					$model->save();
 					Log::createLog("PdfController Create $model->id");
 					Yii::app()->user->setFlash('success','Data has been inserted');
@@ -106,8 +114,10 @@ class PdfController extends ControllerAdmin
 		if(isset($_POST['Pdf']))
 		{
 			$file = $model->file;//mengamankan nama file
+			$image = $model->image;//mengamankan nama file
 			$model->attributes=$_POST['Pdf'];//setting semua nilai
 			$model->file = $file;//mengembalikan nama file
+			$model->image = $image;//mengembalikan nama file
 
 			$file = CUploadedFile::getInstance($model,'file');
 			if ($file->name != '') {
@@ -120,6 +130,11 @@ class PdfController extends ControllerAdmin
 			}
 			$model->category_id = $category;
 
+			$image = CUploadedFile::getInstance($model,'image');
+			if ($image->name != '') {
+				$model->image = substr(md5(time()),0,5).'-'.$image->name;
+			}
+
 			$model->date_input = date("Y-m-d H:i:s");
 			if(!$model->hasErrors() AND $model->validate()){
 				$transaction=$model->dbConnection->beginTransaction();
@@ -128,6 +143,10 @@ class PdfController extends ControllerAdmin
 					if ($file->name != '') {
 						$file->saveAs(Yii::getPathOfAlias('webroot').'/images/pdf/'.$model->file);
 					}
+					if ($image->name != '') {
+						$image->saveAs(Yii::getPathOfAlias('webroot').'/images/pdf/'.$model->image);
+					}
+					
 
 					$model->save();
 					Log::createLog("PdfController Update $model->id");
@@ -173,7 +192,8 @@ class PdfController extends ControllerAdmin
 		if(isset($_GET['Pdf']))
 			$model->attributes=$_GET['Pdf'];
 		
-		$model->category_id=$category;
+		// filter category
+		// $model->category_id=$category;
 
 		$dataProvider=new CActiveDataProvider('Pdf');
 		$this->render('index',array(

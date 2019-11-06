@@ -2,7 +2,7 @@
 $type_page = htmlentities($type_page);
 // echo $type_page; exit;
 ?>
-<section class="coverpages ill-about" style="background-image: url('<?php echo Yii::app()->baseUrl.'/images/static/'. $this->setting['career_hero_image']; ?>');">
+<section class="coverpages ill-about" style="background-image: url('<?php echo Yii::app()->baseUrl.'/images/static/'. $this->setting[$type_page.'_hero_image']; ?>');">
     <div class="inners_npage_ill">
       <h1><?php echo $this->setting[$type_page.'_hero_title'] ?></h1>
     </div>
