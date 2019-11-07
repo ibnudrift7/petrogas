@@ -1147,13 +1147,17 @@ Staff dari perabotplastik.com akan menghubungi anda untuk konfirmasi dan penjela
 
 		$criteria = new CDbCriteria;
 	    $criteria->addCondition('status = "1"');
-	    $criteria->order = 't.id DESC';
+	    // $criteria->order = 't.id DESC';
+	    $criteria->order = 't.tgl_statistik DESC';
+	    
 	    $criteria->limit = 1;
 		$data_first = StatistikList::model()->find($criteria);
 
 		$criteria = new CDbCriteria;
 	    $criteria->addCondition('status = "1"');
-	    $criteria->order = 't.id DESC';
+	    // $criteria->order = 't.id DESC';
+	    $criteria->order = 't.tgl_statistik DESC';
+
 	    // $criteria->addCondition('t.id = "1"');
 	    // $criteria->limit = 1;
 		$data = StatistikList::model()->findAll($criteria);

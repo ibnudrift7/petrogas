@@ -41,24 +41,31 @@
           <nav class="navbar navbar-expand-lg">
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
               <ul class="navbar-nav">
-                <li class="nav-item <?php echo ($active_menu_pg == 'home/index')? 'active':'' ?>">
-                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Home') ?></a>
+                <li class="nav-item <?php echo ($active_menu_pg == 'home/about_us' && $_GET['name'] == 'profile')? 'active':'' ?>">
+                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'profile')); ?>"><?php echo Tt::t('front', 'Profile') ?></a>
                 </li>
-                <li class="nav-item <?php echo ($active_menu_pg == 'home/about')? 'active':'' ?>">
-                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'About Us') ?></a>
+                <li class="nav-item <?php echo ($active_menu_pg == 'home/about_us' && $_GET['name'] == 'structure')? 'active':'' ?>">
+                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'structure')); ?>"><?php echo Tt::t('front', 'Organisation Structure') ?></a>
                 </li>
-                <li class="nav-item <?php echo ($active_menu_pg == 'home/business')? 'active':'' ?>">
-                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/business', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Our Business') ?></a>
+                <li class="nav-item <?php echo ($active_menu_pg == 'home/about_us' && $_GET['name'] == 'commissary')? 'active':'' ?>">
+                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'commissary')); ?>"><?php echo Tt::t('front', 'Board of Commissary') ?></a>
                 </li>
-                <li class="nav-item <?php echo ($active_menu_pg == 'home/news')? 'active':'' ?>">
-                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/news', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'News') ?></a>
+                <li class="nav-item <?php echo ($active_menu_pg == 'home/about_us' && $_GET['name'] == 'director')? 'active':'' ?>">
+                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'director')); ?>"><?php echo Tt::t('front', 'Board of Director') ?></a>
                 </li>
-                <li class="nav-item <?php echo ($active_menu_pg == 'home/career')? 'active':'' ?>">
-                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/career', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Career') ?></a>
-                </li>             
-                <li class="nav-item <?php echo ($active_menu_pg == 'home/contact')? 'active':'' ?>">
-                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/contact', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Contact Us') ?></a>
-                </li>             
+                <li class="nav-item <?php echo ($active_menu_pg == 'home/about_us' && $_GET['name'] == 'share_holders')? 'active':'' ?>">
+                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'share_holders')); ?>"><?php echo Tt::t('front', 'Share Holders') ?></a>
+                </li>
+                <li class="nav-item <?php echo ($active_menu_pg == 'home/about_us' && $_GET['name'] == 'rups')? 'active':'' ?>">
+                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'rups')); ?>"><?php echo Tt::t('front', 'RUPS') ?></a>
+                </li>
+                <li class="nav-item <?php echo ($active_menu_pg == 'home/about_us' && $_GET['name'] == 'financial_report')? 'active':'' ?>">
+                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'financial_report')); ?>"><?php echo Tt::t('front', 'Financial Report') ?></a>
+                </li>
+                <li class="nav-item <?php echo ($active_menu_pg == 'home/about_us' && $_GET['name'] == 'production_profile')? 'active':'' ?>">
+                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'production_profile')); ?>"><?php echo Tt::t('front', 'Production Profile') ?></a>
+                </li>
+                
               </ul>
             </div>
           </nav>
@@ -191,8 +198,9 @@
     <div class="middles">
       <ul class="list-unstyled ff_menu">
         <li><a href="<?php echo CHtml::normalizeUrl(array('/home/index', 'lang'=> Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Home') ?></a></li>
-        <li class="dropdown"><a href="<?php echo CHtml::normalizeUrl(array('/home/about', 'lang'=> Yii::app()->language)); ?>"><?php echo Tt::t('front', 'About') ?></a>
-          <ul class="dropdown-menu">
+        <li class="dropdown">
+          <a href="#" class="customs_drop" id="dropdownMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo Tt::t('front', 'About') ?></a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu" id="customs_dropMenu">
             <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'profile')); ?>"><?php echo Tt::t('front', 'Profile') ?></a></li>
             <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'structure')); ?>"><?php echo Tt::t('front', 'Organisation Structure') ?></a></li>
             <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'commissary')); ?>"><?php echo Tt::t('front', 'Board of Commissary') ?></a></li>
@@ -210,8 +218,10 @@
         $criteria->order = 't.id ASC';
         $data_block = Blockbuilding::model()->findAll($criteria);
         ?>
-        <li class="dropdown"><a href="<?php echo CHtml::normalizeUrl(array('/home/business', 'lang'=> Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Our Business') ?></a>
-          <ul class="dropdown-menu">
+        <?php /*<li class="dropdown"><a href="<?php echo CHtml::normalizeUrl(array('/home/business', 'lang'=> Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Our Business') ?></a>*/ ?>
+        <li class="dropdown">
+          <a href="#" class="customs_drop2" id="dropdownMenu2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo Tt::t('front', 'Our Business') ?></a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu2" id="customs_dropMenu2">
             <?php foreach ($data_block as $key => $value): ?>
             <li><a href="<?php echo CHtml::normalizeUrl(array('/home/business_detail', 'id'=> $value->id)); ?>"><?php echo $value->nama ?></a></li>
             <?php endforeach; ?>
@@ -293,10 +303,14 @@
       return false;
     });
 
-    // var widths = $(window).width();
-    // if (widths < 767){
-    //   $('.inside-cont-black-foot.content-text p').find('br').remove();
-    // };
+    $('.customs_drop').on('click', function(){
+      $('#customs_dropMenu2').hide();
+      $('#customs_dropMenu').show();
+    });
+    $('.customs_drop2').on('click', function(){
+      $('#customs_dropMenu').hide();
+      $('#customs_dropMenu2').show();
+    });
     
   });
 </script>

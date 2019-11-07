@@ -1,7 +1,7 @@
 <?php 
 $criteria = new CDbCriteria;
 $criteria->addCondition('status = "1"');
-$criteria->order = 'date_input DESC';
+$criteria->order = 't.tgl_statistik DESC';
 // $criteria->limit = 3;
 $data_fet = StatistikList::model()->find($criteria);
 ?>
@@ -21,7 +21,7 @@ $data_fet = StatistikList::model()->find($criteria);
 		</div>
 		<div class="col buttons_chart my-auto">
 			<p>
-				<a href="<?php echo CHtml::normalizeUrl(array('/home/statistic')); ?>">
+				<a href="<?php echo CHtml::normalizeUrl(array('/home/statistic', 'lang'=> Yii::app()->language)); ?>">
 				<span><img src="<?php echo $this->assetBaseurl; ?>line-graph.png" alt=""></span><?php echo Tt::t('front', 'PRODUCTION PROFILE') ?>
 				</a>
 			</p>
