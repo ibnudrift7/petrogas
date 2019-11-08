@@ -80,3 +80,14 @@ $data = Blockbuilding::model()->find('t.id = :ids', array(':ids'=> intval($_GET[
         </div>
     </div>
 </section>
+
+
+<script type="text/javascript">
+  // hide menu default
+  var n_width = $(window).width();
+  if (n_width > 980){
+    $('.view_default_menu, .view_about_menu').addClass('d-none');
+
+    $('.view_business_menu').removeClass('d-none')
+  }
+</script>

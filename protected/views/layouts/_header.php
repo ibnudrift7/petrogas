@@ -95,6 +95,22 @@
               </ul>
             </div>
           </nav>
+          <?php 
+          $criteria = new CDbCriteria;
+          $criteria->order = 't.id ASC';
+          $data_blocks = Blockbuilding::model()->findAll($criteria);
+          ?>
+          <nav class="navbar navbar-expand-lg d-none view_business_menu">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <?php foreach ($data_blocks as $key => $value): ?>
+                <li class="nav-item <?php echo ($active_menu_pg == 'home/business_detail' && $_GET['id'] ==  $value->id)? 'active':'' ?>">
+                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/business_detail', 'id'=> $value->id)); ?>"><?php echo $value->nama ?></a>
+                </li>
+                <?php endforeach; ?>
+              </ul>
+            </div>
+          </nav>
         </div>
       </div>
       <div class="col-md-15 text-right">
