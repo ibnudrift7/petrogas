@@ -45,7 +45,7 @@
                   <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'profile')); ?>"><?php echo Tt::t('front', 'Profile') ?></a>
                 </li>
                 <li class="nav-item <?php echo ($active_menu_pg == 'home/about_us' && $_GET['name'] == 'structure')? 'active':'' ?>">
-                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'structure')); ?>"><?php echo Tt::t('front', 'Organisation Structure') ?></a>
+                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'structure')); ?>"><?php echo Tt::t('front', 'Our Team') ?></a>
                 </li>
                 <li class="nav-item <?php echo ($active_menu_pg == 'home/about_us' && $_GET['name'] == 'commissary')? 'active':'' ?>">
                   <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'commissary')); ?>"><?php echo Tt::t('front', 'Board of Commissary') ?></a>
@@ -62,9 +62,9 @@
                 <li class="nav-item <?php echo ($active_menu_pg == 'home/about_us' && $_GET['name'] == 'financial_report')? 'active':'' ?>">
                   <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'financial_report')); ?>"><?php echo Tt::t('front', 'Financial Report') ?></a>
                 </li>
-                <li class="nav-item <?php echo ($active_menu_pg == 'home/about_us' && $_GET['name'] == 'production_profile')? 'active':'' ?>">
+                <!-- <li class="nav-item <?php echo ($active_menu_pg == 'home/about_us' && $_GET['name'] == 'production_profile')? 'active':'' ?>">
                   <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'production_profile')); ?>"><?php echo Tt::t('front', 'Production Profile') ?></a>
-                </li>
+                </li> -->
                 
               </ul>
             </div>
@@ -145,7 +145,7 @@
         <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'share_holders')); ?>"><?php echo Tt::t('front', 'Share Holders') ?></a></li>
         <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'rups')); ?>"><?php echo Tt::t('front', 'RUPS') ?></a></li>
         <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'financial_report')); ?>"><?php echo Tt::t('front', 'Financial Report') ?></a></li>
-        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'production_profile')); ?>"><?php echo Tt::t('front', 'Production Profile') ?></a></li>
+        <!-- <li><a href="<?php // echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'production_profile')); ?>"><?php echo Tt::t('front', 'Production Profile') ?></a></li> -->
         <li><a href="<?php echo CHtml::normalizeUrl(array('/home/annual_report')); ?>"><?php echo Tt::t('front', 'Annual Report') ?></a></li>
       </ul>
 		</li>
@@ -250,7 +250,7 @@
             <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'share_holders')); ?>"><?php echo Tt::t('front', 'Share Holders') ?></a></li>
             <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'rups')); ?>"><?php echo Tt::t('front', 'RUPS') ?></a></li>
             <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'financial_report')); ?>"><?php echo Tt::t('front', 'Financial Report') ?></a></li>
-            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'production_profile')); ?>"><?php echo Tt::t('front', 'Production Profile') ?></a></li>
+            <!-- <li><a href="<?php // echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'production_profile')); ?>"><?php echo Tt::t('front', 'Production Profile') ?></a></li> -->
             <li><a href="<?php echo CHtml::normalizeUrl(array('/home/annual_report')); ?>"><?php echo Tt::t('front', 'Annual Report') ?></a></li>
           </ul>
         </li>
