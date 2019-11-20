@@ -47,12 +47,18 @@
                 <li class="nav-item <?php echo ($active_menu_pg == 'home/about_us' && $_GET['name'] == 'structure')? 'active':'' ?>">
                   <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'structure')); ?>"><?php echo Tt::t('front', 'Our Team') ?></a>
                 </li>
-                <li class="nav-item <?php echo ($active_menu_pg == 'home/about_us' && $_GET['name'] == 'commissary')? 'active':'' ?>">
-                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'commissary')); ?>"><?php echo Tt::t('front', 'Board of Commissary') ?></a>
+
+                <!-- <li class="nav-item <?php // echo ($active_menu_pg == 'home/about_us' && $_GET['name'] == 'commissary')? 'active':'' ?>">
+                  <a class="nav-link" href="<?php // echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'commissary')); ?>"><?php echo Tt::t('front', 'Board of Commissary') ?></a>
                 </li>
-                <li class="nav-item <?php echo ($active_menu_pg == 'home/about_us' && $_GET['name'] == 'director')? 'active':'' ?>">
-                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'director')); ?>"><?php echo Tt::t('front', 'Board of Director') ?></a>
+                <li class="nav-item <?php // echo ($active_menu_pg == 'home/about_us' && $_GET['name'] == 'director')? 'active':'' ?>">
+                  <a class="nav-link" href="<?php // echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'director')); ?>"><?php echo Tt::t('front', 'Board of Director') ?></a>
                 </li>
+                 -->
+                 <li class="nav-item <?php echo ($active_menu_pg == 'home/about_us' && $_GET['name'] == 'management')? 'active':'' ?>">
+                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'management')); ?>"><?php echo Tt::t('front', 'Our Management') ?></a>
+                </li>
+
                 <li class="nav-item <?php echo ($active_menu_pg == 'home/about_us' && $_GET['name'] == 'share_holders')? 'active':'' ?>">
                   <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'share_holders')); ?>"><?php echo Tt::t('front', 'Share Holders') ?></a>
                 </li>
@@ -81,8 +87,8 @@
                 <li class="nav-item <?php echo ($active_menu_pg == 'home/business')? 'active':'' ?>">
                   <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/business', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Our Business') ?></a>
                 </li>
-                <li class="nav-item <?php echo ($active_menu_pg == 'home/news')? 'active':'' ?>">
-                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/news', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'News') ?></a>
+                <li class="nav-item <?php echo ($active_menu_pg == 'blog/index')? 'active':'' ?>">
+                  <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/blog/index', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'News') ?></a>
                 </li>
                 <li class="nav-item <?php echo ($active_menu_pg == 'home/career')? 'active':'' ?>">
                   <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/career', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Career') ?></a>
@@ -139,9 +145,12 @@
 			<a class="nav-link" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="<?php echo CHtml::normalizeUrl(array('/home/about', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'About Us') ?></a>
       <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
         <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'profile')); ?>"><?php echo Tt::t('front', 'Profile') ?></a></li>
-        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'structure')); ?>"><?php echo Tt::t('front', 'Organisation Structure') ?></a></li>
-        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'commissary')); ?>"><?php echo Tt::t('front', 'Board of Commissary') ?></a></li>
-        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'director')); ?>"><?php echo Tt::t('front', 'Board of Director') ?></a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'structure')); ?>"><?php echo Tt::t('front', 'Our Team') ?></a></li>
+        <?php 
+        /*<li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'commissary')); ?>"><?php echo Tt::t('front', 'Board of Commissary') ?></a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'director')); ?>"><?php echo Tt::t('front', 'Board of Director') ?></a></li>*/ 
+        ?>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'management')); ?>"><?php echo Tt::t('front', 'Our Management') ?></a></li>
         <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'share_holders')); ?>"><?php echo Tt::t('front', 'Share Holders') ?></a></li>
         <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'rups')); ?>"><?php echo Tt::t('front', 'RUPS') ?></a></li>
         <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'financial_report')); ?>"><?php echo Tt::t('front', 'Financial Report') ?></a></li>
@@ -153,7 +162,7 @@
 			<a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/business', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Our Business') ?></a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/news', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'News') ?></a>
+			<a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/blog/index', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'News') ?></a>
 		</li>
 		<li class="nav-item">
 			<a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/career', 'lang'=>Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Career') ?></a>
@@ -244,9 +253,12 @@
           <a href="#" class="customs_drop" id="dropdownMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><?php echo Tt::t('front', 'About') ?></a>
           <ul class="dropdown-menu" aria-labelledby="dropdownMenu" id="customs_dropMenu">
             <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'profile')); ?>"><?php echo Tt::t('front', 'Profile') ?></a></li>
-            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'structure')); ?>"><?php echo Tt::t('front', 'Organisation Structure') ?></a></li>
-            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'commissary')); ?>"><?php echo Tt::t('front', 'Board of Commissary') ?></a></li>
-            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'director')); ?>"><?php echo Tt::t('front', 'Board of Director') ?></a></li>
+            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'structure')); ?>"><?php echo Tt::t('front', 'Our Team') ?></a></li>
+            <?php 
+        /*<li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'commissary')); ?>"><?php echo Tt::t('front', 'Board of Commissary') ?></a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'director')); ?>"><?php echo Tt::t('front', 'Board of Director') ?></a></li>*/ 
+        ?>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'management')); ?>"><?php echo Tt::t('front', 'Our Management') ?></a></li>
             <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'share_holders')); ?>"><?php echo Tt::t('front', 'Share Holders') ?></a></li>
             <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'rups')); ?>"><?php echo Tt::t('front', 'RUPS') ?></a></li>
             <li><a href="<?php echo CHtml::normalizeUrl(array('/home/about_us', 'name'=> 'financial_report')); ?>"><?php echo Tt::t('front', 'Financial Report') ?></a></li>
@@ -270,7 +282,7 @@
           </ul>
         </li>
 
-        <li><a href="<?php echo CHtml::normalizeUrl(array('/home/news', 'lang'=> Yii::app()->language)); ?>"><?php echo Tt::t('front', 'News') ?></a></li>
+        <li><a href="<?php echo CHtml::normalizeUrl(array('/blog/index', 'lang'=> Yii::app()->language)); ?>"><?php echo Tt::t('front', 'News') ?></a></li>
         <li><a href="<?php echo CHtml::normalizeUrl(array('/home/career', 'lang'=> Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Career') ?></a></li>
         <li><a href="<?php echo CHtml::normalizeUrl(array('/home/contact', 'lang'=> Yii::app()->language)); ?>"><?php echo Tt::t('front', 'Contact Us') ?></a></li>
       </ul>

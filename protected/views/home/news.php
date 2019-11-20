@@ -38,7 +38,13 @@
           <div class="row">
             <div class="col-md-35">
               <div class="pn_top">
-                <p class="mb-0"><b>SORTING ARTICLES:</b>  <a <?php if ($_GET['sorting'] == 'latest'): ?>class="active"<?php endif ?> href="<?php echo CHtml::normalizeUrl(array('/blog/index', 'sorting'=> 'latest')); ?>">LATEST</a> / <a <?php if ($_GET['sorting'] == 'oldest'): ?>class="active"<?php endif ?> href="<?php echo CHtml::normalizeUrl(array('/blog/index', 'sorting'=> 'oldest')); ?>">OLDEST</a></p>
+                <!-- <p class="mb-0"><b>SORTING ARTICLES:</b> <a <?php if ($_GET['sorting'] == 'latest'): ?>class="active"<?php endif ?> href="<?php echo CHtml::normalizeUrl(array('/blog/index', 'sorting'=> 'latest')); ?>">LATEST</a> / <a <?php if ($_GET['sorting'] == 'oldest'): ?>class="active"<?php endif ?> href="<?php echo CHtml::normalizeUrl(array('/blog/index', 'sorting'=> 'oldest')); ?>">OLDEST</a></p> -->
+                <p class="mb-0">
+                  <a href="<?php echo CHtml::normalizeUrl(array('/blog/index')); ?>"><?php echo Tt::t('front', 'Semua') ?></a>&nbsp;&nbsp;
+                  <a href="<?php echo CHtml::normalizeUrl(array('/blog/index', 'topik'=>1)); ?>"><?php echo Tt::t('front', 'Berita PJUC') ?></a>&nbsp;&nbsp;
+                  <a href="<?php echo CHtml::normalizeUrl(array('/blog/index', 'topik'=>2)); ?>"><?php echo Tt::t('front', 'Seputar Energi') ?></a>&nbsp;&nbsp;
+                  <a href="<?php echo CHtml::normalizeUrl(array('/blog/index', 'topik'=>3)); ?>"><?php echo Tt::t('front', 'Galeri') ?></a>&nbsp;&nbsp;
+                </p>
               </div>
             </div>
             <div class="col-md-25">
@@ -79,7 +85,7 @@
                   <div class="nx-titles">
                     <h6><?php echo $value->description->title ?></h6>
                   </div>
-                  <a href="<?php echo CHtml::normalizeUrl(array('/blog/detail', 'id'=> $value->id)); ?>" class="btn btn-link p-0 nviews">VIEW ARTICLE</a>
+                  <a href="<?php echo CHtml::normalizeUrl(array('/blog/detail', 'id'=> $value->id)); ?>" class="btn btn-link p-0 nviews"><?php echo strtoupper( Tt::t('front', 'view article')) ?></a>
                   <div class="clear"></div>
                 </div>
               </div>

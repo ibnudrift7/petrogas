@@ -196,7 +196,7 @@
 
 </section>
 
-<style>
+<style type="text/css">
 	.content-boxx{
 		display: table;
 		vertical-align: middle;
@@ -208,4 +208,23 @@
 		display: table-cell;
 		height: 100%;
 	}
+</style>
+
+
+<script type="text/javascript">
+  // hide menu default
+  var n_width = $(window).width();
+  if (n_width > 980){
+    $('.view_default_menu').addClass('d-none');
+
+    $('.view_about_menu').removeClass('d-none')
+  }
+</script>
+<style type="text/css">
+  section.header .header-bottom .navbar-expand-lg ul.navbar-nav li.nav-item a.nav-link{
+    font-size: 13px;
+    font-weight: 300;
+    margin-right: 0px;
+    padding: 0.5rem 0.4rem;
+  }
 </style>

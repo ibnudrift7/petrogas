@@ -93,8 +93,9 @@
 			// 	$res_product[$value->id] = $value->description->name;
 			// }
 			$res_product = [
-							1=>'NEWS',
-							2=>'EVENTS',
+							1=>'Berita PJUC',
+							2=>'Seputar Energi',
+							2=>'Galeri',
 							];
 
 			?>

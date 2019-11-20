@@ -525,9 +525,15 @@ class HomeController extends Controller
 		$this->pageTitle = 'About Us - '.$this->pageTitle;
 		$this->layout='//layouts/column2';
 
-		$this->render('about_page', array(	
-			'type_page' => htmlspecialchars($_GET['name']),
-		));
+		if ($_GET['name'] == 'structure') {
+			$this->render('about_ourteam', array(
+				'type_page' => htmlspecialchars($_GET['name']),
+			));
+		}else{
+			$this->render('about_page', array(	
+				'type_page' => htmlspecialchars($_GET['name']),
+			));
+		}
 	}
 
 	public function actionAnnual_report()
@@ -1191,7 +1197,22 @@ Staff dari perabotplastik.com akan menghubungi anda untuk konfirmasi dan penjela
 		$this->pageTitle = 'News & Article - '.$this->pageTitle;
 		$this->layout='//layouts/column2';
 
+		$criteria = new CDbCriteria;
+		$criteria->order = 'date_input DESC';
+		$criteria->with = array('description');
+		$criteria->addCondition('description.language_id = :language_id');
+		$criteria->params[':language_id'] = $this->languageID;
+		$criteria->addCondition('active = "1"');
+		
+		if ($_GET['id']) {
+			$criteria->addCondition('t.id = :id');
+			$criteria->params[':id'] = $dataBlog->id;
+		}
+
+		$dataBlogs = Blog::model()->findAll($criteria);
+
 		$this->render('news', array(	
+			'dataBlogs' => $dataBlogs,
 		));
 	}
 

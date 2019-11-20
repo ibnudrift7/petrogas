@@ -38,9 +38,11 @@
         <?php
         $sub_page = array(
                     'profile'=>'Profile',
-                    'structure'=>'Organisation Structure',
-                    'commissary'=>'Board of Commissary',
-                    'director'=>'Board of Director',
+                    'structure'=>'Our Team',
+                    // 'commissary'=>'Board of Commissary',
+                    // 'director'=>'Board of Director',
+                    'management'=>'Our Management',
+
                     'share_holders'=>'Share Holders',
                     'rups'=>'RUPS',
                     'financial_report'=>'Financial Report',
