@@ -42,8 +42,8 @@ $this->pageHeader=array(
 				<?php $this->widget('ImperaviRedactorWidget', array(
 				    'selector' => '.redactor',
 				    'options' => array(
-				        'imageUpload'=> $this->createUrl('admin/setting/uploadimage', array('type'=>'image')),
-				        'clipboardUploadUrl'=> $this->createUrl('admin/setting/uploadimage', array('type'=>'clip')),
+				        'imageUpload'=> $this->createUrl('/admin/setting/uploadimage', array('type'=>'image')),
+				        'clipboardUploadUrl'=> $this->createUrl('/admin/setting/uploadimage', array('type'=>'clip')),
 				    ),
 				    'plugins' => array(
 				        'clips' => array(

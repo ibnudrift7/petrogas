@@ -24,6 +24,13 @@ class SettingController extends ControllerAdmin
 				'types' => 'jpg, png, gif, jpeg',
 			    ),
 			),
+			'uploadimage'=>array(
+			    'class' => 'ext.imperavi-redactor-widget.actions.RedactorUploadAction',
+			    'directory'=>'images/static',
+			    'validator'=>array(
+				'types' => 'jpg, png, gif, jpeg',
+			    ),
+			),
 			'fileUpload'=>array(
 			    'class' => 'ext.imperavi-redactor-widget.actions.RedactorUploadAction',
 			    'directory'=>'images/static',

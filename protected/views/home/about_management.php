@@ -40,49 +40,83 @@ $type_page = htmlentities($type_page);
         <!-- start inner -->
         <div class="blocks_managements">
           <div class="tops">
-            <h3>Board of Commissary</h3>
+            <h3><?php echo Tt::t('front', 'Board of Commissary') ?></h3>
           </div>
           <div class="py-3"></div>
+          <?php 
+          $criteria = new CDbCriteria;
+          $criteria->addCondition('t.actives = "1"');
+          $criteria->addCondition('t.type_board = "1"');
+          $criteria->order = 't.sorts ASC';
+          $data_commis = Managements::model()->findAll($criteria);
+          ?>
           <div class="inners_nlist">
             <div class="row">
-              <?php for ($i=1; $i < 5; $i++) { ?>
+
+              <?php foreach ($data_commis as $key => $value): ?>
               <div class="col-md-30">
                 <div class="items">
-                  <div class="picture"><img src="https://placehold.it/650x250" alt="" class="img img-fluid"></div>
+                  <div class="picture"><img src="<?php echo Yii::app()->baseUrl.'/images/management/'.$value->image ?>" alt="" class="img img-fluid"></div>
                   <div class="info">
-                    <h4 class="names">Names guys</h4>
-                    <p class="positions">Chariman Executive</p>
-                    <p class="ages">Age. 52</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste perferendis saepe incidunt cumque velit quasi corrupti, laboriosam maxime quod libero aspernatur accusamus pariatur, nam vero iure enim corporis vitae accusantium!</p>
+                    <h4 class="names"><?php echo $value->name ?></h4>
+
+                    <?php if (Yii::app()->language == 'en'): ?>
+                    <p class="positions"><?php echo $value->position_en ?></p>
+                    <p class="ages">Age. <?php echo $value->age ?></p>
+                    <?php echo $value->content_en ?>
+                    <?php else: ?>
+                    <p class="positions"><?php echo $value->position_id ?></p>
+                    <p class="ages">Umur. <?php echo $value->age ?></p>
+                    <?php echo $value->content_id ?>
+                    <?php endif ?>
                     <div class="clearfix"></div>
                   </div>
                 </div>
               </div>
-              <?php } ?>
+              <?php endforeach; ?>
+
             </div>
           </div>
 
           <div class="py-4"></div>
+          <div class="py-2"></div>
+
           <div class="tops">
-            <h3>Board of Director</h3>
+            <h3><?php echo Tt::t('front', 'Board of Director') ?></h3>
           </div>
           <div class="py-3"></div>
+          <?php 
+          $criteria = new CDbCriteria;
+          $criteria->addCondition('t.actives = "1"');
+          $criteria->addCondition('t.type_board = "2"');
+          $criteria->order = 't.sorts ASC';
+          $data_commis2 = Managements::model()->findAll($criteria);
+          ?>
           <div class="inners_nlist">
             <div class="row">
-              <?php for ($i=1; $i < 5; $i++) { ?>
+
+              <?php foreach ($data_commis2 as $key => $value): ?>
               <div class="col-md-30">
                 <div class="items">
-                  <div class="picture"><img src="https://placehold.it/650x250" alt="" class="img img-fluid"></div>
+                  <div class="picture"><img src="<?php echo Yii::app()->baseUrl.'/images/management/'.$value->image ?>" alt="" class="img img-fluid"></div>
                   <div class="info">
-                    <h4 class="names">Names guys</h4>
-                    <p class="positions">Chariman Executive</p>
-                    <p class="ages">Age. 52</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste perferendis saepe incidunt cumque velit quasi corrupti, laboriosam maxime quod libero aspernatur accusamus pariatur, nam vero iure enim corporis vitae accusantium!</p>
+                    <h4 class="names"><?php echo $value->name ?></h4>
+
+                    <?php if (Yii::app()->language == 'en'): ?>
+                    <p class="positions"><?php echo $value->position_en ?></p>
+                    <p class="ages">Age. <?php echo $value->age ?></p>
+                    <?php echo $value->content_en ?>
+                    <?php else: ?>
+                    <p class="positions"><?php echo $value->position_id ?></p>
+                    <p class="ages">Umur. <?php echo $value->age ?></p>
+                    <?php echo $value->content_id ?>
+                    <?php endif ?>
                     <div class="clearfix"></div>
                   </div>
                 </div>
               </div>
-              <?php } ?>
+              <?php endforeach; ?>
+
             </div>
           </div>
 
