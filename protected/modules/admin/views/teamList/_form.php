@@ -27,7 +27,7 @@
 	</div>
 
 	<?php echo $form->fileFieldRow($model,'image',array(
-	'hint'=>'<b>Note:</b> Ukuran gambar adalah 206 x 269px. Gambar yang lebih besar akan ter-crop otomatis, tolong upload foto ukuran horizontal')); ?>
+	'hint'=>'<b>Note:</b> Ukuran gambar adalah 1024 x 768px. Gambar yang lebih besar akan ter-crop otomatis, tolong upload foto ukuran horizontal')); ?>
 	<?php if ($model->scenario == 'update'): ?>
 	<div class="control-group">
 		<label class="control-label">&nbsp;</label>

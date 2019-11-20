@@ -529,7 +529,11 @@ class HomeController extends Controller
 			$this->render('about_ourteam', array(
 				'type_page' => htmlspecialchars($_GET['name']),
 			));
-		}else{
+		}elseif ($_GET['name'] == 'management') {
+			$this->render('about_management', array(
+				'type_page' => htmlspecialchars($_GET['name']),
+			));
+		} else{
 			$this->render('about_page', array(	
 				'type_page' => htmlspecialchars($_GET['name']),
 			));
@@ -1180,6 +1184,15 @@ Staff dari perabotplastik.com akan menghubungi anda untuk konfirmasi dan penjela
 		$this->layout='//layouts/column2';
 
 		$this->render('bussiness', array(	
+		));
+	}
+
+	public function actionBlocks_cepu()
+	{
+		$this->pageTitle = 'Blocks Cepu - '.$this->pageTitle;
+		$this->layout='//layouts/column2';
+
+		$this->render('blocks_cepu', array(	
 		));
 	}
 

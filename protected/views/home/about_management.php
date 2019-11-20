@@ -34,61 +34,63 @@ $type_page = htmlentities($type_page);
     </div>
 
     <div class="insides">
-      <div class="t-about text-center">
+      <div class="t-about">
         <div class="py-4 d-none d-sm-block"></div>
 
-
-        <div class="mw1091 mx-auto nblocks_ourteam">
-          <div class="blocks_featured_top">
-            <div class="row no-gutters">
-              <div class="col-md-25">
-                <div class="covers">
-                  <img src="https://placehold.it/1024x768" alt="" class="img img-fluid w-100">
-                </div>
-              </div>
-              <div class="col-md-35 my-auto">
-                <div class="content-text text-left p-5 pt-0 pb-0">
-                  <h3>ISSAC MURRAY</h3>
-                  <span>Managing Editor</span>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam tempora quos, id hic similique impedit dolorem at sint quod tenetur ad beatae amet, commodi recusandae eum et soluta reiciendis illum.</p>
-                  <div class="small_email">
-                    <p>+ <a href="mailto:issac@testmail.com">issac@testmail.com</a></p>
-                  </div>
-                  <div class="clear"></div>
-                </div>
-              </div>
-            </div>
+        <!-- start inner -->
+        <div class="blocks_managements">
+          <div class="tops">
+            <h3>Board of Commissary</h3>
           </div>
           <div class="py-3"></div>
-          <div class="lines-gep"></div>
-          <div class="py-3"></div>
-          <div class="blocks_lists_btmfeature">
-            
-            <div class="row no-gutters">
+          <div class="inners_nlist">
+            <div class="row">
               <?php for ($i=1; $i < 5; $i++) { ?>
-              <div class="col">
-                <div class="boxs_img">
-                  <div class="cover">
-                    <img src="https://placehold.it/1024x768" alt="" class="img img-fluid">
-                  </div>
+              <div class="col-md-30">
+                <div class="items">
+                  <div class="picture"><img src="https://placehold.it/650x250" alt="" class="img img-fluid"></div>
                   <div class="info">
-                    <h3 class="name">YASMIN</h3>
-                    <p>Business Editor</p>
-                    <p class="d-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum accusantium, et suscipit modi rerum porro tempora earum veritatis est deleniti nam perferendis saepe, ipsa reiciendis alias, optio nesciunt doloribus sint?</p>
+                    <h4 class="names">Names guys</h4>
+                    <p class="positions">Chariman Executive</p>
+                    <p class="ages">Age. 52</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste perferendis saepe incidunt cumque velit quasi corrupti, laboriosam maxime quod libero aspernatur accusamus pariatur, nam vero iure enim corporis vitae accusantium!</p>
+                    <div class="clearfix"></div>
                   </div>
-                  <div class="clearfix"></div>
                 </div>
               </div>
               <?php } ?>
             </div>
-
           </div>
 
+          <div class="py-4"></div>
+          <div class="tops">
+            <h3>Board of Director</h3>
+          </div>
+          <div class="py-3"></div>
+          <div class="inners_nlist">
+            <div class="row">
+              <?php for ($i=1; $i < 5; $i++) { ?>
+              <div class="col-md-30">
+                <div class="items">
+                  <div class="picture"><img src="https://placehold.it/650x250" alt="" class="img img-fluid"></div>
+                  <div class="info">
+                    <h4 class="names">Names guys</h4>
+                    <p class="positions">Chariman Executive</p>
+                    <p class="ages">Age. 52</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste perferendis saepe incidunt cumque velit quasi corrupti, laboriosam maxime quod libero aspernatur accusamus pariatur, nam vero iure enim corporis vitae accusantium!</p>
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
+              </div>
+              <?php } ?>
+            </div>
           </div>
 
-          <?php // echo $this->setting[$type_page.'1_content'] ?>
-          <div class="clearfix"></div>
+
+          <div class="clear"></div>
         </div>
+        <!-- end inner -->
+
         <div class="py-4"></div>
 
         <div class="clear"></div>
@@ -96,6 +98,7 @@ $type_page = htmlentities($type_page);
 
       <div class="clear"></div>
     </div>
+
     <div class="py-2 d-none d-sm-block"></div>
     <div class="py-4 d-none d-sm-block"></div>
   </div>
