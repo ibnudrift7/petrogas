@@ -34,7 +34,7 @@ $type_page = htmlentities($type_page);
     </div>
 
     <div class="insides">
-      <div class="content-text t-about text-center">
+      <div class="t-about text-center">
         <div class="py-4 d-none d-sm-block"></div>
         <div class="mw1091 mx-auto">
           <div class="blocks_featured_top">
@@ -45,13 +45,17 @@ $type_page = htmlentities($type_page);
                 </div>
               </div>
               <div class="col-md-35">
-                
+                <div class="content-text">
+
+                  <div class="clear"></div>
+                </div>
               </div>
             </div>
           </div>
           <div class="py-3"></div>
           <div class="blocks_lists_btmfeature">
-            <ul class="list-inline">
+            <ul class="list-inline m-0 mr-0">
+              <?php for ($i=1; $i < 5; $i++) { ?>
               <li class="list-inline-item">
                 <div class="boxs_img">
                   <div class="cover">
@@ -64,6 +68,7 @@ $type_page = htmlentities($type_page);
                   <div class="clearfix"></div>
                 </div>
               </li>
+              <?php } ?>
             </ul>
           </div>
 

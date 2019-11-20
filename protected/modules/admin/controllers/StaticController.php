@@ -56,6 +56,17 @@ class StaticController extends ControllerAdmin
 		));
 	}
 
+	public function actionBusiness2()
+	{
+		$model = Setting::model()->getModelSetting('data');
+
+		$model = $this->loadData($model);
+
+		$this->render('business2', array(
+			'model'=>$model,
+		));
+	}
+
 	public function actionCareer()
 	{
 		$model = Setting::model()->getModelSetting('data');

@@ -15,11 +15,16 @@
 <div class="widgetcontent">
 	<?php echo $form->textFieldRow($model,'title',array('class'=>'span5','maxlength'=>225)); ?>
 
-	<?php echo $form->textFieldRow($model,'position_en', array('class'=>'span5','maxlength'=>225)); ?>
-
-	<?php echo $form->textFieldRow($model,'position_id', array('class'=>'span5','maxlength'=>225)); ?>
-
-	<?php // echo $form->textAreaRow($model,'content',array('rows'=>3, 'class'=>'span8')); ?>
+	<div class="row-fluid">
+		<div class="span6">
+			<?php echo $form->textFieldRow($model,'position_en', array('class'=>'span7','maxlength'=>225)); ?>
+			<?php echo $form->textAreaRow($model,'content_en',array('rows'=>3, 'class'=>'span12')); ?>
+		</div>
+		<div class="span6">
+			<?php echo $form->textFieldRow($model,'position_id', array('class'=>'span7','maxlength'=>225)); ?>
+			<?php echo $form->textAreaRow($model,'content_id',array('rows'=>3, 'class'=>'span12')); ?>
+		</div>
+	</div>
 
 	<?php echo $form->fileFieldRow($model,'image',array(
 	'hint'=>'<b>Note:</b> Ukuran gambar adalah 206 x 269px. Gambar yang lebih besar akan ter-crop otomatis, tolong upload foto ukuran horizontal')); ?>

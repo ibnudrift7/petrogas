@@ -1,24 +1,27 @@
 <?php
 
 /**
- * This is the model class for table "tb_teams_list".
+ * This is the model class for table "tb_managements".
  *
- * The followings are the available columns in table 'tb_teams_list':
- * @property integer $id
+ * The followings are the available columns in table 'tb_managements':
+ * @property string $id
+ * @property string $type_board
  * @property string $image
- * @property string $title
+ * @property string $name
+ * @property string $age
  * @property string $position_en
  * @property string $position_id
- * @property string $content
- * @property integer $sortings
+ * @property string $content_en
+ * @property string $content_id
+ * @property integer $sorts
  * @property integer $actives
  */
-class TeamList extends CActiveRecord
+class Managements extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
 	 * @param string $className active record class name.
-	 * @return TeamList the static model class
+	 * @return Managements the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -30,7 +33,7 @@ class TeamList extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'tb_teams_list';
+		return 'tb_managements';
 	}
 
 	/**
@@ -41,12 +44,15 @@ class TeamList extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('actives', 'numerical', 'integerOnly'=>true),
-			array('image, title, position_en, position_id', 'length', 'max'=>225),
-			array('content, sortings', 'safe'),
+			array('type_board', 'required'),
+			array('sorts, actives', 'numerical', 'integerOnly'=>true),
+			array('type_board', 'length', 'max'=>50),
+			array('image, name', 'length', 'max'=>225),
+			array('age', 'length', 'max'=>10),
 			// The following rule is used by search().
+			array('image, name, age, position_en, position_id, content_en, content_id, sorts, actives', 'safe'),
 			// Please remove those attributes that should not be searched.
-			array('id, image, title, position_en, position_id, content, sortings, actives', 'safe', 'on'=>'search'),
+			array('id, type_board, image, name, age, position_en, position_id, content_en, content_id, sorts, actives', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -68,15 +74,15 @@ class TeamList extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
+			'type_board' => 'Type Board',
 			'image' => 'Image',
-			'title' => 'Title',
+			'name' => 'Name',
+			'age' => 'Age',
 			'position_en' => 'Position English',
-			'position_id' => 'Position',
-
+			'position_id' => 'Position Indonesia',
 			'content_en' => 'Content English',
-			'content_id' => 'Content',
-
-			'sortings' => 'Sortings',
+			'content_id' => 'Content Indonesia',
+			'sorts' => 'Sorts',
 			'actives' => 'Actives',
 		);
 	}
@@ -92,14 +98,16 @@ class TeamList extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
+		$criteria->compare('id',$this->id,true);
+		$criteria->compare('type_board',$this->type_board,true);
 		$criteria->compare('image',$this->image,true);
-		$criteria->compare('title',$this->title,true);
+		$criteria->compare('name',$this->name,true);
+		$criteria->compare('age',$this->age,true);
 		$criteria->compare('position_en',$this->position_en,true);
 		$criteria->compare('position_id',$this->position_id,true);
 		$criteria->compare('content_en',$this->content_en,true);
 		$criteria->compare('content_id',$this->content_id,true);
-		$criteria->compare('sortings',$this->sortings);
+		$criteria->compare('sorts',$this->sorts);
 		$criteria->compare('actives',$this->actives);
 
 		return new CActiveDataProvider($this, array(

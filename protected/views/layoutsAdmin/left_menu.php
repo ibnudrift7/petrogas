@@ -38,10 +38,12 @@
         <?php
         $sub_page = array(
                     'profile'=>'Profile',
-                    'structure'=>'Our Team',
+                    // 'structure'=>'Our Team',
+
                     // 'commissary'=>'Board of Commissary',
                     // 'director'=>'Board of Director',
-                    'management'=>'Our Management',
+
+                    // 'management'=>'Our Management',
 
                     'share_holders'=>'Share Holders',
                     'rups'=>'RUPS',
@@ -54,6 +56,8 @@
         <li class="dropdown"><a href="#"><span class="fa fa-folder"></span> <?php echo Tt::t('admin', 'About Us') ?></a>
             <ul>
                 <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/about')); ?>">Static About</a></li>
+                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/teamList/index')); ?>">About - Our Team</a></li>
+                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/managements/index')); ?>">About - Managements</a></li>
                 <li>&nbsp;</li>
                 <?php foreach ($sub_page as $key => $value): ?>
                     <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/page_type', 'name'=> $key)); ?>">Static <?php echo $value ?></a></li>
@@ -67,6 +71,7 @@
             <ul>
                 <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/business')); ?>">Static Business</a></li>
                 <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/blockbuilding')); ?>">List Block Building</a></li>
+                <li><a href="<?php echo CHtml::normalizeUrl(array('/admin/static/business2')); ?>">Block Cepu</a></li>
             </ul>
         </li>
         <li class="dropdown"><a href="#"><span class="fa fa-flag"></span> <?php echo Tt::t('admin', 'Statistic Data') ?></a>

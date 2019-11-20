@@ -1,6 +1,6 @@
 <?php
 
-class TeamListController extends ControllerAdmin
+class ManagementsController extends ControllerAdmin
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
@@ -44,14 +44,14 @@ class TeamListController extends ControllerAdmin
 	 */
 	public function actionCreate()
 	{
-		$model=new TeamList;
+		$model=new Managements;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['TeamList']))
+		if(isset($_POST['Managements']))
 		{
-			$model->attributes=$_POST['TeamList'];
+			$model->attributes=$_POST['Managements'];
 
 			$image = CUploadedFile::getInstance($model,'image');
 			$model->image = substr(md5(time()),0,5).'-'.$image->name;
@@ -60,10 +60,10 @@ class TeamListController extends ControllerAdmin
 				$transaction=$model->dbConnection->beginTransaction();
 				try
 				{
-					$image->saveAs(Yii::getPathOfAlias('webroot').'/images/team/'.$model->image);
+					$image->saveAs(Yii::getPathOfAlias('webroot').'/images/management/'.$model->image);
 
 					$model->save();
-					Log::createLog("TeamListController Create $model->id");
+					Log::createLog("ManagementsController Create $model->id");
 					Yii::app()->user->setFlash('success','Data has been inserted');
 				    $transaction->commit();
 					$this->redirect(array('index'));
@@ -92,11 +92,11 @@ class TeamListController extends ControllerAdmin
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if(isset($_POST['TeamList']))
+		if(isset($_POST['Managements']))
 		{
 			$image = $model->image;//mengamankan nama file
 			// $file = $model->file;//mengamankan nama file
-			$model->attributes=$_POST['TeamList'];//setting semua nilai
+			$model->attributes=$_POST['Managements'];
 			$model->image = $image;//mengembalikan nama file
 
 			$image = CUploadedFile::getInstance($model,'image');
@@ -109,11 +109,11 @@ class TeamListController extends ControllerAdmin
 				try
 				{
 					if ($image->name != '') {
-						$image->saveAs(Yii::getPathOfAlias('webroot').'/images/team/'.$model->image);
+						$image->saveAs(Yii::getPathOfAlias('webroot').'/images/management/'.$model->image);
 					}
 
 					$model->save();
-					Log::createLog("TeamListController Update $model->id");
+					Log::createLog("ManagementsController Update $model->id");
 					Yii::app()->user->setFlash('success','Data Edited');
 				    $transaction->commit();
 					$this->redirect(array('index'));
@@ -144,7 +144,7 @@ class TeamListController extends ControllerAdmin
 
 			// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 			// if(!isset($_GET['ajax']))
-				$this->redirect( array('index'));
+				$this->redirect( array('index') );
 		// }
 		// else
 		// 	throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
@@ -155,12 +155,12 @@ class TeamListController extends ControllerAdmin
 	 */
 	public function actionIndex()
 	{
-		$model=new TeamList('search');
+		$model=new Managements('search');
 		$model->unsetAttributes();  // clear any default values
-		if(isset($_GET['TeamList']))
-			$model->attributes=$_GET['TeamList'];
+		if(isset($_GET['Managements']))
+			$model->attributes=$_GET['Managements'];
 
-		$dataProvider=new CActiveDataProvider('TeamList');
+		$dataProvider=new CActiveDataProvider('Managements');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 			'model'=>$model,
@@ -174,7 +174,7 @@ class TeamListController extends ControllerAdmin
 	 */
 	public function loadModel($id)
 	{
-		$model=TeamList::model()->findByPk($id);
+		$model=Managements::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');
 		return $model;
@@ -186,7 +186,7 @@ class TeamListController extends ControllerAdmin
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if(isset($_POST['ajax']) && $_POST['ajax']==='team-list-form')
+		if(isset($_POST['ajax']) && $_POST['ajax']==='managements-form')
 		{
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
