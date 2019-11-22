@@ -114,7 +114,6 @@
                   <a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/business_detail', 'id'=> $value->id)); ?>"><?php echo $value->nama ?></a>
                 </li>
                 <?php endforeach; ?>
-                <li class="nav-item <?php echo ($active_menu_pg == 'home/blocks_cepu')? 'active': ''; ?>"><a class="nav-link" href="<?php echo CHtml::normalizeUrl(array('/home/blocks_cepu')); ?>">Block Cepu</a></li>
               </ul>
             </div>
           </nav>
@@ -280,7 +279,6 @@
             <?php foreach ($data_block as $key => $value): ?>
             <li><a href="<?php echo CHtml::normalizeUrl(array('/home/business_detail', 'id'=> $value->id)); ?>"><?php echo $value->nama ?></a></li>
             <?php endforeach; ?>
-            <li><a href="<?php echo CHtml::normalizeUrl(array('/home/blocks_cepu')); ?>">Block Cepu</a></li>
           </ul>
         </li>
 

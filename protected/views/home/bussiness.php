@@ -94,8 +94,8 @@
         <div class="box-content content-text mw1075 mx-auto d-block">
             <?php echo $this->setting['business3_holder_btm_content'] ?>
         </div>
+        <?php /*
         <div class="py-3  d-none d-sm-block"></div>
-
         <div class="row blocks_sm_list">
             <?php for ($i=1; $i < 4; $i++) { ?>
             <div class="col-md-20">
@@ -111,6 +111,8 @@
         <div class="image d-block mx-auto">
             <img src="<?php echo Yii::app()->baseUrl.'/images/static/'. $this->setting['business3_bottom_banner'] ?>" alt="" class="img img-fluid d-block mx-auto">
         </div>
+        */ ?>
+
         <div class="py-4 my-3"></div>
     </div>
 </section>
